@@ -185,6 +185,36 @@ footer h2{
 |  - Please put boostrap changes EOF here to ensure changes!
 |  - Author: Daniel ∙ 2025-07-31
 --------------------------------------------------------------------------------*/
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.social-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links li a svg {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+}
+
 
 /*
 Toggler Border Removal
