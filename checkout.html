@@ -151,7 +151,95 @@
     </header>
 
     <main>
-      <!-- TODO: Checkout Page Content -->
+          <div class="checkout-container">
+
+              <!-- Navigation -->
+              <nav class="progress-steps">
+                <div class="step-label active">Billing</div>
+                <div class="step-label">Shipping</div>
+                <div class="step-label">Payment</div>
+              </nav>
+
+              <!-- Billing -->
+              <section class="step-section active" id="billing-panel">
+                <h2>Select Address</h2>
+                <form id="billing-form">
+                  <div class="saved-addresses">
+                    <label><input type="radio" name="billing-address" checked> John Doe – 123 Sesame St, NY</label>
+                    <label><input type="radio" name="billing-address"> John Doe – 234 Vacation Way, FL</label>
+                  </div>
+
+                  <!-- Add new address -->
+                  <div class="add-new-block">
+                    <button type="button" id="add-billing-address-btn">+ Add New Address</button>
+                    <div class="new-address-fields" id="billing-address-form">
+                      <input type="text" placeholder="Full Name">
+                      <input type="text" placeholder="Street Address">
+                      <input type="text" placeholder="City">
+                      <input type="text" placeholder="State">
+                      <input type="text" placeholder="ZIP Code">
+                      <button type="submit">Save Address</button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+
+              <!-- Shipping -->
+              <section class="step-section" id="shipping-panel">
+                <h2>Shipping Method</h2>
+                <form id="shipping-form">
+                  <div class="saved-addresses">
+                    <label><input type="radio" name="shipping-address" checked> John Doe – 123 Sesame St, NY</label>
+                    <label><input type="radio" name="shipping-address"> John Doe – 234 Vacation Way, FL</label>
+                  </div>
+
+                  <div class="shipping-methods">
+                    <label><input type="radio" name="shipping-method" checked> Standard – Free</label>
+                    <label><input type="radio" name="shipping-method"> Express – $12.99</label>
+                    <label><input type="radio" name="shipping-method"> Overnight – $18.99</label>
+                  </div>
+
+                  <!-- Add new address -->
+                  <div class="add-new-block">
+                    <button type="button" id="add-shipping-address-btn">+ Add New Address</button>
+                    <div class="new-address-fields" id="shipping-address-form">
+                      <input type="text" placeholder="Full Name">
+                      <input type="text" placeholder="Street Address">
+                      <input type="text" placeholder="City">
+                      <input type="text" placeholder="State">
+                      <input type="text" placeholder="ZIP Code">
+                      <button type="submit">Save Address</button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+
+              <!-- Payment -->
+              <section class="step-section" id="payment-panel">
+                <h2>Payment Method</h2>
+                <form id="payment-form">
+                  <div class="saved-payments">
+                    <label><input type="radio" name="payment-method" checked> Bank 1 – ****1234</label>
+                    <label><input type="radio" name="payment-method"> Bank 2 – ****2345</label>
+                    <label><input type="radio" name="payment-method"> PayPal</label>
+                  </div>
+
+                  <!-- Add new payment -->
+                  <div class="add-new-block">
+                    <button type="button" id="add-payment-method-btn">+ Add New Payment Method</button>
+                    <div class="new-payment-fields" id="payment-method-form">
+                      <input type="text" placeholder="Cardholder Name">
+                      <input type="text" placeholder="Card Number">
+                      <input type="text" placeholder="Expiration (MM/YY)">
+                      <input type="text" placeholder="CVV">
+                      <button type="submit">Save Payment</button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+
+            </div>
+
     </main>
 
     <footer>
@@ -250,7 +338,7 @@
             <h3>CUSTOMER SERVICE</h3>
             <ul>
               <li><a href="#">Find a Store</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </section>
           <section aria-label="Legal and Policies">
