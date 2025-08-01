@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outdoor Company – Product Details</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Outdoor Co</a>
+            <button class="nav-toggle" aria-label="Open navigation">☰</button>
+            <ul class="nav-menu">
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="checkout.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Product Detail Page Content -->
+        <div class="product-card">
+            <img src="assets/product-images/Boot placeholder.jpg" alt="Boot" class="product-img" />
+
+            <h2 class="product-title">Boot</h2>
+
+            <div class="product-option">
+                <label class="color-label">Color:</label>
+                <div class="color-options">
+                <span class="color-dot color-white"></span>
+                <span class="color-dot color-gray"></span>
+                <span class="color-dot color-darkgray"></span>
+                </div>
+            </div>
+
+            <div class="product-option">
+                <div class="size-options">
+                <button class="size-btn">XS</button>
+                <button class="size-btn">S</button>
+                <button class="size-btn selected">M</button>
+                <button class="size-btn">L</button>
+                <button class="size-btn">XL</button>
+                </div>
+            </div>
+
+            <div class="product-option">
+                <div class="price-control">
+                <label class="price-label">Price:</label>
+                <button class="circle-btn">−</button>
+                <span>#</span>
+                <button class="circle-btn">+</button>
+                </div>
+            </div>
+
+            <button class="btn-add-to-cart">Add to Cart</button>
+        </div>
+        <section class="product-details">
+            <div class="accordion">
+                <div class="accordion-item">Description <span>&gt;</span></div>
+                <div class="accordion-item">Specs <span>&gt;</span></div>
+                <div class="accordion-item">Behind the Gear <span>&gt;</span></div>
+                <div class="accordion-item">Customer Reviews <span>&or;</span></div>
+            </div>
+
+            <div class="review-summary">
+                <div class="star-summary">
+                <div class="star-icon">★</div>
+                <div class="rating-info">
+                    <div class="average">4.0</div>
+                    <div class="reviews">Average Rating<br>100 reviews</div>
+                </div>
+                </div>
+
+                <div class="rating-bars">
+                <div class="bar-row">
+                    <span>5 star</span>
+                    <div class="bar"><div class="fill" style="width: 43%"></div></div>
+                    <span>43%</span>
+                </div>
+                <div class="bar-row">
+                    <span>4 star</span>
+                    <div class="bar"><div class="fill" style="width: 30%"></div></div>
+                    <span>30%</span>
+                </div>
+                <div class="bar-row">
+                    <span>3 star</span>
+                    <div class="bar"><div class="fill" style="width: 18%"></div></div>
+                    <span>18%</span>
+                </div>
+                <div class="bar-row">
+                    <span>2 star</span>
+                    <div class="bar"><div class="fill" style="width: 6%"></div></div>
+                    <span>6%</span>
+                </div>
+                <div class="bar-row">
+                    <span>1 star</span>
+                    <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                    <span>3%</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- user reviews -->
+             <div class="user-review">
+                <hr>
+                <div class="review-header">
+                    <div class="avatar"></div>
+                    <div class="user-content">
+                    <div class="user-name">User 1</div>
+                    <div class="user-stars">★ ★ ★ ★ ☆</div>
+                    <p class="review-text">I love this product.</p>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="review-header">
+                    <div class="avatar"></div>
+                    <div class="user-content">
+                    <div class="user-name">User 2</div>
+                    <div class="user-stars">★ ☆ ☆ ☆ ☆</div>
+                    <p class="review-text">product broke apart after one use</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- user-photos-newsletter -->
+
+        <section class="user-photos-newsletter">
+
+        <!-- Top Carousel -->
+        <div class="carousel">
+            <button class="arrow left">&#8249;</button>
+            <div class="carousel-track">
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            </div>
+            <button class="arrow right">&#8250;</button>
+        </div>
+
+        <!-- Newsletter CTA -->
+        <div class="newsletter-signup">
+            <p class="caption">customers using gear</p>
+            <p class="cta">
+            <strong>Sign up for Operation Basecamp newsletters</strong>
+            for 10% off, new adventure plans, and more!
+            </p>
+
+            <form class="newsletter-form">
+            <div class="input-wrapper">
+                <input type="email" placeholder="YourEmail@operationbasecamp.com" required>
+                <span class="icon">📧</span>
+            </div>
+            <button type="submit">Sign me up!</button>
+            </form>
+        </div>
+
+        <!-- Hashtag + Bottom Carousel -->
+        <p class="hashtag">#OpBStayWild</p>
+
+        <div class="carousel">
+            <button class="arrow left">&#8249;</button>
+            <div class="carousel-track">
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            <div class="carousel-item"></div>
+            </div>
+            <button class="arrow right">&#8250;</button>
+        </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer>
+         <footer>
+        <nav class="social-nav" aria-label="Social Media Links">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                  </a></li>
+               <li><a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg></a></li>
+               <li><a href="https://www.tiktok.com" target="_blank" aria-label="Tiktok">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+               </a></li>
+            </ul>
+        </nav>
+        <h2>Stay Wild.</h2>
+        <section class="footer-links" aria-label="Footer navigation">
+            <section aria-label="Company Information">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="about.html">Our Mission</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </section>
+            <section aria-label="Customer Service">
+                <h3>CUSTOMER SERVICE</h3>
+                <ul>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </section>
+            <section aria-label="Legal and Policies">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </section>
+            <section aria-label="Orders and Returns">
+                <h3>ORDERS AND RETURNS</h3>
+                <ul>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                </ul>
+            </section>
+        </section>
+        <p>&copy; 2025 Outdoor Co. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
