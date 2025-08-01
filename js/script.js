@@ -74,3 +74,23 @@ document.addEventListener("DOMContentLoaded", function (){
     }
 
 });
+
+// event listener to operate swipe.js on checkout page 'You Might Also Like'
+
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".swiper", {
+        slidesPerView: 3, // Show 3 at a time
+        spaceBetween: 20, // Gap between slides
+        loop: true, // Infinite loop
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+        768: { slidesPerView: 3 }, // Tablets & up
+        480: { slidesPerView: 2 }, // Small tablets
+        0: { slidesPerView: 1 }    // Mobile
+        }
+    });
+});
+

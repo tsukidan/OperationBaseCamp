@@ -242,3 +242,20 @@ Toggler Border Removal
 .navbar-dark .navbar-toggler {
   border: none;
 }
+
+/* this is the styles or the carousel on checkout page 'You Might Also Like...' */
+
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+.swiper-slide {
+  background: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
