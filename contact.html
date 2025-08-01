@@ -15,11 +15,6 @@
   </head>
   <body>
     <header>
-      <div
-        class="bg-white text-dark text-center mx-auto border-bottom fst-italic"
-      >
-        Banner area! Sales! Adventures!
-      </div>
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
         <div
           class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -149,102 +144,82 @@
         </div>
       </nav>
     </header>
-
     <main>
-          <div class="checkout-container">
+      <section class="contact-section">
+        <div class="form-container">
+          <h1>Contact Us</h1>
+          <p>Fill out the form below to contact us</p>
 
-              <!-- Navigation -->
-              <nav class="progress-steps">
-                <div class="step-label active">Billing</div>
-                <div class="step-label">Shipping</div>
-                <div class="step-label">Payment</div>
-              </nav>
-
-              <!-- Billing -->
-              <section class="step-section active" id="billing-panel">
-                <h2>Select Address</h2>
-                <form id="billing-form">
-                  <div class="saved-addresses">
-                    <label><input type="radio" name="billing-address" checked> John Doe – 123 Sesame St, NY</label>
-                    <label><input type="radio" name="billing-address"> John Doe – 234 Vacation Way, FL</label>
-                  </div>
-
-                  <!-- Add new address -->
-                  <div class="add-new-block">
-                    <button type="button" id="add-billing-address-btn">+ Add New Address</button>
-                    <div class="new-address-fields" id="billing-address-form">
-                      <input type="text" placeholder="Full Name">
-                      <input type="text" placeholder="Street Address">
-                      <input type="text" placeholder="City">
-                      <input type="text" placeholder="State">
-                      <input type="text" placeholder="ZIP Code">
-                      <button type="submit">Save Address</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-
-              <!-- Shipping -->
-              <section class="step-section" id="shipping-panel">
-                <h2>Shipping Method</h2>
-                <form id="shipping-form">
-                  <div class="saved-addresses">
-                    <label><input type="radio" name="shipping-address" checked> John Doe – 123 Sesame St, NY</label>
-                    <label><input type="radio" name="shipping-address"> John Doe – 234 Vacation Way, FL</label>
-                  </div>
-
-                  <div class="shipping-methods">
-                    <label><input type="radio" name="shipping-method" checked> Standard – Free</label>
-                    <label><input type="radio" name="shipping-method"> Express – $12.99</label>
-                    <label><input type="radio" name="shipping-method"> Overnight – $18.99</label>
-                  </div>
-
-                  <!-- Add new address -->
-                  <div class="add-new-block">
-                    <button type="button" id="add-shipping-address-btn">+ Add New Address</button>
-                    <div class="new-address-fields" id="shipping-address-form">
-                      <input type="text" placeholder="Full Name">
-                      <input type="text" placeholder="Street Address">
-                      <input type="text" placeholder="City">
-                      <input type="text" placeholder="State">
-                      <input type="text" placeholder="ZIP Code">
-                      <button type="submit">Save Address</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-
-              <!-- Payment -->
-              <section class="step-section" id="payment-panel">
-                <h2>Payment Method</h2>
-                <form id="payment-form">
-                  <div class="saved-payments">
-                    <label><input type="radio" name="payment-method" checked> Bank 1 – ****1234</label>
-                    <label><input type="radio" name="payment-method"> Bank 2 – ****2345</label>
-                    <label><input type="radio" name="payment-method"> PayPal</label>
-                  </div>
-
-                  <!-- Add new payment -->
-                  <div class="add-new-block">
-                    <button type="button" id="add-payment-method-btn">+ Add New Payment Method</button>
-                    <div class="new-payment-fields" id="payment-method-form">
-                      <input type="text" placeholder="Cardholder Name">
-                      <input type="text" placeholder="Card Number">
-                      <input type="text" placeholder="Expiration (MM/YY)">
-                      <input type="text" placeholder="CVV">
-                      <button type="submit">Save Payment</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-
+          <form action="" method="POST">
+            <div class="form-group">
+              <label for="name">Name*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
             </div>
 
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="xxxxx@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="xxx-xxx-xxxx"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Topic *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Please select a topic</option>
+                <option value="product">Product Inquiry</option>
+                <option value="support">After sales support</option>
+                <option value="other">Other issues</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message content *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Enter Message content here"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="subscribe" name="subscribe" />
+              <label for="subscribe"
+                >Subscribe to our newsletter and get a 10% discount
+                coupon.</label
+              >
+            </div>
+
+            <button type="submit">Send a message</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
       <footer>
-        <!-- Social Media Links -->
         <nav class="social-nav" aria-label="Social Media Links">
           <ul class="social-links">
             <li>
@@ -338,7 +313,7 @@
             <h3>CUSTOMER SERVICE</h3>
             <ul>
               <li><a href="#">Find a Store</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="Contact.html">Contact Us</a></li>
             </ul>
           </section>
           <section aria-label="Legal and Policies">
