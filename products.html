@@ -151,7 +151,224 @@
     </header>
 
     <main>
-      <!-- Product List Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <h1>Header 1</h1>
+          </div>
+          <div class="col-1">
+            <button
+              class="sort-toggler btn btn-link text-dark"
+              type="button"
+              aria-label="Sort Products"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-sort"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 9l4 -4l4 4m-4 -4v14" />
+                <path d="M21 15l-4 4l-4 -4m4 4v-14" />
+              </svg>
+            </button>
+          </div>
+          <div class="col-1">
+            <button
+              class="filter-toggler btn btn-link text-dark"
+              type="button"
+              aria-label="Filter Products"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-horizontal"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M4 6l8 0" />
+                <path d="M16 6l4 0" />
+                <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M4 12l2 0" />
+                <path d="M10 12l10 0" />
+                <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M4 18l11 0" />
+                <path d="M19 18l1 0" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row row-cols-2 g-4">
+
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="prodocutDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 1"
+                />
+                <!-- Stacked buttons, bottom right -->
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-0">
+                  <a href="prodocutDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                    Product Name
+                  </a>
+                </h5>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="prodocutDetail.html" class="stretched-link" aria-label="View details for Product 2"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 2"
+                />
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="prodocutDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 2">
+                  Product Name
+                </a>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="prodocutDetail.html" class="stretched-link" aria-label="View details for Product 3"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 3"
+                />
+                <!-- Stacked buttons, bottom right -->
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="prodocutDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 3">
+                  Product Name
+                </a>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="prodocutDetail.html" class="stretched-link" aria-label="View details for Product 4"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 4"
+                />
+                <!-- Stacked buttons, bottom right -->
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="prodocutDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 4">
+                  Product Name
+                </a>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat more cards as needed -->
+
+        </div>
+      </div>
+    </main>
     </main>
 
     <footer>
