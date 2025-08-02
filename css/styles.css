@@ -1,4 +1,16 @@
 /* === Reset & Base === */
+:root{
+  --magenta: #8C324A;
+  --sky-blue: #6295D9;
+  --dk-blue: #022156;
+  --orange: #F25C05;
+  --gold: #FE9D18;
+  --green: #2F7A3E;
+  --plum: #5D3A58;
+  --brown: #713B1C;
+  --black: #333;
+  --white: #F9F9F9;
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 100%; }
 body {
