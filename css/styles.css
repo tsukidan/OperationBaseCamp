@@ -79,7 +79,10 @@ body {
   background: #0e0f0f;
   color: #fff;
 }
-
+.logo-btn {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 /* === Navigation === */
 .navbar {
   background: #0e0f0f;
