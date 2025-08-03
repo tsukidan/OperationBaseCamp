@@ -591,3 +591,14 @@ Toggler Border Removal
   max-width: 100%;
   height: auto;
 }
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1b1b1b; /* dark color, change if needed */
+}
+
+.carousel-indicators .active {
+  background-color: #0d6efd; /* Bootstrap primary color */
+}
