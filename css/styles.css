@@ -16,8 +16,8 @@ html { font-size: 100%; }
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
+  color: var(--black);
+  background: var(--white);
 }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
@@ -67,8 +67,8 @@ body {
 
 /* === Buttons === */
 .btn-primary {
-  background: #fff;
-  color: #0e0f0f;
+  background: var(--dk-blue);
+  color: var(--white);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: bold;
@@ -76,16 +76,20 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 .btn-primary:hover {
-  background: #0e0f0f;
-  color: #fff;
+  background: var(--sky-blue);
+  color: var(--black);
 }
 .logo-btn {
-  color: rgb(255, 255, 255);
+  color: var(--white);
   text-decoration: none;
+}
+.logo-btn:hover{
+ color: var(--sky-blue);
+ text-decoration: none;
 }
 /* === Navigation === */
 .navbar {
-  background: #0e0f0f;
+  background: var(--dk-blue);
   color: #fff;
   display: flex;
   justify-content: space-between;
