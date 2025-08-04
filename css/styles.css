@@ -591,3 +591,83 @@ Toggler Border Removal
   max-width: 100%;
   height: auto;
 }
+
+/*checkout tab selection dot on line*/
+.checkout-progress {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background-color: black;
+  z-index: 1;
+}
+
+.progress-dot {
+  position: absolute;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+  z-index: 2;
+}
+
+/*checkout nav styles*/
+.checkoutNav {
+  color: #000;
+}
+
+.nav-tabs .nav-link {
+  position: relative;
+  z-index: 3;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/*css styles for black radio button*/
+.form-check-input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: white;
+  position: relative;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-check-input[type="radio"]:checked {
+  background-color: black;
+  border-color: black;
+}
+
+.form-check-input[type="radio"]::after {
+  content: none !important;
+}
+
+.form-check-input[type="radio"] {
+  box-shadow: none !important;
+  background-image: none !important;
+}

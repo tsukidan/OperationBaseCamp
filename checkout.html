@@ -133,25 +133,78 @@
     </header>
 
     <main>
+
+      <div class="container my-3 mb-5">
+        <h3>< checkout</h3>
+      </div>
+
       <div class="checkout-container">
+
         <!-- Navigation -->
-        <nav class="progress-steps">
-          <div class="step-label active">Billing</div>
-          <div class="step-label">Shipping</div>
-          <div class="step-label">Payment</div>
-        </nav>
+      <nav class="checkout-progress position-relative">
+        <ul class="nav nav-tabs justify-content-evenly checkoutTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active checkoutNav" id="billing-tab" data-bs-toggle="tab" data-bs-target="#billing" type="button" role="tab">billing</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link checkoutNav" id="shipping-tab" data-bs-toggle="tab" data-bs-target="#shipping" type="button" role="tab">shipping</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link checkoutNav" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button" role="tab">payment</button>
+          </li>
+        </ul>
+
+        <div class="progress-line"></div>
+        
+        <div class="progress-dot" id="progressDot"></div>
+      </nav>
 
         <!-- Billing -->
-        <section class="step-section active" id="billing-panel">
-          <h2>Select Address</h2>
-          <form id="billing-form">
-            <div class="saved-addresses">
-              <label><input type="radio" name="billing-address" checked /> John Doe – 123 Sesame St, NY</label>
-              <label><input type="radio" name="billing-address" /> John Doe – 234 Vacation Way, FL</label>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+            <div class="container my-3">
+              <h6 class="mb-3">address</h6>
+
+              <!-- Billing Address Option 1 -->
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="address" id="billingAddress1" checked />
+                  <label class="form-check-label" for="billingAddress1">
+                    <strong>John Doe</strong><br />
+                    123 Sesame St<br />
+                    New York, NY 12345
+                  </label>
+                </div>
+                <a href="#" class="text-decoration-none small">*edit</a>
+              </div>
+
+              <!-- Billing Address Option 2 -->
+              <div class="d-flex justify-content-between align-items-start mb-5">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="address" id="billingAddress2" />
+                  <label class="form-check-label" for="billingAddress2">
+                    <strong>John Doe</strong><br />
+                    234 Vacation Way<br />
+                    Miami, FL 23456
+                  </label>
+                </div>
+                <a href="#" class="text-decoration-none small">*edit</a>
+              </div>
             </div>
 
-            <!-- Add new address -->
-            <div class="add-new-block">
+            <hr class="my-3 w-100 mb-1" />
+
+            <!-- Add New -->
+            <div class="mb-5">
+              <a href="#" class="text-decoration-none ms-5">+ add new</a>
+            </div>
+
+            <button type="button" class="btn btn-primary mx-auto d-block">Confirm</button>
+        </div>
+      
+
+        <!-- Add new address -->
+        <!-- <div class="add-new-block">
               <button type="button" id="add-billing-address-btn">+ Add New Address</button>
               <div class="new-address-fields" id="billing-address-form">
                 <input type="text" placeholder="Full Name" />
@@ -163,62 +216,123 @@
               </div>
             </div>
           </form>
-        </section>
+        </section> -->
 
         <!-- Shipping -->
-        <section class="step-section" id="shipping-panel">
-          <h2>Shipping Method</h2>
-          <form id="shipping-form">
-            <div class="saved-addresses">
-              <label><input type="radio" name="shipping-address" checked /> John Doe – 123 Sesame St, NY</label>
-              <label><input type="radio" name="shipping-address" /> John Doe – 234 Vacation Way, FL</label>
-            </div>
+        <div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="shipping-tab">
+          <div class="container my-3">
+            <h6 class="mb-3">address</h6>
 
-            <div class="shipping-methods">
-              <label><input type="radio" name="shipping-method" checked /> Standard – Free</label>
-              <label><input type="radio" name="shipping-method" /> Express – $12.99</label>
-              <label><input type="radio" name="shipping-method" /> Overnight – $18.99</label>
+            <!-- Address Option 1 -->
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="address" id="shippingAddress1" checked />
+                <label class="form-check-label" for="shippingAddress1">
+                  <strong>John Doe</strong><br />
+                  123 Sesame St<br />
+                  New York, NY 12345
+                </label>
             </div>
+              <a href="#" class="text-decoration-none small">*edit</a>
+            </div>
+          </div>
 
-            <!-- Add new address -->
-            <div class="add-new-block">
-              <button type="button" id="add-shipping-address-btn">+ Add New Address</button>
-              <div class="new-address-fields" id="shipping-address-form">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Street Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="ZIP Code" />
-                <button type="submit">Save Address</button>
+          <hr class="my-3 w-100 mb-3" />
+
+          <!-- Method -->
+          <div class="container my-3">
+            <section class="mb-5">
+              <h6 class="mb-3">method</h6>
+
+              <div class="form-check d-flex justify-content-between">
+                <input class="form-check-input me-2" type="radio" name="shippingMethod" id="shippingMethod1" />
+                <label class="form-check-label w-100" for="shippingMethod1">
+                  <div class="d-flex justify-content-between">
+                    <span>standard-free</span>
+                    <span>arrives 8/15</span>
+                  </div>
+                </label>
               </div>
-            </div>
-          </form>
-        </section>
+              <div class="form-check d-flex justify-content-between">
+                <input class="form-check-input me-2" type="radio" name="shippingMethod" id="shippingMethod2" />
+                <label class="form-check-label w-100" for="shippingMethod2">
+                  <div class="d-flex justify-content-between">
+                    <span>express-12.99</span>
+                    <span>arrives 8/11</span>
+                  </div>
+                </label>
+              </div>
+              <div class="mb-3 form-check d-flex justify-content-between">
+                <input class="form-check-input me-2" type="radio" name="shippingMethod" id="shippingMethod3" />
+                <label class="form-check-label w-100" for="shippingMethod3">
+                  <div class="d-flex justify-content-between">
+                    <span>overnight-18.99</span>
+                    <span>arrives 8/08</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">comments</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary mx-auto d-block">Confirm</button>
+            </section>
+          </div>
+        </div> 
 
         <!-- Payment -->
-        <section class="step-section" id="payment-panel">
-          <h2>Payment Method</h2>
-          <form id="payment-form">
-            <div class="saved-payments">
-              <label><input type="radio" name="payment-method" checked /> Bank 1 – ****1234</label>
-              <label><input type="radio" name="payment-method" /> Bank 2 – ****2345</label>
-              <label><input type="radio" name="payment-method" /> PayPal</label>
-            </div>
+        <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+          <div class="container my-3">
+            <section class="step-section" id="payment-panel">
+              <h2>payment method</h2>
+              <form id="payment-form">
 
-            <!-- Add new payment -->
-            <div class="add-new-block">
-              <button type="button" id="add-payment-method-btn">+ Add New Payment Method</button>
-              <div class="new-payment-fields" id="payment-method-form">
-                <input type="text" placeholder="Cardholder Name" />
-                <input type="text" placeholder="Card Number" />
-                <input type="text" placeholder="Expiration (MM/YY)" />
-                <input type="text" placeholder="CVV" />
-                <button type="submit">Save Payment</button>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="payment1" checked />
+                    <label class="form-check-label" for="payment1">
+                      <strong>Bank 1</strong><br />
+                      <span class="ms-5">********1234</span><br />
+                    </label>
+                  </div>
+                  <a href="#" class="text-decoration-none small">*edit</a>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="payment1" checked />
+                    <label class="form-check-label" for="payment1">
+                      <strong>Bank 2</strong><br />
+                      <span class="ms-5">********2345</span><br />
+                    </label>
+                  </div>
+                  <a href="#" class="text-decoration-none small">*edit</a>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="payment3" />
+                    <label class="form-check-label" for="payment3">
+                      <strong>Paypal</strong>
+                    </label>
+                  </div>
+                  <a href="#" class="text-decoration-none small">*edit</a>
+                </div>
+              </form>
+            </section>
+          </div>
+              <hr class="my-3 w-100 mb-1" />
+
+              <!-- Add New -->
+              <div class="mb-5">
+                <a href="#" class="text-decoration-none ms-5">+ add new</a>
               </div>
-            </div>
-          </form>
-        </section>
+              <button type="button" class="btn btn-primary mx-auto d-block mb-3">Purchase</button>
+        </div>
       </div>
+
+            <!-- You Might Also like -->
       <section id="youMayAlsoLike">
         <h2>You Might Also Like...</h2>
         <div class="swiper">
@@ -427,5 +541,6 @@
     <script src="js/script.js" defer></script>
     <!-- link to js library for swipe.js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
