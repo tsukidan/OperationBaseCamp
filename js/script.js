@@ -174,3 +174,34 @@ document.addEventListener("DOMContentLoaded", function () {
     if (activeTab) moveDotToTab(activeTab);
   });
 });
+
+// used to reveal and hide add new section
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-toggle]").forEach((toggleBtn) => {
+    toggleBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("data-toggle");
+      const form = this.closest("section, .container, .tab-pane")?.querySelector(`[data-form="${target}"]`);
+      if (form) form.classList.remove("d-none");
+    });
+  });
+
+  document.querySelectorAll("[data-hide]").forEach((hideBtn) => {
+    hideBtn.addEventListener("click", function () {
+      const target = this.getAttribute("data-hide");
+      const form = this.closest("section, .container, .tab-pane")?.querySelector(`[data-form="${target}"]`);
+      if (form) form.classList.add("d-none");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Hide form when button clicked
+  document.querySelectorAll("[data-hide]").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const target = this.getAttribute("data-hide");
+      const form = this.closest(".tab-pane")?.querySelector(`[data-form="${target}"]`);
+      if (form) form.classList.add("d-none");
+    });
+  });
+});

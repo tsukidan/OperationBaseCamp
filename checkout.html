@@ -195,28 +195,32 @@
             <hr class="my-3 w-100 mb-1" />
 
             <!-- Add New -->
-            <div class="mb-5">
-              <a href="#" class="text-decoration-none ms-5">+ add new</a>
+            <div class="mb-3">
+              <a href="#" class="text-decoration-none ms-5" data-toggle="billing-form">+ add new</a>
             </div>
 
-            <button type="button" class="btn btn-primary mx-auto d-block">Confirm</button>
-        </div>
-      
-
-        <!-- Add new address -->
-        <!-- <div class="add-new-block">
-              <button type="button" id="add-billing-address-btn">+ Add New Address</button>
-              <div class="new-address-fields" id="billing-address-form">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Street Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="ZIP Code" />
-                <button type="submit">Save Address</button>
+            <!-- New Address Section -->
+            <div class="bg-light p-3 d-none container my-3" data-form="billing-form">
+              <p><strong>current</strong></p>
+              <div class="mb-2">
+                <p>John Doe<br>123 Sesame St<br>New York, NY 12345</p>
+              </div>
+              <p><strong>new</strong></p>
+              <div class="mb-2">
+                <label for="newName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="newName" placeholder="Full Name" />
+              </div>
+              <div class="mb-2">
+                <label for="newAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="newAddress" placeholder="123 Main St" />
               </div>
             </div>
-          </form>
-        </section> -->
+
+          <!-- Confirm Button -->
+          <div>
+            <button type="button" class="btn btn-primary mx-auto d-block" data-hide="billing-form">Confirm</button>
+          </div>
+        </div>
 
         <!-- Shipping -->
         <div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="shipping-tab">
@@ -325,10 +329,27 @@
               <hr class="my-3 w-100 mb-1" />
 
               <!-- Add New -->
-              <div class="mb-5">
-                <a href="#" class="text-decoration-none ms-5">+ add new</a>
+            <div class="mb-3">
+              <a href="#" class="text-decoration-none ms-5" data-toggle="payment-form">+ add new</a>
+            </div>
+            <div class="bg-light p-3 d-none container my-3" data-form="payment-form">
+              <p><strong>current</strong></p>
+              <div class="mb-2">
+                <p>John Doe<br>123 Sesame St<br>New York, NY 12345</p>
               </div>
-              <button type="button" class="btn btn-primary mx-auto d-block mb-3">Purchase</button>
+              <p><strong>new</strong></p>
+              <div class="mb-2">
+                <label for="newName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="newName" placeholder="Full Name" />
+              </div>
+              <div class="mb-2">
+                <label for="newAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="newAddress" placeholder="123 Main St" />
+              </div>
+            </div>
+          <div>
+            <button type="button" class="btn btn-primary mx-auto d-block" data-hide="billing-form">Confirm</button>
+          </div>
         </div>
       </div>
 
