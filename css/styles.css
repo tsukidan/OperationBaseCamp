@@ -19,6 +19,12 @@
 
   --bodyFont: "Lato", sans-serif;
   --bodyFontWeight: 400;}
+  @font-face {
+  font-family: "Freude";
+  src: url("../assets/fonts/freude.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: "Lato";
   src: url("../assets/fonts/Lato/Lato-Black.woff2") format("woff2");
