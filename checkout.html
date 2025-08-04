@@ -14,20 +14,12 @@
     <!-- link to slider library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- add the js file here (defer) TO DO FIX BUGS-->
-    <!-- <script src="js/script.js" defer></script> -->
   </head>
   <body>
     <header>
-      <div
-        class="bg-white text-dark text-center mx-auto border-bottom fst-italic"
-      >
-        Banner area! Sales! Adventures!
-      </div>
+      <div class="bg-white text-dark text-center mx-auto border-bottom fst-italic">Banner area! Sales! Adventures!</div>
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
-        <div
-          class="container-fluid position-relative d-flex align-items-center justify-content-between"
-        >
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
           <!-- Left Aligned Icons -->
           <div class="d-flex align-items-center mx-0">
             <button
@@ -57,10 +49,7 @@
                 <path d="M4 18l16 0" />
               </svg>
             </button>
-            <button
-              class="btn btn-link text-white d-md-none me-2 p-0"
-              aria-label="Search"
-            >
+            <button class="btn btn-link text-white d-md-none me-2 p-0" aria-label="Search">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -85,10 +74,7 @@
           </div>
           <!-- Right Aligned Icons -->
           <div class="d-flex align-items-center ms-auto">
-            <button
-              class="btn btn-link text-white d-md-none me-2 p-0"
-              aria-label="Profile"
-            >
+            <button class="btn btn-link text-white d-md-none me-2 p-0" aria-label="Profile">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -104,15 +90,10 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
                 <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path
-                  d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"
-                />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
               </svg>
             </button>
-            <button
-              class="btn btn-link text-white d-md-none me-2 p-0"
-              aria-label="Cart"
-            >
+            <button class="btn btn-link text-white d-md-none me-2 p-0" aria-label="Cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -134,10 +115,7 @@
             </button>
           </div>
           <!-- collapsed menu (desktop view) -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="mainNav"
-          >
+          <div class="collapse navbar-collapse justify-content-end" id="mainNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link text-white" href="products.html">Shop</a>
@@ -155,164 +133,191 @@
     </header>
 
     <main>
-          <div class="checkout-container">
+      <div class="checkout-container">
+        <!-- Navigation -->
+        <nav class="progress-steps">
+          <div class="step-label active">Billing</div>
+          <div class="step-label">Shipping</div>
+          <div class="step-label">Payment</div>
+        </nav>
 
-              <!-- Navigation -->
-              <nav class="progress-steps">
-                <div class="step-label active">Billing</div>
-                <div class="step-label">Shipping</div>
-                <div class="step-label">Payment</div>
-              </nav>
-
-              <!-- Billing -->
-              <section class="step-section active" id="billing-panel">
-                <h2>Select Address</h2>
-                <form id="billing-form">
-                  <div class="saved-addresses">
-                    <label><input type="radio" name="billing-address" checked> John Doe – 123 Sesame St, NY</label>
-                    <label><input type="radio" name="billing-address"> John Doe – 234 Vacation Way, FL</label>
-                  </div>
-
-                  <!-- Add new address -->
-                  <div class="add-new-block">
-                    <button type="button" id="add-billing-address-btn">+ Add New Address</button>
-                    <div class="new-address-fields" id="billing-address-form">
-                      <input type="text" placeholder="Full Name">
-                      <input type="text" placeholder="Street Address">
-                      <input type="text" placeholder="City">
-                      <input type="text" placeholder="State">
-                      <input type="text" placeholder="ZIP Code">
-                      <button type="submit">Save Address</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-
-              <!-- Shipping -->
-              <section class="step-section" id="shipping-panel">
-                <h2>Shipping Method</h2>
-                <form id="shipping-form">
-                  <div class="saved-addresses">
-                    <label><input type="radio" name="shipping-address" checked> John Doe – 123 Sesame St, NY</label>
-                    <label><input type="radio" name="shipping-address"> John Doe – 234 Vacation Way, FL</label>
-                  </div>
-
-                  <div class="shipping-methods">
-                    <label><input type="radio" name="shipping-method" checked> Standard – Free</label>
-                    <label><input type="radio" name="shipping-method"> Express – $12.99</label>
-                    <label><input type="radio" name="shipping-method"> Overnight – $18.99</label>
-                  </div>
-
-                  <!-- Add new address -->
-                  <div class="add-new-block">
-                    <button type="button" id="add-shipping-address-btn">+ Add New Address</button>
-                    <div class="new-address-fields" id="shipping-address-form">
-                      <input type="text" placeholder="Full Name">
-                      <input type="text" placeholder="Street Address">
-                      <input type="text" placeholder="City">
-                      <input type="text" placeholder="State">
-                      <input type="text" placeholder="ZIP Code">
-                      <button type="submit">Save Address</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-
-              <!-- Payment -->
-              <section class="step-section" id="payment-panel">
-                <h2>Payment Method</h2>
-                <form id="payment-form">
-                  <div class="saved-payments">
-                    <label><input type="radio" name="payment-method" checked> Bank 1 – ****1234</label>
-                    <label><input type="radio" name="payment-method"> Bank 2 – ****2345</label>
-                    <label><input type="radio" name="payment-method"> PayPal</label>
-                  </div>
-
-                  <!-- Add new payment -->
-                  <div class="add-new-block">
-                    <button type="button" id="add-payment-method-btn">+ Add New Payment Method</button>
-                    <div class="new-payment-fields" id="payment-method-form">
-                      <input type="text" placeholder="Cardholder Name">
-                      <input type="text" placeholder="Card Number">
-                      <input type="text" placeholder="Expiration (MM/YY)">
-                      <input type="text" placeholder="CVV">
-                      <button type="submit">Save Payment</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-
+        <!-- Billing -->
+        <section class="step-section active" id="billing-panel">
+          <h2>Select Address</h2>
+          <form id="billing-form">
+            <div class="saved-addresses">
+              <label><input type="radio" name="billing-address" checked /> John Doe – 123 Sesame St, NY</label>
+              <label><input type="radio" name="billing-address" /> John Doe – 234 Vacation Way, FL</label>
             </div>
-            <section id="youMayAlsoLike">
-              <h2>You Might Also Like...</h2>
-              <div class="swiper">
-                <div class="swiper-wrapper" id="divCarousel1">
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 1">
-                    <p>Product Name 1</p>
-                    <span>$00.00</span>
-                  </div>
 
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 2">
-                    <p>Product Name 2</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 3">
-                    <p>Product Name 3</p>
-                    <span>$00.00</span>
-                  </div>
-  
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 4">
-                    <p>Product Name 4</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 5">
-                    <p>Product Name 5</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 6">
-                    <p>Product Name 6</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 7">
-                    <p>Product Name 7</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 8">
-                    <p>Product Name 8</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 9">
-                    <p>Product Name 9</p>
-                    <span>$00.00</span>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg" alt="PRODUCT 10">
-                    <p>Product Name 10</p>
-                    <span>$00.00</span>
-                  </div>
-                </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            <!-- Add new address -->
+            <div class="add-new-block">
+              <button type="button" id="add-billing-address-btn">+ Add New Address</button>
+              <div class="new-address-fields" id="billing-address-form">
+                <input type="text" placeholder="Full Name" />
+                <input type="text" placeholder="Street Address" />
+                <input type="text" placeholder="City" />
+                <input type="text" placeholder="State" />
+                <input type="text" placeholder="ZIP Code" />
+                <button type="submit">Save Address</button>
               </div>
-            </section>
+            </div>
+          </form>
+        </section>
 
+        <!-- Shipping -->
+        <section class="step-section" id="shipping-panel">
+          <h2>Shipping Method</h2>
+          <form id="shipping-form">
+            <div class="saved-addresses">
+              <label><input type="radio" name="shipping-address" checked /> John Doe – 123 Sesame St, NY</label>
+              <label><input type="radio" name="shipping-address" /> John Doe – 234 Vacation Way, FL</label>
+            </div>
+
+            <div class="shipping-methods">
+              <label><input type="radio" name="shipping-method" checked /> Standard – Free</label>
+              <label><input type="radio" name="shipping-method" /> Express – $12.99</label>
+              <label><input type="radio" name="shipping-method" /> Overnight – $18.99</label>
+            </div>
+
+            <!-- Add new address -->
+            <div class="add-new-block">
+              <button type="button" id="add-shipping-address-btn">+ Add New Address</button>
+              <div class="new-address-fields" id="shipping-address-form">
+                <input type="text" placeholder="Full Name" />
+                <input type="text" placeholder="Street Address" />
+                <input type="text" placeholder="City" />
+                <input type="text" placeholder="State" />
+                <input type="text" placeholder="ZIP Code" />
+                <button type="submit">Save Address</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- Payment -->
+        <section class="step-section" id="payment-panel">
+          <h2>Payment Method</h2>
+          <form id="payment-form">
+            <div class="saved-payments">
+              <label><input type="radio" name="payment-method" checked /> Bank 1 – ****1234</label>
+              <label><input type="radio" name="payment-method" /> Bank 2 – ****2345</label>
+              <label><input type="radio" name="payment-method" /> PayPal</label>
+            </div>
+
+            <!-- Add new payment -->
+            <div class="add-new-block">
+              <button type="button" id="add-payment-method-btn">+ Add New Payment Method</button>
+              <div class="new-payment-fields" id="payment-method-form">
+                <input type="text" placeholder="Cardholder Name" />
+                <input type="text" placeholder="Card Number" />
+                <input type="text" placeholder="Expiration (MM/YY)" />
+                <input type="text" placeholder="CVV" />
+                <button type="submit">Save Payment</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+      <section id="youMayAlsoLike">
+        <h2>You Might Also Like...</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper" id="divCarousel1">
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 1"
+              />
+              <p>Product Name 1</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 2"
+              />
+              <p>Product Name 2</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 3"
+              />
+              <p>Product Name 3</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 4"
+              />
+              <p>Product Name 4</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 5"
+              />
+              <p>Product Name 5</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 6"
+              />
+              <p>Product Name 6</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 7"
+              />
+              <p>Product Name 7</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 8"
+              />
+              <p>Product Name 8</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 9"
+              />
+              <p>Product Name 9</p>
+              <span>$00.00</span>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                alt="PRODUCT 10"
+              />
+              <p>Product Name 10</p>
+              <span>$00.00</span>
+            </div>
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -321,11 +326,7 @@
         <nav class="social-nav" aria-label="Social Media Links">
           <ul class="social-links">
             <li>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                aria-label="Facebook"
-              >
+              <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -339,17 +340,12 @@
                   class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-                  />
+                  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                 </svg>
               </a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                aria-label="Instagram"
+              <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -363,19 +359,13 @@
                   class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-                  />
+                  <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                   <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                   <path d="M16.5 7.5v.01" /></svg
               ></a>
             </li>
             <li>
-              <a
-                href="https://www.tiktok.com"
-                target="_blank"
-                aria-label="Tiktok"
-              >
+              <a href="https://www.tiktok.com" target="_blank" aria-label="Tiktok">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -433,7 +423,8 @@
       </footer>
     </footer>
 
-    <!-- <script src="js/script.js"></script> -->
+    <!-- add the js file here (defer) TO DO FIX BUGS-->
+    <script src="js/script.js" defer></script>
     <!-- link to js library for swipe.js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
