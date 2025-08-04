@@ -671,3 +671,11 @@ Toggler Border Removal
   box-shadow: none !important;
   background-image: none !important;
 }
+
+/*checkout styles*/
+.checkoutNav {
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2em;
+}
