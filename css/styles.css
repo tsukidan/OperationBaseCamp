@@ -1,3 +1,21 @@
+/*--------------------------------------------------------------------------------
+|  CSS ROOT
+|  - Please put any reusable variables within this block of code to be referenced
+|    in future css changes. This ensures we are reusing code and have consistency.
+| 
+|  example:
+|  --varName: property; (this property is dependent on the var type!)
+--------------------------------------------------------------------------------*/
+:root {
+  --redMaroon: #8c324a;
+  --skyBlue: #6295d9;
+  --navyBlue: #022156;
+  --brightOrange: #f25c05;
+  --brightYellow: #fe9d18;
+  --forestGreen: #2f7a3e;
+  --plum: #5d3a58;
+  --brown: #713b1c;
+}
 /* === Reset & Base === */
 * {
   margin: 0;
