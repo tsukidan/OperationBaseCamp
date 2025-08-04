@@ -8,53 +8,55 @@ function formValidation1() {
   // create a boolean variable that tells us if the form is true or not
   let isValid = true;
 
-    // variables for the inputs
-    let inputNameFirst = document.getElementById(""); // name input
-    let inputNameLast = document.getElementById("");
-    let inputMail = document.getElementById(""); // email input
-    let inputTel = document.getElementById(""); // phone input
-    let radioMail = document.getElementById(""); // preferred method of contact radio email
-    let radioTel = document.getElementById(""); // preferred method of contact radio phone
+  // variables for the inputs
+  let inputNameFirst = document.getElementById(""); // name input
+  let inputNameLast = document.getElementById("");
+  let inputMail = document.getElementById(""); // email input
+  let inputTel = document.getElementById(""); // phone input
+  let radioMail = document.getElementById(""); // preferred method of contact radio email
+  let radioTel = document.getElementById(""); // preferred method of contact radio phone
 
-    // box(es) to list errors
-    let eBox = document.getElementById("");
+  // box(es) to list errors
+  let eBox = document.getElementById("");
 
-    // reset eBox to an empty string
+  // reset eBox to an empty string
 
-    // create an output of errors, this works if the errors are displayed as a list
-    let output = "<ul>";
+  // create an output of errors, this works if the errors are displayed as a list
+  let output = "<ul>";
 
-    // REGEX validation
-    let firstNameRegex = /^[A-Za-z]+(?:[-'][A-Za-z]+)*$/;
-    let lastNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
-    let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let telRegex = /^\+?[0-9\s\-().]{7,20}$/;
+  // REGEX validation
+  let firstNameRegex = /^[A-Za-z]+(?:[-'][A-Za-z]+)*$/;
+  let lastNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+  let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let telRegex = /^\+?[0-9\s\-().]{7,20}$/;
 
-    // Remove error class (depends on what the class is named)
-    inputNameFirst.classList.remove("");
-    inputNameLast.classList.remove("");
-    inputMail.classList.remove("");
-    inputTel.classList.remove("");
-    eBox.classList.remove("");
+  // Remove error class (depends on what the class is named)
+  inputNameFirst.classList.remove("");
+  inputNameLast.classList.remove("");
+  inputMail.classList.remove("");
+  inputTel.classList.remove("");
+  eBox.classList.remove("");
 
-    // validate first name
+  // validate first name
 
-    //validate last name
+  //validate last name
 
-    // validate email
+  // validate email
 
-    // validate phone number
+  // validate phone number
 
-    // validate method of contact
+  // validate method of contact
 
-    // add output to the page
-    output += "</ul>";
-    eBox.innerHTML += output;
+  // add output to the page
+  output += "</ul>";
+  eBox.innerHTML += output;
 
-    // if form is valid output
-    if(isValid === true){
-        alert(`Thank you, ${inputNameFirst.value} for reaching out! A team member will address your concerns promptly. DISCLAIMER: This is a demonstration form for an educational project. No real information has been gathered.`)
-    }
+  // if form is valid output
+  if (isValid === true) {
+    alert(
+      `Thank you, ${inputNameFirst.value} for reaching out! A team member will address your concerns promptly. DISCLAIMER: This is a demonstration form for an educational project. No real information has been gathered.`
+    );
+  }
 }
 
 // July 31st newsletter alert
@@ -104,24 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.remove();
     });
 
-        // remove popup when users subscribes
-        document.getElementById("newsletter-submit").addEventListener("click", function () {
-            let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            let mailInput = document.getElementById("newsletter-email").value.trim();
-
-            if (mailInput === ""){
-                alert("Please enter your email address.");
-                return;
-            }
-            if (!mailRegex.test(mailInput)){
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            alert("Thanks for subscribing to our newsletter, see you on the trail! DISCLAIMER: This form is an educational demonstration, no real information was collected.");
-            popup.remove();
-        });
-    }
+    // remove popup when users subscribes
+    document.getElementById("newsletter-submit").addEventListener("click", function () {
+      let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let mailInput = document.getElementById("newsletter-email").value.trim();
 
       if (mailInput === "") {
         alert("Please enter your email address.");
@@ -159,60 +147,56 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//event listener to move the dot on the checkout page
+// functions to facilitate movable nav effect
 document.addEventListener("DOMContentLoaded", function () {
   const dot = document.getElementById("progressDot");
   const tabButtons = document.querySelectorAll(".checkoutTabs .nav-link");
 
   function moveDotToTab(tab) {
     const tabRect = tab.getBoundingClientRect();
-    const navRect = tab.parentElement.parentElement.getBoundingClientRect();
+    const navRect = tab.closest(".checkout-progress").getBoundingClientRect();
     const centerX = tabRect.left + tabRect.width / 2;
     const dotX = centerX - navRect.left - dot.offsetWidth / 2;
     dot.style.left = `${dotX}px`;
   }
 
+  // Initial position
   const initialActive = document.querySelector(".checkoutTabs .nav-link.active");
-  if (initialActive) moveDotToTab(initialActive);
+  if (initialActive) {
+    moveDotToTab(initialActive);
+  }
 
+  // Listen for Bootstrap tab change event
   tabButtons.forEach((tab) => {
     tab.addEventListener("shown.bs.tab", function () {
+      console.log("Tab changed:", this.id);
       moveDotToTab(this);
     });
   });
 
+  // Move on resize
   window.addEventListener("resize", () => {
     const activeTab = document.querySelector(".checkoutTabs .nav-link.active");
     if (activeTab) moveDotToTab(activeTab);
   });
 });
 
-// used to reveal and hide add new section
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+  // Show the form when "Add New" is clicked
   document.querySelectorAll("[data-toggle]").forEach((toggleBtn) => {
     toggleBtn.addEventListener("click", function (e) {
       e.preventDefault();
       const target = this.getAttribute("data-toggle");
-      const form = this.closest("section, .container, .tab-pane")?.querySelector(`[data-form="${target}"]`);
+      const form = this.closest(".tab-pane").querySelector(`[data-form="${target}"]`);
       if (form) form.classList.remove("d-none");
     });
   });
 
+  // Hide the form when "Confirm" is clicked
   document.querySelectorAll("[data-hide]").forEach((hideBtn) => {
     hideBtn.addEventListener("click", function () {
       const target = this.getAttribute("data-hide");
-      const form = this.closest("section, .container, .tab-pane")?.querySelector(`[data-form="${target}"]`);
-      if (form) form.classList.add("d-none");
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Hide form when button clicked
-  document.querySelectorAll("[data-hide]").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const target = this.getAttribute("data-hide");
-      const form = this.closest(".tab-pane")?.querySelector(`[data-form="${target}"]`);
+      const form = this.closest(".tab-pane").querySelector(`[data-form="${target}"]`);
       if (form) form.classList.add("d-none");
     });
   });
