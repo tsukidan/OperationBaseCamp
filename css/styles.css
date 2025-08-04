@@ -1,17 +1,24 @@
 /* === Reset & Base === */
 :root{
-  --magenta: #8C324A;
-  --sky-blue: #6295D9;
-  --dk-blue: #022156;
-  --orange: #F25C05;
-  --gold: #FE9D18;
-  --green: #2F7A3E;
-  --plum: #5D3A58;
-  --brown: #713B1C;
-  --black: #333;
-  --white: #F9F9F9;
-}
 
+ --redMaroon: #8c324a;
+  --skyBlue: #6295d9;
+  --navyBlue: #022156;
+  --brightOrange: #f25c05;
+  --brightYellow: #fe9d18;
+  --forestGreen: #2f7a3e;
+  --plum: #5d3a58;
+  --brown: #713b1c;
+
+  /*Fonts*/
+  --headingFont: "Freude";
+  --headingWeight: 400;
+
+  --subtitleFont: "MontserratAlt", sans-serif;
+  --subtitleWeight: 800;
+
+  --bodyFont: "Lato", sans-serif;
+  --bodyFontWeight: 400;}
 @font-face {
   font-family: "Lato";
   src: url("../assets/fonts/Lato/Lato-Black.woff2") format("woff2");
