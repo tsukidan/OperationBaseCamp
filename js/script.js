@@ -59,74 +59,79 @@ function formValidation1() {
 
 // July 31st newsletter alert
 
+
 // run function when page is loaded
 
-document.addEventListener("DOMContentLoaded", function (){
-    // check to see if user has already been on site during this browsing session
-    if (sessionStorage.getItem("newsletterShown")) return;
+// document.addEventListener("DOMContentLoaded", function (){
+//     // check to see if user has already been on site during this browsing session
+//     if (sessionStorage.getItem("newsletterShown")) return;
 
-    // a 5 second delay
-    setTimeout(showNewsletterPopup, 5000);
+//     // a 5 second delay
+//     setTimeout(showNewsletterPopup, 5000);
 
     // function for newsletter
-    function showNewsletterPopup() {
-        // mark as shown so it won't show again til browser tab is closed
-        sessionStorage.setItem("newsletterShown", "true");
+//     function showNewsletterPopup() {
+//         // mark as shown so it won't show again til browser tab is closed
+//         sessionStorage.setItem("newsletterShown", "true");
 
-        // create div and style it
-        const popup = document.createElement("div");
-        popup.id = "newsletter-popup";
-        popup.style.position = "fixed";
-        popup.style.top = "50%";
-        popup.style.left = "50%";
-        popup.style.transform = "translate(-50%, -50%)";
-        popup.style.background = "#fff";
-        popup.style.padding = "20px";
-        popup.style.border = "2px solid #333";
-        popup.style.borderRadius = "8px";
-        popup.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-        popup.style.zIndex = "9999";
-        popup.style.textAlign = "center";
+//         // create div and style it
+//         const popup = document.createElement("div");
+//         popup.id = "newsletter-popup";
+//         popup.style.position = "fixed";
+//         popup.style.top = "50%";
+//         popup.style.left = "50%";
+//         popup.style.transform = "translate(-50%, -50%)";
+//         popup.style.background = "#fff";
+//         popup.style.padding = "20px";
+//         popup.style.border = "2px solid #333";
+//         popup.style.borderRadius = "8px";
+//         popup.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
+//         popup.style.zIndex = "9999";
+//         popup.style.textAlign = "center";
 
-        popup.innerHTML = 
-            `<h2>Join our newsletter</h2>
-            <p>Get exclusive offers and updates.</p>
-            <input type="email" id="newsletter-email" placeholder="Your email" style="padding:5px; width: 80%;">
-            <br><br>
-            <button id="newsletter-submit" style="padding:8px 12px;">Subscribe</button>
-            <br><br>
-            <button id="newsletter-close" style="background:none; border:none; color:red; cursor:pointer;">Close</button>`;
+//         popup.innerHTML = 
+//             `<h2>Join our newsletter</h2>
+//             <p>Get exclusive offers and updates.</p>
+//             <input type="email" id="newsletter-email" placeholder="Your email" style="padding:5px; width: 80%;">
+//             <br><br>
+//             <button id="newsletter-submit" style="padding:8px 12px;">Subscribe</button>
+//             <br><br>
+//             <button id="newsletter-close" style="background:none; border:none; color:red; cursor:pointer;">Close</button>`;
 
-        // add this to the body
-        document.body.appendChild(popup);
+//         // add this to the body
+//         document.body.appendChild(popup);
 
-        // remove popup when user clicks remove
-        document.getElementById("newsletter-close").addEventListener("click", function () {
-            popup.remove();
-        });
+//         // remove popup when user clicks remove
+//         document.getElementById("newsletter-close").addEventListener("click", function () {
+//             popup.remove();
+//         });
 
-        // remove popup when users subscribes
-        document.getElementById("newsletter-submit").addEventListener("click", function () {
-            let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            let mailInput = document.getElementById("newsletter-email").value.trim();
+//         // remove popup when users subscribes
+//         document.getElementById("newsletter-submit").addEventListener("click", function () {
+//             let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//             let mailInput = document.getElementById("newsletter-email").value.trim();
 
-            if (mailInput === ""){
-                alert("Please enter your email address.");
-                return;
-            }
-            if (!mailRegex.test(mailInput)){
-                alert("Please enter a valid email address.");
-                return;
-            }
+//             if (mailInput === ""){
+//                 alert("Please enter your email address.");
+//                 return;
+//             }
+//             if (!mailRegex.test(mailInput)){
+//                 alert("Please enter a valid email address.");
+//                 return;
+//             }
 
-            alert("Thanks for subscribing to our newsletter, see you on the trail! DISCLAIMER: This form is an educational demonstration, no real information was collected.");
-            popup.remove();
-        });
-    }
+//             alert("Thanks for subscribing to our newsletter, see you on the trail! DISCLAIMER: This form is an educational demonstration, no real information was collected.");
+//             popup.remove();
+//         });
+//     }
 
-});
+// });
+
+
 
 // event listener to operate swipe.js on checkout page 'You Might Also Like'
+
+//
 
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".swiper", {
@@ -145,3 +150,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// a function that searches the dom for a newsletter section and validates the users email
+
+document.addEventListener("DOMContentLoaded", function () {
+    // email regex, confirms email they entered is valid
+    let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // variable that grabs the btns with submit newsletter class
+    const newsletterBtns = document.querySelectorAll(".newsletterSubmit");
+
+    newsletterBtns.forEach(function (button) {
+        // when button is clicked
+        button.addEventListener("click", function () {
+
+            let form = button.closest(".newsletters");
+            let mailInput = form.querySelector("input[type='email']");
+
+            // remove error class
+            mailInput.classList.remove("errorClassValidate");
+
+            // if empty string
+            if (mailInput.value.trim() === "") {
+                mailInput.classList.add("errorClassValidate");
+                alert("Please enter your email address.");
+                return;
+            }
+
+            // if email is invalid
+            if (!mailRegex.test(mailInput.value.trim())) {
+                mailInput.classList.add("errorClassValidate");
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // passes validation, confirms to user and disclaimer
+            alert("Thank you for subscribing to our newsletter, see you on the trail! DISCLAIMER: This form is an educational demonstration, no real information was collected.");
+            mailInput.value = ""; // clears email
+        });
+    });
+});

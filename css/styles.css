@@ -841,3 +841,21 @@ Toggler Border Removal
 .carousel-indicators .active {
   background-color: #0d6efd; /* Bootstrap primary color */
 }
+
+/* newsletter sign up styles */
+.emailInput {
+  display: grid;
+  gap: 1rem;
+}
+
+.emailInput input {
+  width: 266px;
+}
+
+.newsletterSubmit {
+  margin-top: 1rem;
+}
+
+.errorClassValidate{
+  border-color: red;
+}
