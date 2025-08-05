@@ -1110,6 +1110,9 @@ Toggler Border Removal
   justify-content: space-between;
   padding: 0.5rem, 1rem;
 }
+.card{
+  background-color:#022156 !important;
+}
 .card-img-overlay {
   background-image: url('assets/product-images/_DSC3385.jpg');
   background-size: cover;  
