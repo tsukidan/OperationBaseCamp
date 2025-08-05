@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Product Options
+// Color Selection
 const colorButtons = document.querySelectorAll('.color-button');
 
   colorButtons.forEach(button => {
@@ -161,5 +162,21 @@ const colorButtons = document.querySelectorAll('.color-button');
       
       const selectedColor = button.querySelector('.color-dot').classList[1]; 
       console.log("Selected color:", selectedColor); 
+    });
+  });
+// Size Selection
+const sizeButtons = document.querySelectorAll('.size-btn');
+
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // cancel other buttons' selected styles
+      sizeButtons.forEach(btn => btn.classList.remove('selected'));
+
+      // Add selected style to the clicked button
+      button.classList.add('selected');
+
+      // Selected size (optional)
+      const selectedSize = button.textContent;
+      console.log("Selected size:", selectedSize);
     });
   });

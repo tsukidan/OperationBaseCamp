@@ -624,18 +624,22 @@ Social Media Links
   justify-content: space-around;
 }
 .size-btn {
-  justify-self: center;
   width: 45px;
   height: 45px;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .size-btn.selected {
   background: #0e0f0f;
   color: #fff;
+  border: 1px solid #0e0f0f;
 }
 
 .price-control {
