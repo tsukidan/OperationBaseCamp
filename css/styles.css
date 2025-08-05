@@ -350,7 +350,7 @@ padding: .3rem;
 
 /* === Footer === */
 footer {
-  background: #000000;
+  background: var(--navyBlue);
   color: #fff;
   text-align: center;
   padding: 1rem 0;
