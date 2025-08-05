@@ -306,14 +306,14 @@ body {
 .backpacks {
   background-image: url("../assets/product-images/backpackplaceholder.jpg");
 }
-.mission-statment {
+.mission-statement {
   background-image: url("../assets/product-images/hammockplaceholder.jpg");
 }
 
 .banner h1,
 .top-rated h1,
 .backpacks h1,
-.mission-statment h1 {
+.mission-statement h1 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1056,6 +1056,153 @@ Toggler Border Removal
 .contact-section button[type="submit"]:hover {
   background-color: var(--brightOrange);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------------------------
 |  checkout FROM page
