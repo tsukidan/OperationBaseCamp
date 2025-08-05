@@ -1056,3 +1056,221 @@ Toggler Border Removal
 .contact-section button[type="submit"]:hover {
   background-color: var(--brightOrange);
 }
+
+/*--------------------------------------------------------------------------------
+|  checkout FROM page
+|  For CSS testing
+--------------------------------------------------------------------------------*/
+
+
+/* ===  Checkout container === */
+.checkout-container {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+
+/* ===  Step navigation bar === */
+.step-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.step-navigation .step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+
+.form-step {
+  margin-bottom: 2rem;
+}
+
+
+
+/* ===  heading === */
+.form-step h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+
+/* === Address and Payment Cards=== */
+.address-list, .payment-list {
+  margin-top: 1rem;
+}
+
+.address-card, .payment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+.address-card label, .payment-card label {
+  cursor: pointer;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+
+
+/* === edit button === */
+.edit-action {
+  background: none;
+  border: 1px solid #888;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.edit-action:hover {
+  background-color: #eee;
+}
+
+.add-address-wrapper {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.toggle-check {
+  display: none;
+}
+
+
+.add-address-btn {
+  display: inline-block;
+  background-color: #cfdcf4;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #003366;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-address-btn:hover {
+  background-color: #b5cbee;
+}
+
+.new-address-box {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.toggle-check:checked ~ .new-address-box {
+  display: block;
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.delivery-options {
+  margin-top: 1.5rem;
+}
+
+.delivery-options label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.delivery-options select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.order-summary {
+  margin-top: 1.5rem;
+}
+
+.summary-box {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.summary-item, .summary-item.mini {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.summary-item.mini {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.8rem;
+}
+
+button[type="submit"], .purchase-btn {
+  background-color: #003366;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1.2rem auto 0;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover, .purchase-btn:hover {
+  background-color: #002244;
+}
