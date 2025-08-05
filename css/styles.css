@@ -929,7 +929,11 @@ Social Media Links
   background-color: #ccc;
   border: 1px solid #999;
 }
-
+.carousel-inner-rounded > .carousel-item > img{
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
 .arrow {
   position: absolute;
   top: 50%;
@@ -1188,16 +1192,63 @@ Toggler Border Removal
   background-color: var(--sunRay);
 }
 /* About Section page*/
+.hero {
+  background-image: url('assets/product-images/_DSC3540.jpg');
+  background-size: cover;  
+  background-position: bottom; 
+  background-repeat: no-repeat; 
+  height: 120vh;           
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  padding: 2rem;
+}
+.hero-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: contain;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;                 
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.hero-content h2{
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem, 1rem;
 }
+.card{
+  background-color:#022156 !important;
+}
 .card-img-overlay {
-  background-image: url("assets/product-images/Hikers\ talking.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('assets/product-images/_DSC3385.jpg');
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
   display: flex;
   align-items: left;
   justify-content: center;
@@ -1228,6 +1279,22 @@ Toggler Border Removal
 .card-text-featured-content {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+.card-group {
+  height: 250px;
+  width: 500px;
+}
+.card-group img container-1{
+background-image: url('assets/product-images/_DSC3385.jpg');
+background-size:auto;
+}
+.card-group img container-2{
+background-image: url('assets/product-images/_DSC3497.jpg');
+background-size:auto;
+}
+.card-group img container-3{
+background-image: url('assets/product-images/_DSC3482.jpg');
+background-size:auto;
 }
 .email {
   font-size: 1.25rem;
