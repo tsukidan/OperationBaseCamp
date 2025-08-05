@@ -270,7 +270,7 @@ body {
 .banner,
 .top-rated,
 .backpacks,
-.mission-statment {
+.mission-statement {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -281,7 +281,7 @@ body {
 }
 
 .banner,
-.mission-statment {
+.mission-statement {
   grid-column: 1 / -1;
 }
 
@@ -289,7 +289,7 @@ body {
   height: 41vh;
 }
 
-.mission-statment {
+.mission-statement {
   aspect-ratio: 2 / 1;
 }
 .top-rated,
@@ -307,7 +307,7 @@ body {
   background-image: url("../assets/product-images/backpackplaceholder.jpg");
 }
 .mission-statement {
-  background-image: url("../assets/product-images/hammockplaceholder.jpg");
+  background-image: url("../assets/product-images/hammockplaceholder.jpg") !important;
 }
 
 .banner h1,
@@ -353,7 +353,7 @@ body {
   padding: 0 0.5rem 0.6rem;
 }
 
-.mission-statment h1 {
+.mission-statement h1 {
   top: 0;
   bottom: auto;
   border-top-left-radius: 1rem;
@@ -939,7 +939,7 @@ Toggler Border Removal
 .contact-section .form-container {
   max-width: 600px;
   margin: 0 auto;
-  background-color: var(--navyBlue); 
+  background-color: var(--navyBlue);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -1122,7 +1122,8 @@ Toggler Border Removal
   position: relative;
   color: #fff;
   padding: 2rem;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -1130,16 +1131,16 @@ Toggler Border Removal
 .card-title-newsletter {
   font-size: 2rem;
   margin-bottom: 1rem;
-  line-height: 1.2; 
+  line-height: 1.2;
 }
 .card-text-newsletter {
- font-size: 1.25rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
 }
 .card-title-featured-content {
-font-size: 2rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
-  line-height: 1.2; 
+  line-height: 1.2;
 }
 .card-text-featured-content {
   font-size: 1.25rem;
@@ -1162,14 +1163,14 @@ background-image: url('assets/product-images/_DSC3482.jpg');
 background-size:auto;
 }
 .email {
-   font-size: 1.25rem;
-   margin-top: 1rem;
-   margin-bottom: 0.001rem;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0.001rem;
 }
 .hashtag {
-text-align: center;
-font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  line-height: 1.2; 
+  line-height: 1.2;
   font-style: bold;
 }

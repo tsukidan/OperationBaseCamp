@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supply Post – Shop</title>
+    <!-- Boostrap CDN Implementation! Please do not remove!-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- add the js file here (defer) TO DO FIX BUGS-->
+    <!-- <script src="js/script.js" defer></script> -->
+  </head>
+  <body>
+
+    <header>
+      <div
+        class="bg-white text-dark text-center mx-auto border-bottom fst-italic"
+      >
+        Use the code SUMMERFUN for 10% off!
+      </div>
+      <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
+        <div
+          class="container-fluid position-relative d-flex align-items-center justify-content-between"
+        >
+          <!-- Left Aligned Icons -->
+          <div class="d-flex align-items-center mx-0">
+        <button
+          class="navbar-toggler d-lg-none me-2 text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+        </button>
+        <button
+          class="btn btn-link text-white d-md-none me-2 p-0"
+          aria-label="Search"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+          >
+            <path stroke="none" d="M0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+        </button>
+          </div>
+          <!-- Placeholder Logo! -->
+          <div class="position-absolute start-50 translate-middle-x">
+        <a href="index.html" class="logo-btn">Supply Post</a>
+          </div>
+          <!-- Right Aligned Icons -->
+          <div class="d-flex align-items-center ms-auto">
+        <button
+          class="btn btn-link text-white d-md-none me-2 p-0"
+          aria-label="Profile"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path
+          d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"
+            />
+          </svg>
+        </button>
+        <button
+          class="btn btn-link text-white d-md-none me-2 p-0"
+          aria-label="Cart"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+          d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
+            />
+            <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+          </svg>
+        </button>
+          </div>
+          <!-- collapsed menu (desktop view) -->
+          <div
+        class="collapse navbar-collapse justify-content-end"
+        id="mainNav"
+          >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="products.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="checkout.html">Cart</a>
+          </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-5 text-white text-center position-relative" 
+            style="background: url('assets/images/shop-banner.jpg') center/cover no-repeat;">
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+      <div class="container position-relative">
+        <h1 class="fw-bold" id="category-title">Cycling</h1>
+        <p class="lead" id="category-description">Find equipment for all your outdoor adventures.</p>
+      </div>
+    </section>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <button
+              class="sort-toggler btn btn-link text-dark"
+              type="button"
+              aria-label="Sort Products"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-sort"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 9l4 -4l4 4m-4 -4v14" />
+                <path d="M21 15l-4 4l-4 -4m4 4v-14" />
+              </svg>
+            </button>
+          </div>
+          <div class="col-1">
+            <button
+              class="filter-toggler btn btn-link text-dark"
+              type="button"
+              aria-label="Filter Products"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-horizontal"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M4 6l8 0" />
+                <path d="M16 6l4 0" />
+                <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M4 12l2 0" />
+                <path d="M10 12l10 0" />
+                <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M4 18l11 0" />
+                <path d="M19 18l1 0" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row row-cols-2 g-4 row-cols-lg-4 g-4">
+
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 1"
+                />
+                <!-- Stacked buttons, bottom right -->
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="add-cart-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-0">
+                  <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                    Product Name
+                  </a>
+                </h5>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 2"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 2"
+                />
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="add-cart-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 2">
+                  Product Name
+                </a>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 3"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 3"
+                />
+                <!-- Stacked buttons, bottom right -->
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="add-cart-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 3">
+                  Product Name
+                </a>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card">
+              <div class="position-relative">
+                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 4"></a>
+                <img
+                  src="assets/product-images/Product Icon.svg"
+                  class="card-img-top"
+                  alt="Product 4"
+                />
+                <!-- Stacked buttons, bottom right -->
+                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
+                  <button
+                    class="favorite-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Wishlist-Item"
+                  >
+                    <img src="assets/ui/heart icon.svg" />
+                  </button>
+                  <button
+                    class="add-cart-btn btn btn-link text-white"
+                    type="button"
+                    aria-label="Add-to-Cart"
+                  >
+                    <img src="assets/ui/+ to cart Icon.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 4">
+                  Product Name
+                </a>
+                <p class="card-text">$00.00</p>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat more cards as needed -->
+
+        </div>
+      </div>
+      <!-- Newsletter Signup Dummy Section -->
+      <section class="py-5 bg-light">
+            <div class="container">
+              <h6 class="fw-bold text-dark">Sign up for Operation Basecamp newsletters</h6>
+              <p class="mb-4 text-dark">for 10% off, new adventure plans, and more!</p>
+              <form class="row g-2 justify-content-center" aria-label="Newsletter signup form">
+                <div class="row-auto">
+                  <input type="email" class="form-control" placeholder="youremail@gmail.com..." required>
+                </div>
+                <div class="row-auto justify-content-end align-items-end">
+                  <button type="submit" class="btn btn-primary bg-">Sign me up!</button>
+                </div>
+              </form>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+      <section class="py-5">
+        <div class="container">
+          <h5 class="text-right mb-4">We think these articles might interest you!</h5>
+          <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-4">
+              <a href="#" class="text-decoration-none text-dark d-block">
+                <img src="assets/articles/mtb-sedona.jpg" class="img-fluid rounded mb-2" alt="I'm related!">
+                <h5 class="fw-semibold">Im a related Article!</h5>
+              </a>
+            </div>
+            <div class="col-6 col-md-4">
+              <a href="#" class="text-decoration-none text-dark d-block">
+                <img src="assets/articles/best-cities-cyclists.jpg" class="img-fluid rounded mb-2" alt="I'm related!">
+                <h5 class="fw-semibold">Im a related Article!</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+      <!-- Photo Carousel -->
+      <section class="py-5 bg-light text-center">
+          <div class="container">
+            <h3 class="fw-bold mb-4">#StayWild</h3>
+            <div id="communityCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <img src="https://shop.reidbikes.com/cdn/shop/files/mtb-sport-275-mountain-bike-my24-black-reid-bikes-558544.png?v=1730603970" class="d-block w-100" alt="Community photo 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://www.elite-wheels.com/wp-content/uploads/2023/08/Gravel-Bike.jpg" class="d-block w-100" alt="Community photo 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://jacksonhole-traveler-production.s3.amazonaws.com/wp-content/uploads/2014/05/grandteton-mountainbike-1280x853.jpg" class="d-block w-100" alt="Community photo 3">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev mt-3" type="button" data-bs-target="#communityCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#communityCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+              </button>
+              <!-- Carousel Indicators -->
+              <div class="carousel-indicators mt-3 position-static">
+                <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        
+    </main>
+
+
+    <footer>
+      <footer>
+        
+        <nav class="social-nav" aria-label="Social Media Links">
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                  />
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                  <path d="M16.5 7.5v.01" /></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com"
+                target="_blank"
+                aria-label="Tiktok"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <h2>Stay Wild.</h2>
+        <section class="footer-links" aria-label="Footer navigation">
+          <section aria-label="Company Information">
+            <h3>ABOUT US</h3>
+            <ul>
+              <li><a href="about.html">Our Mission</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </section>
+          <section aria-label="Customer Service">
+            <h3>CUSTOMER SERVICE</h3>
+            <ul>
+              <li><a href="#">Find a Store</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </section>
+          <section aria-label="Legal and Policies">
+            <h3>LEGAL</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </section>
+          <section aria-label="Orders and Returns">
+            <h3>ORDERS AND RETURNS</h3>
+            <ul>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Return Policy</a></li>
+            </ul>
+          </section>
+        </section>
+        <p>&copy; 2025 Supply Post All rights reserved.</p>
+      </footer>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+    <!-- add the js file here (defer) -->
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
