@@ -213,3 +213,13 @@ const addToCartBtn = document.getElementById('addToCart');
     // Show the cart icon and number
     cartStatus.style.display = 'inline-block';
   });
+
+// Product Description Accordion
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      item.classList.toggle('active');
+    });
+  });
