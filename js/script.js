@@ -198,3 +198,18 @@ const quantityDisplay = document.getElementById('quantity');
     quantity++;
     quantityDisplay.textContent = quantity;
   });
+// Add to Cart Button
+const addToCartBtn = document.getElementById('addToCart');
+  const cartStatus = document.getElementById('cartStatus');
+  const cartCount = document.getElementById('cartCount');
+
+  let cartQuantity = 0; // Tracking the total quantity in the cart
+
+  addToCartBtn.addEventListener('click', () => {
+    // Add the currently selected product quantity (from the quantity variable)
+    cartQuantity += quantity;
+    cartCount.textContent = cartQuantity;
+
+    // Show the cart icon and number
+    cartStatus.style.display = 'inline-block';
+  });
