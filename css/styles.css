@@ -798,7 +798,11 @@ Social Media Links
   background-color: #ccc;
   border: 1px solid #999;
 }
-
+.carousel-inner-rounded > .carousel-item > img{
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
 .arrow {
   position: absolute;
   top: 50%;
