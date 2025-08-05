@@ -386,8 +386,8 @@ body {
 .ad-banner{
   padding-top: 1rem;
   border-bottom-width: 0 !important;
-  color: var(--navyBlue) !important;
-  background-color: var(--brightYellow) !important;
+  color: var(--darkBlue) !important;
+  background-color: var(--starGold) !important;
   font-family: var(--bodyFont) !important;
 }
 /* === Buttons === */
@@ -1309,7 +1309,6 @@ background-size:auto;
   line-height: 1.2;
   font-style: bold;
 }
-
 /*--------------------------------------------------------------------------------
 |  Products Page
 /*--------------------------------------------------------------------------------*/
@@ -1370,12 +1369,6 @@ background-size:auto;
   color: #fff;
 }
 
-.breadcrumbs{
-  background-color: white;
-  padding-top: 0.25rem;
-
-}
-
 .sort-buttons{
   display: flex;
   flex-direction: row;
@@ -1418,9 +1411,8 @@ background-size:auto;
   color: black;
   text-align: center ;
   padding: 0.5rem;
-  font-family: var(--subtitleFont);
+  font-family: var(--bodyFont);
 }
-
 
 .product-cards{
   padding: 0;
@@ -1428,7 +1420,7 @@ background-size:auto;
 }
 .card {
   border: none;
-  background: transparent;
+  background: transparent !important;
   box-shadow: none;
 }
 .card-link{
@@ -1438,7 +1430,7 @@ background-size:auto;
   height: 100%;
 }
 .card-body {
-  background: transparent;
+  background: transparent !important;
   padding:0 !important;
 }
 .card-body h4{
@@ -1462,6 +1454,71 @@ background-size:auto;
   height: 80px;
 }
 
+.product-addcart {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.product-favorite {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.product-addcart button,
+.product-favorite button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  background: none;
+  border: none;
+}
+.product-addcart button{
+  padding-top: 10px;
+}
+.product-favorite button {
+  padding-bottom: 10px;
+}
+
+/* Responsive Design for PLP */
+
+@media (max-width: 640px) {
+  .cycling-banner {
+    min-height: 24vh;
+  }
+  .cycling-banner h1 {
+    font-size: 5rem;
+    bottom: -1.75rem;
+  }
+}
+@media (min-width: 640px) {
+  .cycling-banner {
+    min-height: 24vh;
+  }
+  .cycling-banner h1 {
+    font-size: 7rem;
+    bottom: -2.5rem;
+    left: 25vh;
+  }
+}
+
+
+/* Action Button Styling */
+
+
+.favorite-btn svg{
+  width: 80px;   
+  height: 80px;
+}
+.add-cart-btn svg {
+  width: 80px;   
+  height: 80px;
+}
+
 
 /* Cart icon fill color change */
 .add-cart-btn .cart-shape {
@@ -1469,7 +1526,7 @@ background-size:auto;
   fill: #FAF9F6;
 }
 .add-cart-btn:hover .cart-shape{
-  fill: var(--skyBlue);
+  fill: var(--periwinkle) !important;
 }
 
 /* Heart icon fill color change */
@@ -1478,7 +1535,10 @@ background-size:auto;
   fill: #C7C6C6; 
 }
 .favorite-btn:hover .heart-shape {
-  fill: var(--skyBlue);
+  fill: var(--periwinkle) !important;
+}
+.heart-shape:hover{
+  fill: var(--periwinkle) !important;  
 }
 
 .product-addcart {
