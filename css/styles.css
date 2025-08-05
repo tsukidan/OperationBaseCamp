@@ -553,10 +553,14 @@ Social Media Links
 }
 
 /* Product Detail Page */
+.container-pdp {
+  background: #fff;
+}
+
 .product-card {
-  /* background: #fff; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  /* background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
   padding: 2rem;
   text-align: center;
 }
@@ -580,6 +584,7 @@ Social Media Links
   margin-bottom: 0.5rem;
 }
 
+/* Color Options */
 .color-options {
   display: flex;
   gap: 1.5rem;
@@ -600,6 +605,19 @@ Social Media Links
 .color-darkgray {
   background: #666;
 }
+.color-button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.color-button.selected .color-dot {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+
+/* Size Options */
 .size-options {
   display: flex;
   gap: 1rem;

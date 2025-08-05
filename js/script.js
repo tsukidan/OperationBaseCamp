@@ -150,3 +150,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Product Options
+const colorButtons = document.querySelectorAll('.color-button');
+
+  colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      colorButtons.forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+
+      
+      const selectedColor = button.querySelector('.color-dot').classList[1]; 
+      console.log("Selected color:", selectedColor); 
+    });
+  });

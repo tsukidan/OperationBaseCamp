@@ -149,19 +149,25 @@
 
     <main>
         <!-- Product Detail Page Content -->
-         <div class="product-card">
-            <img src="assets/product-images/Boot placeholder.jpg" alt="Boot" class="product-img" />
-            <h2 class="product-title">Boot</h2>
+        <div class="container-pdp">
+         
+          <div class="product-card">
+
+            <img src="assets/product-images/Boot placeholder.jpg" alt="Boots" class="product-img" />
+            <h2 class="product-title">Boots</h2>
+            
             <div class="product-option">
                 <label class="color-label">Color:</label>
                 <div class="color-options">
-                <span class="color-dot color-white"></span>
-                <span class="color-dot color-gray"></span>
-                <span class="color-dot color-darkgray"></span>
+                <button class="color-button" selected><span class="color-dot color-white"></span></button>
+                <button class="color-button"><span class="color-dot color-gray"></span></button>
+                <button class="color-button"><span class="color-dot color-darkgray"></span></button>
                 </div>
             </div>
+
             <div class="product-option">
-                <div class="size-options">
+              <label class="size-label">Size:</label>
+                <div class="size-options" aria-label="Size Options" id="size-options"> 
                 <button class="size-btn">XS</button>
                 <button class="size-btn">S</button>
                 <button class="size-btn selected">M</button>
@@ -169,6 +175,7 @@
                 <button class="size-btn">XL</button>
                 </div>
             </div>
+
             <div class="product-option">
                 <div class="price-control">
                 <label class="price-label">Price:</label>
@@ -177,8 +184,10 @@
                 <button class="circle-btn">+</button>
                 </div>
             </div>
+
             <button class="btn-add-to-cart">Add to Cart</button>
         </div>
+
         <section class="product-details">
             <div class="accordion">
                 <div class="accordion-item">Description <span>&gt;</span></div>
@@ -222,6 +231,7 @@
                 </div>
                 </div>
             </div>
+
             <!-- user reviews -->
              <div class="user-review">
                 <hr>
@@ -283,6 +293,7 @@
             <button class="arrow right">&#8250;</button>
         </div>
         </section>
+      </div>
     </main>
 
     <footer>
