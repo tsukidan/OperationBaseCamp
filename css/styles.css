@@ -309,6 +309,7 @@ padding-bottom: 1rem ;
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 2rem 0;
 }
 .logo {
   font-size: 1.5rem;
@@ -342,12 +343,12 @@ background: var(--skyBlue);
 color: var(--white);
 padding: .3rem;
 }
-.row{
+.row {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem, 1rem;
 }
-.card-img-overlay{
+.card-img-overlay {
   background-image: url('assets/product-images/Hikers\ talking.jpg');
   background-size: cover;  
   background-position: center; 
@@ -364,7 +365,7 @@ padding: .3rem;
   height: 100%;
   z-index: 0;
 }
-.card-title-newsletter{
+.card-title-newsletter {
   font-size: 2rem;
   margin-bottom: 1rem;
   line-height: 1.2; 
@@ -373,7 +374,27 @@ padding: .3rem;
  font-size: 1.25rem;
   margin-bottom: 2rem;
 }
-
+.card-title-featured-content {
+font-size: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2; 
+}
+.card-text-featured-content {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.email {
+   font-size: 1.25rem;
+   margin-top: 1rem;
+   margin-bottom: 0.001rem;
+}
+.hashtag {
+text-align: center;
+font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2; 
+  font-style: bold;
+}
 /* === Footer === */
 footer {
   background: var(--navyBlue);
