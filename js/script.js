@@ -150,3 +150,76 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Product Options
+// Color Selection
+const colorButtons = document.querySelectorAll('.color-button');
+
+  colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      colorButtons.forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+
+      
+      const selectedColor = button.querySelector('.color-dot').classList[1]; 
+      console.log("Selected color:", selectedColor); 
+    });
+  });
+// Size Selection
+const sizeButtons = document.querySelectorAll('.size-btn');
+
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // cancel other buttons' selected styles
+      sizeButtons.forEach(btn => btn.classList.remove('selected'));
+
+      // Add selected style to the clicked button
+      button.classList.add('selected');
+
+      // Selected size (optional)
+      const selectedSize = button.textContent;
+      console.log("Selected size:", selectedSize);
+    });
+  });
+// Quantity Selection
+const quantityDisplay = document.getElementById('quantity');
+  const decreaseBtn = document.getElementById('decrease');
+  const increaseBtn = document.getElementById('increase');
+
+  let quantity = 1;
+
+  decreaseBtn.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityDisplay.textContent = quantity;
+    }
+  });
+
+  increaseBtn.addEventListener('click', () => {
+    quantity++;
+    quantityDisplay.textContent = quantity;
+  });
+// Add to Cart Button
+const addToCartBtn = document.getElementById('addToCart');
+  const cartStatus = document.getElementById('cartStatus');
+  const cartCount = document.getElementById('cartCount');
+
+  let cartQuantity = 0; // Tracking the total quantity in the cart
+
+  addToCartBtn.addEventListener('click', () => {
+    // Add the currently selected product quantity (from the quantity variable)
+    cartQuantity += quantity;
+    cartCount.textContent = cartQuantity;
+
+    // Show the cart icon and number
+    cartStatus.style.display = 'inline-block';
+  });
+
+// Product Description Accordion
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      item.classList.toggle('active');
+    });
+  });
