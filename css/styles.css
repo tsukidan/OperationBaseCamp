@@ -9,7 +9,7 @@
   --forestGreen: #2f7a3e;
   --plum: #5d3a58;
   --brown: #713b1c;
-
+  --white: #fff;
   /*Fonts*/
   --headingFont: "Freude";
   --headingWeight: 400;
@@ -218,21 +218,24 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 100%; }
-body {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+main {
+  font-family: 'Freude','MontserratAlt','Lato','Segoe UI', Tahoma, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--black);
   background: var(--white);
 }
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.container { 
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 0 auto; }
 
 /* === Hero Banner === */
 .hero {
-  background-image: url('assets/product-images/Boot placeholder.jpg');
+  background-image: url('assets/product-images/Campfire placeholder.jpg');
   background-size: cover;  
-  background-position: center; 
+  background-position: bottom; 
   background-repeat: no-repeat; 
-  height: 100vh;           
+  height: 120vh;           
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,6 +250,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 0;
+  object-fit: contain;
 }
 .hero::before {
   content: "";
@@ -265,14 +269,17 @@ body {
   margin-bottom: 1rem;
   line-height: 1.2;
 }
-.hero-content p {
+.hero-content h2{
   font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+.hero-divider{
+padding-bottom: 1rem ;
 }
 
 /* === Buttons === */
 .btn-primary {
-  background: var(--dk-blue);
+  background: var(--navyBlue);
   color: var(--white);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -281,25 +288,24 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 .btn-primary:hover {
-  background: var(--sky-blue);
-  color: var(--black);
+  background: var(--skyBlue);
+  color: var(--plum);
 }
 .logo-btn {
   color: var(--white);
   text-decoration: none;
 }
 .logo-btn:hover{
- color: var(--sky-blue);
+ color: var(--skyBlue);
  text-decoration: none;
 }
 /* === Navigation === */
 .navbar {
-  background: var(--dk-blue);
-  color: #fff;
+  background: var(--navyBlue);
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -327,6 +333,19 @@ body {
   border: none;
   color: #fff;
   cursor: pointer;
+}
+header div {
+  background: var(--navyBlue);
+}
+header div p {
+background: var(--skyBlue);
+color: var(--white);
+padding: .3rem;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem, 1rem;
 }
 
 /* === Footer === */
