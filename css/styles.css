@@ -228,7 +228,7 @@ body {
 
 /* === Hero Banner === */
 .hero {
-  background-image: url('../assets/product-images/Boot placeholder.jpg');
+  background-image: url('assets/product-images/Boot placeholder.jpg');
   background-size: cover;  
   background-position: center; 
   background-repeat: no-repeat; 
