@@ -642,18 +642,32 @@ Social Media Links
   border: 1px solid #0e0f0f;
 }
 
+/* Quantity Selection */
 .price-control {
-  float: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .circle-btn {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #fff;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
 }
+
+#quantity {
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+/*Add to Cart Button */
 .btn-add-to-cart {
   position: relative;
   top: 20px;

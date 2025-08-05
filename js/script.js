@@ -180,3 +180,21 @@ const sizeButtons = document.querySelectorAll('.size-btn');
       console.log("Selected size:", selectedSize);
     });
   });
+// Quantity Selection
+const quantityDisplay = document.getElementById('quantity');
+  const decreaseBtn = document.getElementById('decrease');
+  const increaseBtn = document.getElementById('increase');
+
+  let quantity = 1;
+
+  decreaseBtn.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityDisplay.textContent = quantity;
+    }
+  });
+
+  increaseBtn.addEventListener('click', () => {
+    quantity++;
+    quantityDisplay.textContent = quantity;
+  });
