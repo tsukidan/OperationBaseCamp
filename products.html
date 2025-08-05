@@ -18,11 +18,13 @@
   <body>
 
     <header>
-      <div
-        class="bg-white text-dark text-center mx-auto border-bottom fst-italic"
-      >
-        Use the code SUMMERFUN for 10% off!
-      </div>
+      <!-- Top Ad Banner -->
+      <section class="ad-banner">
+          <p class="mb-0 text-center">
+            Use the code <strong>SUMMERFUN</strong> for 10% off!
+          </p>
+      </section>
+      <!-- Nav Bar -->
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
         <div
           class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -152,26 +154,28 @@
         </div>
       </nav>
     </header>
+    
+    
+    <!--Hero Banner and tagline. Change when sorting?-->
 
-    <section class="py-5 text-white text-center position-relative" 
-            style="background: url('assets/images/shop-banner.jpg') center/cover no-repeat;">
-      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-      <div class="container position-relative">
-        <h1 class="fw-bold" id="category-title">Cycling</h1>
-        <p class="lead" id="category-description">Find equipment for all your outdoor adventures.</p>
-      </div>
+    <section class="cycling-banner">
+      <h1 class="fw-bold" id="category-title">CYCLING</h1>
+    </section>
+    <main>
+
+    <section class="category-subtitle">
+      <h5>Whether you're racing to the finish line or your 8AM meeting, we've got ya covered.</h5>
     </section>
 
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-1">
-            <button
-              class="sort-toggler btn btn-link text-dark"
-              type="button"
-              aria-label="Sort Products"
-            >
-              <svg
+    <section class="product-content">
+      <!--Sort button, filter button, and display for current sort criteria-->
+      <section class="sort-buttons">
+        <button
+          class="sort-toggler btn btn-link text-dark"
+          type="button"
+          aria-label="Sort Products"
+        >
+           <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -187,15 +191,14 @@
                 <path d="M3 9l4 -4l4 4m-4 -4v14" />
                 <path d="M21 15l-4 4l-4 -4m4 4v-14" />
               </svg>
-            </button>
-          </div>
-          <div class="col-1">
-            <button
-              class="filter-toggler btn btn-link text-dark"
-              type="button"
-              aria-label="Filter Products"
-            >
-              <svg
+
+        </button>
+        <button
+          class="filter-toggler btn btn-link text-dark"
+          type="button"
+          aria-label="Filter Products"
+        >
+          <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -218,175 +221,343 @@
                 <path d="M4 18l11 0" />
                 <path d="M19 18l1 0" />
               </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+
+        </button>
+      </section>
+
+      <section class="product-cards">
       <div class="container">
-        <div class="row row-cols-2 g-4 row-cols-lg-4 g-4">
+            <div class="row row-cols-2 g-4 row-cols-lg-4 g-4">
 
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card">
-              <div class="position-relative">
-                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
-                <img
-                  src="assets/product-images/Product Icon.svg"
-                  class="card-img-top"
-                  alt="Product 1"
-                />
-                <!-- Stacked buttons, bottom right -->
-                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
-                  <button
-                    class="favorite-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Wishlist-Item"
-                  >
-                    <img src="assets/ui/heart icon.svg" />
-                  </button>
-                  <button
-                    class="add-cart-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Add-to-Cart"
-                  >
-                    <img src="assets/ui/+ to cart Icon.svg" />
-                  </button>
+              <!-- Card 1 -->
+
+              <div class="col">
+              <div class="card">
+                <div class="card-link position-relative">
+                  <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                  <img
+                    src="assets/product-images/Cycling/Orange Helmet.png"
+                    class="card-img-top"  
+                    alt="Product 1"
+                  />
+
+                  <!-- Add-to-Cart Button (Top Right) -->
+                  <div class="product-addcart">
+                    <button class="add-cart-btn btn btn-link" type="button" aria-label="Add-to-Cart">
+                    <svg class="cart-icon" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_805_331)">
+                        <circle class="cart-shape" cx="20.0055" cy="18.0055" r="12.0055" fill="#FAF9F6"/>
+                        </g>
+                        <rect x="18.8047" y="10.8018" width="2.40111" height="14.4067" rx="1" fill="#5E5E5E"/>
+                        <rect x="27.209" y="16.8047" width="2.40111" height="14.4067" rx="1" transform="rotate(90 27.209 16.8047)" fill="#5E5E5E"/>
+                        <defs>
+                        <filter id="filter0_d_805_331" x="0" y="0" width="44.0107" height="44.011" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="2" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_805_331"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_805_331" result="shape"/>
+                        </filter>
+                        </defs>
+                      </svg>
+                    </button>
+                  
+                  
+                  </div>
+
+                  <!-- Favorite Button (Bottom Right) -->
+                  <div class="product-favorite">
+                    <button class="favorite-btn btn btn-link" type="button" aria-label="Wishlist-Item">
+                      <svg class="heart-icon" viewBox="0 0 64 60" xmlns="http://www.w3.org/2000/svg">
+                        <path class="heart-shape"
+                          d="M39.0988 26.7266L29.516 36.0092L19.9332 26.7266C19.3011 26.125 18.8032 25.4019 18.4709 24.6029C18.1386 23.8039 17.979 22.9462 18.0022 22.0839C18.0254 21.2216 18.231 20.3733 18.6058 19.5925C18.9807 18.8117 19.5168 18.1153 20.1804 17.5471C20.844 16.9789 21.6206 16.5512 22.4615 16.291C23.3024 16.0308 24.1892 15.9438 25.0662 16.0353C25.9431 16.1268 26.7913 16.3949 27.5571 16.8227C28.3229 17.2505 28.9899 17.8288 29.516 18.5211C30.0443 17.8338 30.7121 17.2606 31.4774 16.8373C32.2427 16.414 33.0891 16.1498 33.9636 16.0611C34.8381 15.9725 35.7219 16.0614 36.5597 16.3222C37.3974 16.583 38.1712 17.0101 38.8324 17.5768C39.4937 18.1435 40.0282 18.8377 40.4026 19.6157C40.7769 20.3938 40.983 21.2391 41.008 22.0986C41.033 22.9582 40.8764 23.8135 40.5478 24.6112C40.2193 25.4088 39.726 26.1315 39.0988 26.7341"
+                          fill="#C7C6C6" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title mb-0">
-                  <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
-                    Product Name
-                  </a>
-                </h5>
-                <p class="card-text">$00.00</p>
-              </div>
-            </div>
-          </div>
 
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card">
-              <div class="position-relative">
-                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 2"></a>
-                <img
-                  src="assets/product-images/Product Icon.svg"
-                  class="card-img-top"
-                  alt="Product 2"
-                />
-                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
-                  <button
-                    class="favorite-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Wishlist-Item"
-                  >
-                    <img src="assets/ui/heart icon.svg" />
-                  </button>
-                  <button
-                    class="add-cart-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Add-to-Cart"
-                  >
-                    <img src="assets/ui/+ to cart Icon.svg" />
-                  </button>
+                <div class="card-body">
+                  <h4 class="card-title mb-0">
+                    <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                      ABC Helmet 
+                    </a>
+                  </h5>
+                  <p class="card-text">$120.00</p>
                 </div>
-              </div>
-              <div class="card-body">
-                <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 2">
-                  Product Name
-                </a>
-                <p class="card-text">$00.00</p>
-              </div>
+              </div> 
             </div>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card">
-              <div class="position-relative">
-                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 3"></a>
-                <img
-                  src="assets/product-images/Product Icon.svg"
-                  class="card-img-top"
-                  alt="Product 3"
-                />
-                <!-- Stacked buttons, bottom right -->
-                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
-                  <button
-                    class="favorite-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Wishlist-Item"
-                  >
-                    <img src="assets/ui/heart icon.svg" />
-                  </button>
-                  <button
-                    class="add-cart-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Add-to-Cart"
-                  >
-                    <img src="assets/ui/+ to cart Icon.svg" />
-                  </button>
+              <!-- Card 2 -->
+              <div class="col">
+              <div class="card">
+                <div class="position-relative">
+                  <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                  <img
+                    src="assets/product-images/Cycling/GreenHelmet.png"
+                    class="card-img-top"
+                    alt="Product 1"
+                  />
+
+                  <!-- Add-to-Cart Button (Top Right) -->
+                  <div class="product-addcart">
+                    <button class="add-cart-btn btn btn-link" type="button" aria-label="Add-to-Cart">
+                    <svg class="cart-icon" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_805_331)">
+                        <circle class="cart-shape" cx="20.0055" cy="18.0055" r="12.0055" fill="#FAF9F6"/>
+                        </g>
+                        <rect x="18.8047" y="10.8018" width="2.40111" height="14.4067" rx="1" fill="#5E5E5E"/>
+                        <rect x="27.209" y="16.8047" width="2.40111" height="14.4067" rx="1" transform="rotate(90 27.209 16.8047)" fill="#5E5E5E"/>
+                        <defs>
+                        <filter id="filter0_d_805_331" x="0" y="0" width="44.0107" height="44.011" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="2" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_805_331"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_805_331" result="shape"/>
+                        </filter>
+                        </defs>
+                      </svg>
+                    </button>
+                  
+                  
+                  </div>
+
+                  <!-- Favorite Button (Bottom Right) -->
+                  <div class="product-favorite">
+                    <button class="favorite-btn btn btn-link" type="button" aria-label="Wishlist-Item">
+                      <svg class="heart-icon" viewBox="0 0 64 60" xmlns="http://www.w3.org/2000/svg">
+                        <path class="heart-shape"
+                          d="M39.0988 26.7266L29.516 36.0092L19.9332 26.7266C19.3011 26.125 18.8032 25.4019 18.4709 24.6029C18.1386 23.8039 17.979 22.9462 18.0022 22.0839C18.0254 21.2216 18.231 20.3733 18.6058 19.5925C18.9807 18.8117 19.5168 18.1153 20.1804 17.5471C20.844 16.9789 21.6206 16.5512 22.4615 16.291C23.3024 16.0308 24.1892 15.9438 25.0662 16.0353C25.9431 16.1268 26.7913 16.3949 27.5571 16.8227C28.3229 17.2505 28.9899 17.8288 29.516 18.5211C30.0443 17.8338 30.7121 17.2606 31.4774 16.8373C32.2427 16.414 33.0891 16.1498 33.9636 16.0611C34.8381 15.9725 35.7219 16.0614 36.5597 16.3222C37.3974 16.583 38.1712 17.0101 38.8324 17.5768C39.4937 18.1435 40.0282 18.8377 40.4026 19.6157C40.7769 20.3938 40.983 21.2391 41.008 22.0986C41.033 22.9582 40.8764 23.8135 40.5478 24.6112C40.2193 25.4088 39.726 26.1315 39.0988 26.7341"
+                          fill="#C7C6C6" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div class="card-body">
-                <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 3">
-                  Product Name
-                </a>
-                <p class="card-text">$00.00</p>
-              </div>
-            </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card">
-              <div class="position-relative">
-                <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 4"></a>
-                <img
-                  src="assets/product-images/Product Icon.svg"
-                  class="card-img-top"
-                  alt="Product 4"
-                />
-                <!-- Stacked buttons, bottom right -->
-                <div class="position-absolute bottom-0 end-0 d-flex flex-column align-items-end" style="z-index: 2;">
-                  <button
-                    class="favorite-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Wishlist-Item"
-                  >
-                    <img src="assets/ui/heart icon.svg" />
-                  </button>
-                  <button
-                    class="add-cart-btn btn btn-link text-white"
-                    type="button"
-                    aria-label="Add-to-Cart"
-                  >
-                    <img src="assets/ui/+ to cart Icon.svg" />
-                  </button>
+                <div class="card-body">
+                  <h4 class="card-title mb-0">
+                    <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                      Protect the Brain Space when I'm Flying Helmet
+                    </a>
+                  </h5>
+                  <p class="card-text">$215.00</p>
                 </div>
-              </div>
-              <div class="card-body">
-                <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 4">
-                  Product Name
-                </a>
-                <p class="card-text">$00.00</p>
-              </div>
+              </div> 
             </div>
-          </div>
-          <!-- Repeat more cards as needed -->
 
-        </div>
-      </div>
+              <!-- Card 3 -->
+              <div class="col">
+              <div class="card">
+                <div class="position-relative">
+                  <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                  <img
+                    src="assets/product-images/Cycling/BlackHelmet.png"
+                    class="card-img-top"
+                    alt="Product 1"
+                  />
+
+                  <!-- Add-to-Cart Button (Top Right) -->
+                  <div class="product-addcart">
+                    <button class="add-cart-btn btn btn-link" type="button" aria-label="Add-to-Cart">
+                    <svg class="cart-icon" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_805_331)">
+                        <circle class="cart-shape" cx="20.0055" cy="18.0055" r="12.0055" fill="#FAF9F6"/>
+                        </g>
+                        <rect x="18.8047" y="10.8018" width="2.40111" height="14.4067" rx="1" fill="#5E5E5E"/>
+                        <rect x="27.209" y="16.8047" width="2.40111" height="14.4067" rx="1" transform="rotate(90 27.209 16.8047)" fill="#5E5E5E"/>
+                        <defs>
+                        <filter id="filter0_d_805_331" x="0" y="0" width="44.0107" height="44.011" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="2" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_805_331"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_805_331" result="shape"/>
+                        </filter>
+                        </defs>
+                      </svg>
+                    </button>
+                  
+                  
+                  </div>
+
+                  <!-- Favorite Button (Bottom Right) -->
+                  <div class="product-favorite">
+                    <button class="favorite-btn btn btn-link" type="button" aria-label="Wishlist-Item">
+                      <svg class="heart-icon" viewBox="0 0 64 60" xmlns="http://www.w3.org/2000/svg">
+                        <path class="heart-shape"
+                          d="M39.0988 26.7266L29.516 36.0092L19.9332 26.7266C19.3011 26.125 18.8032 25.4019 18.4709 24.6029C18.1386 23.8039 17.979 22.9462 18.0022 22.0839C18.0254 21.2216 18.231 20.3733 18.6058 19.5925C18.9807 18.8117 19.5168 18.1153 20.1804 17.5471C20.844 16.9789 21.6206 16.5512 22.4615 16.291C23.3024 16.0308 24.1892 15.9438 25.0662 16.0353C25.9431 16.1268 26.7913 16.3949 27.5571 16.8227C28.3229 17.2505 28.9899 17.8288 29.516 18.5211C30.0443 17.8338 30.7121 17.2606 31.4774 16.8373C32.2427 16.414 33.0891 16.1498 33.9636 16.0611C34.8381 15.9725 35.7219 16.0614 36.5597 16.3222C37.3974 16.583 38.1712 17.0101 38.8324 17.5768C39.4937 18.1435 40.0282 18.8377 40.4026 19.6157C40.7769 20.3938 40.983 21.2391 41.008 22.0986C41.033 22.9582 40.8764 23.8135 40.5478 24.6112C40.2193 25.4088 39.726 26.1315 39.0988 26.7341"
+                          fill="#C7C6C6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <h4 class="card-title mb-0">
+                    <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                      Badboy Helmet
+                    </a>
+                  </h5>
+                  <p class="card-text">$105.00</p>
+                </div>
+              </div> 
+            </div>
+
+              <!-- Card 4 -->
+              <div class="col">
+              <div class="card">
+                <div class="position-relative">
+                  <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                  <img
+                    src="assets/product-images/Cycling/YellowHelmet.png"
+                    class="card-img-top"
+                    alt="Product 1"
+                  />
+
+                  <!-- Add-to-Cart Button (Top Right) -->
+                  <div class="product-addcart">
+                    <button class="add-cart-btn btn btn-link" type="button" aria-label="Add-to-Cart">
+                    <svg class="cart-icon" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_805_331)">
+                        <circle class="cart-shape" cx="20.0055" cy="18.0055" r="12.0055" fill="#FAF9F6"/>
+                        </g>
+                        <rect x="18.8047" y="10.8018" width="2.40111" height="14.4067" rx="1" fill="#5E5E5E"/>
+                        <rect x="27.209" y="16.8047" width="2.40111" height="14.4067" rx="1" transform="rotate(90 27.209 16.8047)" fill="#5E5E5E"/>
+                        <defs>
+                        <filter id="filter0_d_805_331" x="0" y="0" width="44.0107" height="44.011" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="2" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_805_331"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_805_331" result="shape"/>
+                        </filter>
+                        </defs>
+                      </svg>
+                    </button>
+                  
+                  
+                  </div>
+
+                  <!-- Favorite Button (Bottom Right) -->
+                  <div class="product-favorite">
+                    <button class="favorite-btn btn btn-link" type="button" aria-label="Wishlist-Item">
+                      <svg class="heart-icon" viewBox="0 0 64 60" xmlns="http://www.w3.org/2000/svg">
+                        <path class="heart-shape"
+                          d="M39.0988 26.7266L29.516 36.0092L19.9332 26.7266C19.3011 26.125 18.8032 25.4019 18.4709 24.6029C18.1386 23.8039 17.979 22.9462 18.0022 22.0839C18.0254 21.2216 18.231 20.3733 18.6058 19.5925C18.9807 18.8117 19.5168 18.1153 20.1804 17.5471C20.844 16.9789 21.6206 16.5512 22.4615 16.291C23.3024 16.0308 24.1892 15.9438 25.0662 16.0353C25.9431 16.1268 26.7913 16.3949 27.5571 16.8227C28.3229 17.2505 28.9899 17.8288 29.516 18.5211C30.0443 17.8338 30.7121 17.2606 31.4774 16.8373C32.2427 16.414 33.0891 16.1498 33.9636 16.0611C34.8381 15.9725 35.7219 16.0614 36.5597 16.3222C37.3974 16.583 38.1712 17.0101 38.8324 17.5768C39.4937 18.1435 40.0282 18.8377 40.4026 19.6157C40.7769 20.3938 40.983 21.2391 41.008 22.0986C41.033 22.9582 40.8764 23.8135 40.5478 24.6112C40.2193 25.4088 39.726 26.1315 39.0988 26.7341"
+                          fill="#C7C6C6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <h4 class="card-title mb-0">
+                    <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                      Stars Helmet
+                    </a>
+                  </h5>
+                  <p class="card-text">$46.00</p>
+                </div>
+              </div> 
+            </div>
+              <!-- Card 5 -->
+               <div class="col">
+              <div class="card">
+                <div class="position-relative">
+                  <a href="productDetail.html" class="stretched-link" aria-label="View details for Product 1"></a>
+                  <img
+                    src="assets/product-images/Cycling/WhiteHelmet.png"
+                    class="card-img-top"
+                    alt="Product 1"
+                  />
+
+                  <!-- Add-to-Cart Button (Top Right) -->
+                  <div class="product-addcart">
+                    <button class="add-cart-btn btn btn-link" type="button" aria-label="Add-to-Cart">
+                    <svg class="cart-icon" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_805_331)">
+                        <circle class="cart-shape" cx="20.0055" cy="18.0055" r="12.0055" fill="#FAF9F6"/>
+                        </g>
+                        <rect x="18.8047" y="10.8018" width="2.40111" height="14.4067" rx="1" fill="#5E5E5E"/>
+                        <rect x="27.209" y="16.8047" width="2.40111" height="14.4067" rx="1" transform="rotate(90 27.209 16.8047)" fill="#5E5E5E"/>
+                        <defs>
+                        <filter id="filter0_d_805_331" x="0" y="0" width="44.0107" height="44.011" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="2" dy="4"/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_805_331"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_805_331" result="shape"/>
+                        </filter>
+                        </defs>
+                      </svg>
+                    </button>
+                  
+                  
+                  </div>
+
+                  <!-- Favorite Button (Bottom Right) -->
+                  <div class="product-favorite">
+                    <button class="favorite-btn btn btn-link" type="button" aria-label="Wishlist-Item">
+                      <svg class="heart-icon" viewBox="0 0 64 60" xmlns="http://www.w3.org/2000/svg">
+                        <path class="heart-shape"
+                          d="M39.0988 26.7266L29.516 36.0092L19.9332 26.7266C19.3011 26.125 18.8032 25.4019 18.4709 24.6029C18.1386 23.8039 17.979 22.9462 18.0022 22.0839C18.0254 21.2216 18.231 20.3733 18.6058 19.5925C18.9807 18.8117 19.5168 18.1153 20.1804 17.5471C20.844 16.9789 21.6206 16.5512 22.4615 16.291C23.3024 16.0308 24.1892 15.9438 25.0662 16.0353C25.9431 16.1268 26.7913 16.3949 27.5571 16.8227C28.3229 17.2505 28.9899 17.8288 29.516 18.5211C30.0443 17.8338 30.7121 17.2606 31.4774 16.8373C32.2427 16.414 33.0891 16.1498 33.9636 16.0611C34.8381 15.9725 35.7219 16.0614 36.5597 16.3222C37.3974 16.583 38.1712 17.0101 38.8324 17.5768C39.4937 18.1435 40.0282 18.8377 40.4026 19.6157C40.7769 20.3938 40.983 21.2391 41.008 22.0986C41.033 22.9582 40.8764 23.8135 40.5478 24.6112C40.2193 25.4088 39.726 26.1315 39.0988 26.7341"
+                          fill="#C7C6C6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <h4 class="card-title mb-0">
+                    <a href="productDetail.html" class="text-decoration-none text-dark" aria-label="View details for Product 1">
+                      Dad's Helmet 
+                    </a>
+                  </h5>
+                  <p class="card-text">$60.00</p>
+                </div>
+              </div> 
+            </div>
+          </section>
       <!-- Newsletter Signup Dummy Section -->
-      <section class="py-5 bg-light">
+      <section class="newsletter py-5">
             <div class="container">
-              <h6 class="fw-bold text-dark">Sign up for Operation Basecamp newsletters</h6>
+              <h5 class="fw-bold text-dark">Sign up for Operation Basecamp newsletters</h5>
               <p class="mb-4 text-dark">for 10% off, new adventure plans, and more!</p>
               <form class="row g-2 justify-content-center" aria-label="Newsletter signup form">
-                <div class="row-auto">
-                  <input type="email" class="form-control" placeholder="youremail@gmail.com..." required>
+                <div class="row-auto position-relative">
+                  <input class="email-entry-form form-control input-lg" placeholder="youremail@gmail.com..." required>
+                  <div class="email-entry-icon">
+
+                  <svg width="34" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_636_648)">
+                  <path d="M3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H19C19.5304 5 20.0391 5.21071 20.4142 5.58579C20.7893 5.96086 21 6.46957 21 7V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V7Z" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 7L12 13L21 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_636_648">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
                 </div>
-                <div class="row-auto justify-content-end align-items-end">
+                </div>
+                <div class="email-submit row-auto justify-content-end align-items-end">
                   <button type="submit" class="btn btn-primary bg-">Sign me up!</button>
                 </div>
               </form>
@@ -417,7 +588,7 @@
       <!-- Photo Carousel -->
       <section class="py-5 bg-light text-center">
           <div class="container">
-            <h3 class="fw-bold mb-4">#StayWild</h3>
+            <h3 class="fw-bold mb-4">#StayWildSP</h3>
             <div id="communityCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner rounded">
                 <div class="carousel-item active">
@@ -449,7 +620,7 @@
             </div>
           </div>
         </section>
-        
+      </section>    
     </main>
 
 
@@ -570,10 +741,9 @@
         <p>&copy; 2025 Supply Post All rights reserved.</p>
       </footer>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
-    <!-- add the js file here (defer) -->
-    <script src="js/script.js" defer></script>
+
+    <!-- <script src="js/script.js"></script> -->
+     <script src="js/script.js"></script>
   </body>
 </html>
+

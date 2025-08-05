@@ -383,11 +383,12 @@ body {
 }
 
 /* === Ad Banner === */
-.ad-banner {
-  background-color: var(--periwinkle) !important;
-  border: none !important;
-  color: #fff !important;
-  padding: 10px 0 10px;
+.ad-banner{
+  padding-top: 1rem;
+  border-bottom-width: 0 !important;
+  color: var(--darkBlue) !important;
+  background-color: var(--starGold) !important;
+  font-family: var(--bodyFont) !important;
 }
 /* === Buttons === */
 .btn-primary {
@@ -1307,6 +1308,289 @@ Toggler Border Removal
   margin-bottom: 1rem;
   line-height: 1.2;
   font-style: bold;
+}
+/*--------------------------------------------------------------------------------
+|  Products Page
+/*--------------------------------------------------------------------------------*/
+.newsletter{
+  background-color:#faf9f6;
+  color: #fff;
+  text-align: left;
+  font-family: var(--bodyFont);
+
+}
+
+.email-entry-icon{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter h5{
+  font-family: var(--subtitleFont);
+  font-weight: var(--subtitleWeight);
+}
+.newsletter p{
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
+  font-size:large;
+  margin-bottom: 10px !important;
+}
+
+.email-submit{
+  display: flex;
+  flex-direction: row;
+}
+
+.email-entry-form{
+  background-color: #faf9f6;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  border: 3px solid darkgrey;
+  border-radius: 10px;
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
+  font-size: large;
+}
+.email-submit button{
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
+  font-size: large;
+  background-color: var(--navyBlue);
+  color: #fff;
+}
+
+.sort-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.cycling-banner {
+  position: relative;
+  width: 100%;
+  min-height: 20vh; 
+  background-color: white;
+  background-image: url("../assets/ui/Cyclists.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 0;
+}
+.cycling-banner h1 {
+  position: absolute;
+  left: 17vh;
+  bottom: -1.75rem; 
+  transform: translateX(-50%);
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+  color: #faf9f6;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+.product-cards{
+  background-color: #faf9f6;
+}
+.product-content{
+  background-color: #faf9f6;
+}
+
+.category-subtitle{
+  background-color: #faf9f6;
+  color: black;
+  text-align: center ;
+  padding: 0.5rem;
+  font-family: var(--bodyFont);
+}
+
+.product-cards{
+  padding: 0;
+  margin: 0;
+}
+.card {
+  border: none;
+  background: transparent !important;
+  box-shadow: none;
+}
+.card-link{
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card-body {
+  background: transparent !important;
+  padding:0 !important;
+}
+.card-body h4{
+  font-family:(var(--bodyFont));
+  font-weight: bold;
+}
+.card-body p{
+  font-family: var(--bodyFont);
+  font-size: large;
+}
+
+/* Action Button Styling */
+
+
+.favorite-btn svg{
+  width: 80px;   
+  height: 80px;
+}
+.add-cart-btn svg {
+  width: 80px;   
+  height: 80px;
+}
+
+.product-addcart {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.product-favorite {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.product-addcart button,
+.product-favorite button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  background: none;
+  border: none;
+}
+.product-addcart button{
+  padding-top: 10px;
+}
+.product-favorite button {
+  padding-bottom: 10px;
+}
+
+/* Responsive Design for PLP */
+
+@media (max-width: 640px) {
+  .cycling-banner {
+    min-height: 24vh;
+  }
+  .cycling-banner h1 {
+    font-size: 5rem;
+    bottom: -1.75rem;
+  }
+}
+@media (min-width: 640px) {
+  .cycling-banner {
+    min-height: 24vh;
+  }
+  .cycling-banner h1 {
+    font-size: 7rem;
+    bottom: -2.5rem;
+    left: 25vh;
+  }
+}
+
+
+/* Action Button Styling */
+
+
+.favorite-btn svg{
+  width: 80px;   
+  height: 80px;
+}
+.add-cart-btn svg {
+  width: 80px;   
+  height: 80px;
+}
+
+
+/* Cart icon fill color change */
+.add-cart-btn .cart-shape {
+  transition: fill 0.2s;
+  fill: #FAF9F6;
+}
+.add-cart-btn:hover .cart-shape{
+  fill: var(--periwinkle) !important;
+}
+
+/* Heart icon fill color change */
+.favorite-btn .heart-shape {
+  transition: fill 0.2s;
+  fill: #C7C6C6; 
+}
+.favorite-btn:hover .heart-shape {
+  fill: var(--periwinkle) !important;
+}
+.heart-shape:hover{
+  fill: var(--periwinkle) !important;  
+}
+
+.product-addcart {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.product-favorite {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.product-addcart button,
+.product-favorite button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  background: none;
+  border: none;
+}
+.product-addcart button{
+  padding-top: 10px;
+}
+.product-favorite button {
+  padding-bottom: 10px;
+}
+
+/* Responsive Design for PLP */
+
+@media (max-width: 640px) {
+  .cycling-banner {
+    min-height: 24vh;
+  }
+  .cycling-banner h1 {
+    font-size: 5rem;
+    bottom: -1.75rem;
+  }
+}
+@media (min-width: 640px) {
+  .cycling-banner {
+    min-height: 24vh;
+  }
+  .cycling-banner h1 {
+    font-size: 7rem;
+    bottom: -2.5rem;
+    left: 25vh;
+  }
 }
 
 /*--------------------------------------------------------------------------------
