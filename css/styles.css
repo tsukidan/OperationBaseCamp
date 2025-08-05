@@ -41,7 +41,7 @@
 --------------------------------------------------------------------------------*/
 @font-face {
   font-family: "Freude";
-  src: url("../assets/fonts/freude.otf") format("opentype");
+  src: url("../assets/fonts/Freude.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -793,7 +793,6 @@ Social Media Links
   outline-offset: 2px;
 }
 
-
 /* Size Options */
 .size-options {
   display: flex;
@@ -929,7 +928,7 @@ Social Media Links
   background-color: #ccc;
   border: 1px solid #999;
 }
-.carousel-inner-rounded > .carousel-item > img{
+.carousel-inner-rounded > .carousel-item > img {
   max-height: 300px;
   width: 100%;
   object-fit: cover;
@@ -1193,11 +1192,11 @@ Toggler Border Removal
 }
 /* About Section page*/
 .hero {
-  background-image: url('assets/product-images/_DSC3540.jpg');
-  background-size: cover;  
-  background-position: bottom; 
-  background-repeat: no-repeat; 
-  height: 120vh;           
+  background-image: url("assets/product-images/_DSC3540.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1208,7 +1207,8 @@ Toggler Border Removal
 }
 .hero-img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -1217,8 +1217,8 @@ Toggler Border Removal
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;                 
-  background: rgba(0, 0, 0, 0.6); 
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 .hero-content {
@@ -1231,7 +1231,7 @@ Toggler Border Removal
   margin-bottom: 1rem;
   line-height: 1.2;
 }
-.hero-content h2{
+.hero-content h2 {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
@@ -1241,14 +1241,14 @@ Toggler Border Removal
   justify-content: space-between;
   padding: 0.5rem, 1rem;
 }
-.card{
-  background-color:#022156 !important;
+.card {
+  background-color: #022156 !important;
 }
 .card-img-overlay {
-  background-image: url('assets/product-images/_DSC3385.jpg');
-  background-size: cover;  
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url("assets/product-images/_DSC3385.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: left;
   justify-content: center;
@@ -1284,17 +1284,17 @@ Toggler Border Removal
   height: 250px;
   width: 500px;
 }
-.card-group img container-1{
-background-image: url('assets/product-images/_DSC3385.jpg');
-background-size:auto;
+.card-group img container-1 {
+  background-image: url("assets/product-images/_DSC3385.jpg");
+  background-size: auto;
 }
-.card-group img container-2{
-background-image: url('assets/product-images/_DSC3497.jpg');
-background-size:auto;
+.card-group img container-2 {
+  background-image: url("assets/product-images/_DSC3497.jpg");
+  background-size: auto;
 }
-.card-group img container-3{
-background-image: url('assets/product-images/_DSC3482.jpg');
-background-size:auto;
+.card-group img container-3 {
+  background-image: url("assets/product-images/_DSC3482.jpg");
+  background-size: auto;
 }
 .email {
   font-size: 1.25rem;
@@ -1309,7 +1309,6 @@ background-size:auto;
   font-style: bold;
 }
 
-
 /*--------------------------------------------------------------------------------
 |  checkout page
 |  For CSS testing
@@ -1317,7 +1316,7 @@ background-size:auto;
 /* Checkout container */
 .checkout-container {
   padding: 1rem;
-  background-color: white; 
+  background-color: white;
   border-radius: 8px;
   max-width: 500px;
   margin: 2rem auto;
@@ -1341,11 +1340,9 @@ background-size:auto;
   padding-bottom: 0.5rem;
 }
 
-
 .step-navigation .current {
-  border-bottom: 2px solid #000; 
+  border-bottom: 2px solid #000;
 }
-
 
 .form-step h2 {
   font-size: 1rem;
@@ -1353,7 +1350,6 @@ background-size:auto;
   border-bottom: 1px solid #000;
   padding-bottom: 0.25rem;
 }
-
 
 .address-card,
 .payment-card {
@@ -1366,7 +1362,6 @@ background-size:auto;
   margin-bottom: 0.5rem;
 }
 
-
 .edit-action {
   font-size: 0.75rem;
   border: 1px solid #888;
@@ -1375,7 +1370,6 @@ background-size:auto;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
 }
-
 
 .add-address-wrapper {
   margin-top: 1rem;
@@ -1394,18 +1388,17 @@ background-size:auto;
 }
 
 .toggle-check {
-  display: none; 
+  display: none;
 }
 
 .new-address-box {
-  display: none; 
+  display: none;
   margin-top: 1rem;
 }
 
 .toggle-check:checked ~ .new-address-box {
-  display: block; 
+  display: block;
 }
-
 
 input[type="text"] {
   display: block;
@@ -1423,7 +1416,6 @@ select {
   border: 1px solid #ccc;
   margin-top: 0.5rem;
 }
-
 
 .summary-box {
   background: #f7f7f7;
@@ -1443,7 +1435,6 @@ select {
 .summary-total {
   font-weight: bold;
 }
-
 
 button[type="submit"],
 .purchase-btn {
