@@ -1525,6 +1525,10 @@ padding: 1rem 0;
   fill: var(--periwinkle) !important;
 }
 
+.favorite-btn:active{
+  fill: var(--periwinkle) !important;
+}
+
 .product-addcart {
   position: absolute;
   top: 0.5rem;
@@ -1617,6 +1621,22 @@ padding: 1rem 0;
   background-color: var(--darkBlue);
   opacity: 0.8;
 }
+
+#backToTopBtn {
+  position: fixed;
+  top: 25%;
+  right: 20px;
+  z-index: 3;
+  border: none;
+  outline: none;
+  background: none;
+
+}
+
+#backToTopBtn circle:hover {
+  fill: var(--periwinkle) !important;
+}
+
 
 /*--------------------------------------------------------------------------------
 |  checkout page
