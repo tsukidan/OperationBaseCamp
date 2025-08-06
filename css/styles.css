@@ -730,42 +730,78 @@ Social Media Links
   stroke-width: 1.5;
 }
 
-/* Product Detail Page */
+/*------------- Product Detail Page --------------*/
+
+ 
 .container-pdp {
   background: #fff;
-}
-
-.product-card {
-  /* background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
   padding: 2rem;
-  text-align: center;
-}
-.product-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.product-title {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-.product-option {
-  margin: 2rem 0;
-  text-align: left;
 }
 
-.product-option label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.5rem;
+
+/* Product image Carousel */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 可選：上下置中 */
 }
+.carousel {
+  position: relative;
+  display: block;  
+  width: 100%;              /* 滿版，但受 max-width 限制 */
+  max-width: 400px;         /* ✅ 最大寬度限制 */
+  aspect-ratio: 3 / 4;      /* ✅ 維持 3:4 圖片比例 */
+  margin: 1rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* 可選：加背景色避免空白 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 可選：陰影 */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-img {
+  width: 100%;
+  flex-shrink: 0;
+  display: none;
+  border-radius: 10px;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
 
 /* Color Options */
 .color-options {
   display: flex;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 .color-dot {
   width: 30px;
@@ -794,11 +830,13 @@ Social Media Links
   outline-offset: 2px;
 }
 
+
 /* Size Options */
 .size-options {
   display: flex;
   gap: 1rem;
   justify-content: space-around;
+  margin-bottom: 2rem;
 }
 .size-btn {
   width: 45px;
@@ -824,7 +862,7 @@ Social Media Links
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .circle-btn {
@@ -846,14 +884,17 @@ Social Media Links
 
 /*Add to Cart Button */
 .add-to-cart-btn {
-  background-color: #0e0f0f;
+  background-color: var(--darkBlue);
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
-  margin-bottom: 1rem;
+  display:block;
+  width:50%;
+  margin: 1rem auto;
+
 }
 
 .cart-icon {
@@ -861,6 +902,8 @@ Social Media Links
   font-size: 1rem;
   vertical-align: middle;
 }
+
+
 
 /* Product Description Accordion */
 .accordion {
@@ -899,79 +942,14 @@ Social Media Links
 .accordion-item.active .symbol {
   transform: rotate(45deg);
 }
-/*--------------------------------------------------------------------------------
 
+/* ---Newsletter Section------ */
 
-/* User Photos Carousel */
 .user-photos-newsletter {
   width: 100%;
   padding: 40px 20px;
   text-align: center;
   font-family: Arial, sans-serif;
-}
-
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.carousel-track {
-  display: flex;
-  width: 100%;
-}
-
-.carousel-item {
-  flex: 0 0 33.33%;
-  height: 150px;
-  background-color: #ccc;
-  border: 1px solid #999;
-}
-.carousel-inner-rounded > .carousel-item > img {
-  max-height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 20px;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
-}
-
-.caption {
-  font-size: 1rem;
-  margin: 20px 0 10px;
-}
-
-.hashtag {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 30px 0 10px;
-}
-
-.cta {
-  font-size: 0.95rem;
-  max-width: 360px;
-  margin: 0 auto 20px;
-  line-height: 1.5;
 }
 
 .newsletter-form {
@@ -1375,6 +1353,7 @@ Toggler Border Removal
 }
 .cycling-banner {
   position: relative;
+  display: flex;
   width: 100%;
   min-height: 20vh;
   background-color: white;
@@ -1588,6 +1567,47 @@ Toggler Border Removal
   }
 }
 
+.related-articles{
+  font-family: var(--bodyFont);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
+.articles{
+  display: flex;
+  flex-direction: column;
+  column-gap: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+/*Community Carousel*/
+.community-carousel-container{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-slide{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin:0;
+}
+
+.carousel-indicators button:hover{
+  background-color: var(--darkBlue);
+  opacity: 0.8;
+}
+
 /*--------------------------------------------------------------------------------
 |  checkout page
 |  For CSS testing
@@ -1726,6 +1746,7 @@ button[type="submit"],
   font-size: 1rem;
   cursor: pointer;
 }
+
 
 /* newsletter validation failure styles */
 .error {

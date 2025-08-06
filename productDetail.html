@@ -155,12 +155,29 @@
     <main>
         <!-- Product Detail Page Content -->
         <div class="container-pdp">
-         
+
+        <!-- Product Image and Title -->
+        
+        <div class="carousel-wrapper">
+        
+        <div class="carousel">
+        <button class="carousel-btn prev">‹</button>
+        
+        <div class="carousel-track">
+          <img src="assets/product-images/backpackplaceholder.jpg" class="carousel-img active" alt="Boots 1">
+          <img src="assets/product-images/backpackplaceholder2.jpg" class="carousel-img" alt="Boots 2">
+          <img src="assets/product-images/backpackplaceholder3.jpg" class="carousel-img" alt="Boots 3">
+        </div>
+        
+        <button class="carousel-btn next">›</button>
+      </div>
+
+      </div>
+
+      <!-- Product Information -->
+
           <div class="product-card">
 
-            <img src="assets/product-images/Boot placeholder.jpg" alt="Boots" class="product-img" />
-            <h2 class="product-title">Boots</h2>
-            
             <div class="product-option">
                 <label class="color-label">Color:</label>
                 <div class="color-options">
@@ -222,43 +239,39 @@
             </div>
           </div>
 
- 
-
-
-
-
-
-
-
-
-
         <!-- user-photos-newsletter -->
         <section class="user-photos-newsletter">
-        <!-- Top Carousel -->
-        <div class="carousel">
-            <button class="arrow left">&#8249;</button>
-            <div class="carousel-track">
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            </div>
-            <button class="arrow right">&#8250;</button>
-        </div>
+       
         <!-- Newsletter CTA -->
-        <div class="newsletter-signup">
-            <p class="caption">customers using gear</p>
-            <p class="cta">
-            <strong>Sign up for Operation Basecamp newsletters</strong>
-            for 10% off, new adventure plans, and more!
-            </p>
-            <form class="newsletter-form">
-            <div class="input-wrapper">
-                <input type="email" placeholder="YourEmail@operationbasecamp.com" required>
-                <span class="icon">📧</span>
-            </div>
-            <button type="submit">Sign me up!</button>
-            </form>
-        </div>
+            <!-- Newsletter Signup Dummy Section -->
+        <section class="newsletter py-5">
+              <div class="container">
+                <h5 class="fw-bold text-dark">Sign up for Operation Basecamp newsletters</h5>
+                <p class="mb-4 text-dark">for 10% off, new adventure plans, and more!</p>
+                <form class="row g-2 justify-content-center" aria-label="Newsletter signup form">
+                  <div class="row-auto position-relative">
+                    <input class="email-entry-form form-control input-lg" placeholder="youremail@gmail.com..." required>
+                    <div class="email-entry-icon">
+
+                    <svg width="34" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_636_648)">
+                    <path d="M3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H19C19.5304 5 20.0391 5.21071 20.4142 5.58579C20.7893 5.96086 21 6.46957 21 7V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V7Z" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 7L12 13L21 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_636_648">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                  </div>
+                  </div>
+                  <div class="email-submit row-auto justify-content-end align-items-end">
+                    <button type="submit" class="btn btn-primary bg-">Sign me up!</button>
+                  </div>
+                </form>
+              </div>
+          </section>
         <!-- Hashtag + Bottom Carousel -->
         <p class="hashtag">#OpBStayWild</p>
         <div class="carousel">
@@ -268,9 +281,10 @@
             <div class="carousel-item"></div>
             <div class="carousel-item"></div>
             </div>
-            <button class="arrow right">&#8250;</button>
-        </div>
+          </div>
         </section>
+
+
       </div>
     </main>
 

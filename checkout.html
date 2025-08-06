@@ -156,93 +156,129 @@
     </header>
 
     <main>
-      <div class="checkout-container">
-        <nav class="step-navigation">
-          <div class="step current">Billing</div>
-          <div class="step">Shipping</div>
-          <div class="step">Payment</div>
+        <div class="checkout-container">
+    <form id="checkout-form">
+
+      <!-- Step Navigation -->
+      <nav class="step-navigation">
+        <div class="step current" data-step-target="billing">Billing</div>
+        <div class="step" data-step-target="shipping">Shipping</div>
+        <div class="step" data-step-target="payment">Payment</div>
       </nav>
 
       <!-- Billing -->
-      <section class="form-step" id="billing-step">
-        <h2>Your Address</h2>
-        <div class="address-list">
-          <div class="address-card">
-            <label><input type="radio" name="billing-address" checked> John Doe – 123 Sesame St, NY</label>
-            <button type="button" class="edit-action">edit</button>
+      <section class="form-step active" id="billing-step" data-step="billing">
+        <h2 class="section-title">Billing Address</h2>
+        <div class="billing-display" id="billing-address-display">
+          <div class="address-info">
+            <p><strong>John Doe</strong></p>
+            <p>123 Sesame St</p>
+            <p>New York, NY 12345</p>
+          
           </div>
-          <div class="address-card">
-            <label><input type="radio" name="billing-address"> John Doe – 234 Vacation Way, FL</label>
-            <button type="button" class="edit-action">edit</button>
+                <button type="button" class="edit-action" data-action="edit-billing-address">edit</button>
           </div>
-        </div>
-        <div class="add-address-wrapper">
-          <input type="checkbox" id="show-new-address" class="toggle-check">
-          <label for="show-new-address" class="add-address-btn">+ Add New</label>
-          <div class="new-address-box">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Street Address">
-            <input type="text" placeholder="City">
-            <input type="text" placeholder="State">
-            <input type="text" placeholder="ZIP Code">
-            <button type="submit">Save Address</button>
+
+        <h2 class="section-title">Payment Method</h2>
+            <div class="payment-form" data-step-form="billing">
+                <input type="text" placeholder="credit card #" name="card-number" data-input="card-number">
+            <div class="payment-fields">
+                <select name="exp-month" data-input="exp-month">
+                    <option value="">Exp month</option>
+                                                  <option value="01">01</option>
+                                                  <option value="02">02</option>
+                                                  <option value="03">03</option>
+                                                  <option value="04">04</option>
+                                                  <option value="05">05</option>
+                                                  <option value="06">06</option>
+                                                  <option value="07">07</option>
+                                                  <option value="08">08</option>
+                                                  <option value="09">09</option>
+                                                  <option value="10">10</option>
+                                                  <option value="11">11</option>
+                                                  <option value="12">12</option>
+                  </select>
+            <select name="exp-year" data-input="exp-year">
+              <option value="">Year</option><option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2030</option>
+                                            <option value="2030">2030</option>
+            </select>
+            <input type="text" placeholder="CVV" name="cvv" data-input="cvv">
           </div>
-        </div>
-        <button type="submit">Continue</button>
+              <button type="button" class="use-card-btn" data-action="use-card">Use This Card</button>
+          </div>
+
+          <button type="button" class="step-next-btn" data-action="next-to-shipping">Continue</button>
       </section>
 
+
+
+
       <!-- Shipping -->
-      <section class="form-step" id="shipping-step">
-        <h2>Delivery Address</h2>
-        <div class="address-list">
-          <div class="address-card">
-            <label><input type="radio" name="shipping-address" checked> John Doe – 123 Sesame St, NY</label>
-            <button type="button" class="edit-action">edit</button>
+      <section class="form-step" id="shipping-step" data-step="shipping">
+        <h2 class="section-title">Ship to:</h2>
+        <div class="shipping-display" id="shipping-address-display">
+          <div class="address-info">
+            <p><strong>John Doe</strong></p>
+            <p>123 Sesame St</p>
+            <p>New York, NY 12345</p>
           </div>
-          <div class="address-card">
-            <label><input type="radio" name="shipping-address"> John Doe – 234 Vacation Way, FL</label>
-            <button type="button" class="edit-action">edit</button>
-          </div>
+          <button type="button" class="edit-action" data-action="edit-shipping-address">edit</button>
         </div>
-        <div class="delivery-options">
-          <label for="delivery-method">Method</label>
-          <select id="delivery-method" name="delivery-method">
-            <option value="">Select</option>
-            <option value="standard">Standard – Free (arrives 8/15)</option>
-            <option value="express">Express – $12.99 (arrives 8/11)</option>
-            <option value="overnight">Overnight – $18.99 (arrives 8/08)</option>
-          </select>
+
+        <h2 class="section-title">Shipping Method</h2>
+        <div class="shipping-options">
+          <label class="shipping-option">
+            <input type="radio" name="shipping-method" value="standard" checked data-shipping="standard">
+            <div class="option-details"><span class="option-name">Standard</span><span class="option-time">6–8 Business Days</span></div>
+            <span class="option-price">Free</span>
+          </label>
+          <label class="shipping-option">
+            <input type="radio" name="shipping-method" value="ground" data-shipping="ground">
+            <div class="option-details"><span class="option-name">Ground</span><span class="option-time">5–7 Business Days</span></div>
+            <span class="option-price">13.99</span>
+          </label>
+          <label class="shipping-option">
+            <input type="radio" name="shipping-method" value="express" data-shipping="express">
+            <div class="option-details"><span class="option-name">Express</span><span class="option-time">3–5 Business Days</span></div>
+            <span class="option-price">19.99</span>
+          </label>
         </div>
-        <button type="submit">Continue</button>
+        <div class="shipping-comments">
+          <label for="shipping-comment">comments</label>
+          <textarea id="shipping-comment" name="shipping-comment" placeholder="Leave at door" data-input="shipping-comment"></textarea>
+        </div>
+
+        <button type="button" class="step-next-btn" data-action="next-to-payment">Continue</button>
       </section>
 
       <!-- Payment -->
-      <section class="form-step" id="payment-step">
-        <h2>Payment Method</h2>
-        <div class="payment-list">
-          <div class="payment-card">
-            <label><input type="radio" name="payment-method" checked> Bank 1 – *****1234</label>
-            <button type="button" class="edit-action">edit</button>
+      <section class="form-step" id="payment-step" data-step="payment">
+        <div class="order-summary-box">
+          <div class="product-list">
+            <div class="product-item"><img src="" alt="Product Image"><div class="product-info"><p class="product-name">Product Name</p><p class="product-price">$100</p></div></div>
+            <div class="product-item"><img src="" alt="Product Image"><div class="product-info"><p class="product-name">Product Name</p><p class="product-price">$100</p></div></div>
           </div>
-          <div class="payment-card">
-            <label><input type="radio" name="payment-method"> Bank 2 – *****2345</label>
-            <button type="button" class="edit-action">edit</button>
+          <div class="discount-box">
+            <input type="text" name="discount-code" placeholder="Discount code or gift card" data-input="discount-code">
+            <button type="button" data-action="apply-discount">apply</button>
           </div>
-          <div class="payment-card">
-            <label><input type="radio" name="payment-method"> PayPal</label>
-          </div>
-        </div>
-        <div class="order-summary">
-          <div class="summary-box">
-            <div class="summary-item"><span>Product</span><span>x1</span><span>$100</span></div>
-            <div class="summary-item"><span>Product</span><span>x1</span><span>$100</span></div>
-            <div class="summary-item mini"><span>Tax:</span><span>$8.50</span></div>
-            <div class="summary-item mini"><span>Shipping:</span><span>$0</span></div>
-            <div class="summary-total"><span>Total:</span><span>$208.50</span></div>
+          <div class="price-summary">
+            <div class="summary-line"><span>Subtotal</span><span>$200</span></div>
+            <div class="summary-line"><span>order discount</span><span class="discount-tag">SUMMERFUN</span><span>−$20</span></div>
+            <div class="summary-line"><span>tax</span><span>$8.50</span></div>
+            <div class="summary-line"><span>shipping</span><span>$0</span></div>
+            <div class="summary-total"><span>Total:</span><span>$188.50</span></div>
           </div>
         </div>
-        <button class="purchase-btn">Purchase</button>
+        <button type="submit" class="purchase-btn" data-action="purchase">Purchase</button>
       </section>
+    </form>
+  </div>
+
 </div>
       <section id="youMayAlsoLike">
         <h2>You Might Also Like...</h2>

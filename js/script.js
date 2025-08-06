@@ -194,3 +194,24 @@ const accordionHeaders = document.querySelectorAll('.accordion-header');
       item.classList.toggle('active');
     });
   });
+  // Product image Carousel
+const images = document.querySelectorAll('.carousel-img');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let currentIndex = 0;
+
+  function updateCarousel(index) {
+    images.forEach(img => img.classList.remove('active'));
+    images[index].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel(currentIndex);
+  });
