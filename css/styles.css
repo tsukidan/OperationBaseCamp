@@ -1726,3 +1726,11 @@ button[type="submit"],
   font-size: 1rem;
   cursor: pointer;
 }
+
+.photo-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 3rem;
+  
+}
