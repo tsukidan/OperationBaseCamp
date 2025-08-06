@@ -1209,31 +1209,52 @@ Toggler Border Removal
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+   font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
 }
 .hero-content h2 {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  font-family: var(--subtitleFont);
+  font-weight: var(--subtitleWeight);
+}
+.tenants {
+background-color:#001f4d;
+color:#fff;
+display: flex;
+justify-content: space-between;
+ font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+padding-top: 1rem;
+}
+.tenants p {
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
+
+}
+.Story h2 {
+font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+}
+.Story p {
+ font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem, 1rem;
-}
 .card {
-  background-color: #022156 !important;
+  background-color: var(--darkBlue) !important;
 }
 .card-img-overlay {
   background-image: url("assets/product-images/_DSC3385.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   align-items: left;
   justify-content: center;
   text-align: left;
   position: relative;
-  color: #fff;
+  color: #fff ;
   padding: 2rem;
   top: 0;
   left: 0;
@@ -1250,43 +1271,32 @@ Toggler Border Removal
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
+.Featured {
+background-color: #001f4d;
+padding: 1rem 0;
+}
 .card-title-featured-content {
+  color:#fff;
   font-size: 2rem;
   margin-bottom: 0.5rem;
   line-height: 1.2;
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
 }
 .card-text-featured-content {
+  color:#fff;
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  font-family: var(--subtitleFont);
+  font-weight: var(--subtitleWeight);
 }
 .card-group {
   height: 250px;
   width: 500px;
+  display: flex;
+  justify-content: space-between;
 }
-.card-group img container-1 {
-  background-image: url("assets/product-images/_DSC3385.jpg");
-  background-size: auto;
-}
-.card-group img container-2 {
-  background-image: url("assets/product-images/_DSC3497.jpg");
-  background-size: auto;
-}
-.card-group img container-3 {
-  background-image: url("assets/product-images/_DSC3482.jpg");
-  background-size: auto;
-}
-.email {
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  margin-bottom: 0.001rem;
-}
-.hashtag {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  font-style: bold;
-}
+
 /*--------------------------------------------------------------------------------
 |  Products Page
 /*--------------------------------------------------------------------------------*/
