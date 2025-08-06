@@ -884,7 +884,7 @@ Social Media Links
 
 /*Add to Cart Button */
 .add-to-cart-btn {
-  background-color: var(--navyBlue);
+  background-color: var(--darkBlue);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -894,6 +894,7 @@ Social Media Links
   display:block;
   width:50%;
   margin: 1rem auto;
+
 }
 
 .cart-icon {
@@ -901,6 +902,8 @@ Social Media Links
   font-size: 1rem;
   vertical-align: middle;
 }
+
+
 
 /* Product Description Accordion */
 .accordion {
