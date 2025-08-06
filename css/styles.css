@@ -365,10 +365,11 @@ body {
 
 /* === Ad Banner === */
 .ad-banner {
-  background-color: var(--skyBlue) !important;
+  background-color: var(--brightOrange) !important;
   border: none !important;
-  color: #fff !important;
-  padding: 10px 0 10px;
+  color: var(--brown) !important;
+  padding: 10px;
+  margin-bottom: 0;
 }
 /* === Buttons === */
 .btn-primary {
