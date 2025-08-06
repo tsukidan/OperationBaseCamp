@@ -1294,7 +1294,7 @@ padding: 1rem 0;
   height: 250px;
   width: 500px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------------------------
