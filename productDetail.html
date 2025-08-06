@@ -17,6 +17,12 @@
   </head>
 <body>
     <header>
+      
+      <section class="ad-banner">
+          <p class="mb-0 text-center">
+            Use the code <strong>SUMMERFUN</strong> for 10% off!
+          </p>
+      </section>
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
         <div
           class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -145,23 +151,52 @@
           </div>
         </div>
       </nav>
+      <!-- <h1>Backpack</h1> -->
     </header>
 
     <main>
         <!-- Product Detail Page Content -->
-         <div class="product-card">
-            <img src="assets/product-images/Boot placeholder.jpg" alt="Boot" class="product-img" />
-            <h2 class="product-title">Boot</h2>
+        <div class="container-pdp">
+
+        <!-- Product Image Carousel -->
+
+        <div class="carousel-wrapper">
+        
+        <div class="carousel">
+        <button class="carousel-btn prev">‹</button>
+        
+        <div class="carousel-track">
+          <img src="assets/product-images/backpackplaceholder.jpg" class="carousel-img active" alt="Boots 1">
+          <img src="assets/product-images/backpackplaceholder2.jpg" class="carousel-img" alt="Boots 2">
+          <img src="assets/product-images/backpackplaceholder3.jpg" class="carousel-img" alt="Boots 3">
+        </div>
+        
+        <button class="carousel-btn next">›</button>
+      </div>
+
+      </div>
+
+      <!-- Product Title -->
+
+      <h2 class="product-title">Backpack</h2>
+      <p>$30.00</p>
+
+      <!-- Product Information -->
+
+          <div class="product-card">
+
             <div class="product-option">
                 <label class="color-label">Color:</label>
                 <div class="color-options">
-                <span class="color-dot color-white"></span>
-                <span class="color-dot color-gray"></span>
-                <span class="color-dot color-darkgray"></span>
+                <button class="color-button" selected><span class="color-dot color-white"></span></button>
+                <button class="color-button"><span class="color-dot color-gray"></span></button>
+                <button class="color-button"><span class="color-dot color-darkgray"></span></button>
                 </div>
             </div>
+
             <div class="product-option">
-                <div class="size-options">
+              <label class="size-label">Size:</label>
+                <div class="size-options" aria-label="Size Options" id="size-options"> 
                 <button class="size-btn">XS</button>
                 <button class="size-btn">S</button>
                 <button class="size-btn selected">M</button>
@@ -169,171 +204,244 @@
                 <button class="size-btn">XL</button>
                 </div>
             </div>
+
             <div class="product-option">
-                <div class="price-control">
-                <label class="price-label">Price:</label>
-                <button class="circle-btn">−</button>
-                <span>#</span>
-                <button class="circle-btn">+</button>
-                </div>
+              <div class="price-control">
+                <label class="price-label">Quantity:</label>
+                <button class="circle-btn" id="decrease">−</button>
+                <span id="quantity">1</span>
+                <button class="circle-btn" id="increase">+</button>
+              </div>
             </div>
-            <button class="btn-add-to-cart">Add to Cart</button>
-        </div>
-        <section class="product-details">
-            <div class="accordion">
-                <div class="accordion-item">Description <span>&gt;</span></div>
-                <div class="accordion-item">Specs <span>&gt;</span></div>
-                <div class="accordion-item">Behind the Gear <span>&gt;</span></div>
-                <div class="accordion-item">Customer Reviews <span>&or;</span></div>
+
+            <!-- Add to Cart Button -->
+
+            <div class="product-action">
+            <button class="add-to-cart-btn" id="addToCart">Add to Cart</button>
+            <span class="cart-icon" id="cartStatus" style="display: none;">
+              🛒 (<span id="cartCount">0</span>)
+            </span>
+          </div>
+
+            <!-- Product Description Accordion -->
+           <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header">Description <span class="symbol">+</span></button>
+              <div class="accordion-content">This is the product description.</div>
             </div>
-            <div class="review-summary">
-                <div class="star-summary">
-                <div class="star-icon">★</div>
-                <div class="rating-info">
-                    <div class="average">4.0</div>
-                    <div class="reviews">Average Rating<br>100 reviews</div>
-                </div>
-                </div>
-                <div class="rating-bars">
-                <div class="bar-row">
-                    <span>5 star</span>
-                    <div class="bar"><div class="fill" style="width: 43%"></div></div>
-                    <span>43%</span>
-                </div>
-                <div class="bar-row">
-                    <span>4 star</span>
-                    <div class="bar"><div class="fill" style="width: 30%"></div></div>
-                    <span>30%</span>
-                </div>
-                <div class="bar-row">
-                    <span>3 star</span>
-                    <div class="bar"><div class="fill" style="width: 18%"></div></div>
-                    <span>18%</span>
-                </div>
-                <div class="bar-row">
-                    <span>2 star</span>
-                    <div class="bar"><div class="fill" style="width: 6%"></div></div>
-                    <span>6%</span>
-                </div>
-                <div class="bar-row">
-                    <span>1 star</span>
-                    <div class="bar"><div class="fill" style="width: 3%"></div></div>
-                    <span>3%</span>
-                </div>
-                </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">Specs <span class="symbol">+</span></button>
+              <div class="accordion-content">Technical specifications go here.</div>
             </div>
-            <!-- user reviews -->
-             <div class="user-review">
-                <hr>
-                <div class="review-header">
-                    <div class="avatar"></div>
-                    <div class="user-content">
-                    <div class="user-name">User 1</div>
-                    <div class="user-stars">★ ★ ★ ★ ☆</div>
-                    <p class="review-text">I love this product.</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="review-header">
-                    <div class="avatar"></div>
-                    <div class="user-content">
-                    <div class="user-name">User 2</div>
-                    <div class="user-stars">★ ☆ ☆ ☆ ☆</div>
-                    <p class="review-text">product broke apart after one use</p>
-                    </div>
-                </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">Behind the Gear <span class="symbol">+</span></button>
+              <div class="accordion-content">Background story and design notes.</div>
             </div>
-        </section>
+
+            <div class="accordion-item">
+              <button class="accordion-header">Customer Reviews <span class="symbol">+</span></button>
+              <div class="accordion-content">Customer feedback and ratings.</div>
+            </div>
+          </div>
+
         <!-- user-photos-newsletter -->
         <section class="user-photos-newsletter">
-        <!-- Top Carousel -->
-        <div class="carousel">
-            <button class="arrow left">&#8249;</button>
-            <div class="carousel-track">
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            </div>
-            <button class="arrow right">&#8250;</button>
-        </div>
+       
         <!-- Newsletter CTA -->
-        <div class="newsletter-signup">
-            <p class="caption">customers using gear</p>
-            <p class="cta">
-            <strong>Sign up for Operation Basecamp newsletters</strong>
-            for 10% off, new adventure plans, and more!
-            </p>
-            <form class="newsletter-form">
-            <div class="input-wrapper">
-                <input type="email" placeholder="YourEmail@operationbasecamp.com" required>
-                <span class="icon">📧</span>
+            <!-- Newsletter Signup Dummy Section -->
+        <section class="newsletter py-5">
+              <div class="container">
+                <h5 class="fw-bold text-dark">Sign up for Operation Basecamp newsletters</h5>
+                <p class="mb-4 text-dark">for 10% off, new adventure plans, and more!</p>
+                <form class="row g-2 justify-content-center" aria-label="Newsletter signup form">
+                  <div class="row-auto position-relative">
+                    <input class="email-entry-form form-control input-lg" placeholder="youremail@gmail.com..." required>
+                    <div class="email-entry-icon">
+
+                    <svg width="34" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_636_648)">
+                    <path d="M3 7C3 6.46957 3.21071 5.96086 3.58579 5.58579C3.96086 5.21071 4.46957 5 5 5H19C19.5304 5 20.0391 5.21071 20.4142 5.58579C20.7893 5.96086 21 6.46957 21 7V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V7Z" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 7L12 13L21 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_636_648">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                  </div>
+                  </div>
+                  <div class="email-submit row-auto justify-content-end align-items-end">
+                    <button type="submit" class="btn btn-primary bg-">Sign me up!</button>
+                  </div>
+                </form>
+              </div>
+          </section>
+        <!-- Photo Carousel -->
+
+          <div class="community-carousel-container container py-5 text-center position-static">
+            <h3 class="fw-bold mb-4">#StayWildSP</h3>
+            <div class="carousel-slide position-static" data-bs-ride="carousel">
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <img src="assets/site-images/carousel1.png" class="d-block w-100" alt="Community photo 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/site-images/carousel2.png" class="d-block w-100" alt="Community photo 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/site-images/carousel3.png" class="d-block w-100" alt="Community photo 3">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#communityCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#communityCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+              </button>
+              <!-- Carousel Indicators -->
+              <div class="carousel-indicators position-static">
+                <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              
             </div>
-            <button type="submit">Sign me up!</button>
-            </form>
-        </div>
-        <!-- Hashtag + Bottom Carousel -->
-        <p class="hashtag">#OpBStayWild</p>
-        <div class="carousel">
-            <button class="arrow left">&#8249;</button>
-            <div class="carousel-track">
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            </div>
-            <button class="arrow right">&#8250;</button>
-        </div>
-        </section>
+
+      </div>
     </main>
+<footer class="footer-bg">
 
-    <footer>
-         <footer>
-        <nav class="social-nav" aria-label="Social Media Links">
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
-                  </a></li>
-               <li><a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg></a></li>
-               <li><a href="https://www.tiktok.com" target="_blank" aria-label="Tiktok">
-                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
-               </a></li>
-            </ul>
-        </nav>
-        <h2>Stay Wild.</h2>
-        <section class="footer-links" aria-label="Footer navigation">
-            <section aria-label="Company Information">
-                <h3>ABOUT US</h3>
-                <ul>
-                    <li><a href="about.html">Our Mission</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </section>
-            <section aria-label="Customer Service">
-                <h3>CUSTOMER SERVICE</h3>
-                <ul>
-                    <li><a href="#">Find a Store</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </section>
-            <section aria-label="Legal and Policies">
-                <h3>LEGAL</h3>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </section>
-            <section aria-label="Orders and Returns">
-                <h3>ORDERS AND RETURNS</h3>
-                <ul>
-                    <li><a href="#">Order Status</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                </ul>
-            </section>
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+        <div class="layer layer4"></div>
+        <div class="layer layer5"></div>
+
+      <nav class="social-nav" aria-label="Social Media Links">
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                />
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path d="M16.5 7.5v.01" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              aria-label="Tiktok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <h2>Stay Wild.</h2>
+
+      <section class="footer-links" aria-label="Footer navigation">
+        <section aria-label="Company Information">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li><a href="about.html">Our Mission</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
         </section>
-        <p>&copy; 2025 Supply Post All rights reserved.</p>
-    </footer>
-    
+        <section aria-label="Customer Service">
+          <h3>CUSTOMER SERVICE</h3>
+          <ul>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </section>
+        <section aria-label="Legal and Policies">
+          <h3>LEGAL</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </section>
+        <section aria-label="Orders and Returns">
+          <h3>ORDERS AND RETURNS</h3>
+          <ul>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </section>
+      </section>
 
-    <!-- <script src="js/script.js"></script> -->
+      <p>&copy; 2025 Supply Post All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+    <!-- add the js file here (defer) -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -59,10 +59,6 @@ function formValidation1() {
   }
 }
 
-// July 31st newsletter alert
-
-// run function when page is loaded
-
 document.addEventListener("DOMContentLoaded", function () {
   // check to see if user has already been on site during this browsing session
   if (sessionStorage.getItem("newsletterShown")) return;
@@ -129,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // event listener to operate swipe.js on checkout page 'You Might Also Like'
-
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".swiper", {
     slidesPerView: 3, // Show 3 at a time
