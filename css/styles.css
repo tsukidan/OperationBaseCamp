@@ -1726,3 +1726,12 @@ button[type="submit"],
   font-size: 1rem;
   cursor: pointer;
 }
+
+/* newsletter validation failure styles */
+.error {
+  border: 2px solid red !important;
+}
+
+.errorBox {
+  color: red;
+}

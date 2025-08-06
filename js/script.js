@@ -1,4 +1,4 @@
-// JS written by Kaden Rose & 
+
 
 "use strict";
 
@@ -57,82 +57,53 @@ function formValidation1() {
     }
 }
 
-// July 31st newsletter alert
 
 
-// run function when page is loaded
 
-// document.addEventListener("DOMContentLoaded", function (){
-//     // check to see if user has already been on site during this browsing session
-//     if (sessionStorage.getItem("newsletterShown")) return;
 
-//     // a 5 second delay
-//     setTimeout(showNewsletterPopup, 5000);
+// form validation for newsletter signup
+document.addEventListener("DOMContentLoaded", function() {
+    // grab newsletter forms only
+    let newsletterForms = document.querySelectorAll(".newsletter form");
+    
+    // loop through each form
+    newsletterForms.forEach(function (form) {
+        let mailInput = form.querySelector("input");
 
-    // function for newsletter
-//     function showNewsletterPopup() {
-//         // mark as shown so it won't show again til browser tab is closed
-//         sessionStorage.setItem("newsletterShown", "true");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-//         // create div and style it
-//         const popup = document.createElement("div");
-//         popup.id = "newsletter-popup";
-//         popup.style.position = "fixed";
-//         popup.style.top = "50%";
-//         popup.style.left = "50%";
-//         popup.style.transform = "translate(-50%, -50%)";
-//         popup.style.background = "#fff";
-//         popup.style.padding = "20px";
-//         popup.style.border = "2px solid #333";
-//         popup.style.borderRadius = "8px";
-//         popup.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-//         popup.style.zIndex = "9999";
-//         popup.style.textAlign = "center";
+            // reset error class & clear error box
+            mailInput.classList.remove("error");
+            let eBox = form.closest(".newsletter").querySelector(".eBoxNewsletter");
+            eBox.textContent = "";
 
-//         popup.innerHTML = 
-//             `<h2>Join our newsletter</h2>
-//             <p>Get exclusive offers and updates.</p>
-//             <input type="email" id="newsletter-email" placeholder="Your email" style="padding:5px; width: 80%;">
-//             <br><br>
-//             <button id="newsletter-submit" style="padding:8px 12px;">Subscribe</button>
-//             <br><br>
-//             <button id="newsletter-close" style="background:none; border:none; color:red; cursor:pointer;">Close</button>`;
+            // regex for email
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-//         // add this to the body
-//         document.body.appendChild(popup);
+            // empty check
+            if (mailInput.value.trim() === "") {
+                mailInput.classList.add("error");
+                eBox.textContent = "Please enter your email address.";
+                return;
+            }
 
-//         // remove popup when user clicks remove
-//         document.getElementById("newsletter-close").addEventListener("click", function () {
-//             popup.remove();
-//         });
+            // check email format
+            if (!emailRegex.test(mailInput.value.trim())) {
+                mailInput.classList.add("error");
+                eBox.textContent = "Please enter a valid email address.";
+                return;
+            }
 
-//         // remove popup when users subscribes
-//         document.getElementById("newsletter-submit").addEventListener("click", function () {
-//             let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//             let mailInput = document.getElementById("newsletter-email").value.trim();
-
-//             if (mailInput === ""){
-//                 alert("Please enter your email address.");
-//                 return;
-//             }
-//             if (!mailRegex.test(mailInput)){
-//                 alert("Please enter a valid email address.");
-//                 return;
-//             }
-
-//             alert("Thanks for subscribing to our newsletter, see you on the trail! DISCLAIMER: This form is an educational demonstration, no real information was collected.");
-//             popup.remove();
-//         });
-//     }
-
-// });
-
+            // success
+            alert("Thank you for subscribing! #StayWild! (DEMO only, no real information was stored)");
+            mailInput.value = "";
+        });
+    });
+});
 
 
 // event listener to operate swipe.js on checkout page 'You Might Also Like'
-
-//
-
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".swiper", {
         slidesPerView: 3, // Show 3 at a time
