@@ -1,3 +1,224 @@
+/*--------------------------------------------------------------------------------
+|  CSS ROOT
+|  - Please put any reusable variables within this block of code to be referenced
+|    in future css changes. This ensures we are reusing code and have consistency.
+| 
+|  example:
+|  --varName: property; (this property is dependent on the var type!)
+--------------------------------------------------------------------------------*/
+:root {
+  /*colors*/
+  --redMaroon: #8c324a;
+  --skyBlue: #6295d9;
+  --navyBlue: #022156;
+  --brightOrange: #f25c05;
+  --brightYellow: #fe9d18;
+  --forestGreen: #2f7a3e;
+  --plum: #5d3a58;
+  --brown: #713b1c;
+
+  /*Fonts*/
+  --headingFont: "Freude";
+  --headingWeight: 400;
+
+  --subtitleFont: "MontserratAlt", sans-serif;
+  --subtitleWeight: 800;
+
+  --bodyFont: "Lato", sans-serif;
+  --bodyFontWeight: 400;
+}
+/*--------------------------------------------------------------------------------
+|  Font-Face
+|  - This is utilized to load our custom fonts onto the site provided by the brand
+| team. This ensures consistency across all devices.
+--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------
+|  Freude font
+|  - This is for the Freude font.
+--------------------------------------------------------------------------------*/
+@font-face {
+  font-family: "Freude";
+  src: url("../assets/fonts/freude.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------------------------------------------------------------
+|  Lato fonts
+|  - This is a collection of font-face properties for the Lato font family.
+--------------------------------------------------------------------------------*/
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+/*--------------------------------------------------------------------------------
+|  Montserrat Alternates fonts
+|  - This is a collection of font-face properties for the Lato font family.
+--------------------------------------------------------------------------------*/
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlt";
+  src: url("../assets/fonts/Montserrat_Alt/MontserratAlternates-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
 /* === Reset & Base === */
 * {
   margin: 0;
@@ -8,10 +229,11 @@ html {
   font-size: 100%;
 }
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
   line-height: 1.6;
   color: #333;
-  background: #f9f9f9;
+  background: var(--skyBlue);
 }
 .container {
   width: 90%;
@@ -19,51 +241,117 @@ body {
   margin: 0 auto;
 }
 
-/* === Hero Banner === */
-.hero {
-  background-image: url("../assets/product-images/Boot placeholder.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  color: #fff;
-  padding: 2rem;
-}
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-}
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.main-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
+.banner,
+.top-rated,
+.backpacks,
+.mission-statment {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner,
+.mission-statment {
+  grid-column: 1 / -1;
+}
+
+.banner {
+  height: 41vh;
+}
+
+.mission-statment {
+  aspect-ratio: 2 / 1;
+}
+.top-rated,
+.backpacks {
+  aspect-ratio: 1 / 1;
+}
+
+.banner {
+  background-image: url("../assets/product-images/Boot placeholder.jpg");
+}
+.top-rated {
+  background-image: url("../assets/product-images/helmetplaceholder.webp");
+}
+.backpacks {
+  background-image: url("../assets/product-images/backpackplaceholder.jpg");
+}
+.mission-statment {
+  background-image: url("../assets/product-images/hammockplaceholder.jpg");
+}
+
+.banner h1,
+.top-rated h1,
+.backpacks h1,
+.mission-statment h1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+
+  background-color: var(--navyBlue);
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+}
+.banner h1 {
+  font-size: 4.5rem;
+}
+
+.top-rated h1,
+.backpacks h1 {
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  line-height: 2.6rem;
+}
+.top-rated h2,
+.backpacks h2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  font-family: var(--subtitleFont);
+  font-weight: var(--subtitleWeight);
+  padding: 0 0.5rem 0.6rem;
+}
+
+.mission-statment h1 {
+  top: 0;
+  bottom: auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0.4rem 0;
+}
+
+/* === Ad Banner === */
+.ad-banner {
+  background-color: var(--skyBlue) !important;
+  border: none !important;
+  color: #fff !important;
+  padding: 10px 0 10px;
+}
 /* === Buttons === */
 .btn-primary {
   display: inline-flex;
@@ -84,7 +372,8 @@ body {
 
 /* === Navigation === */
 .navbar {
-  background: #0e0f0f;
+  /*important needed to ensure overwrite*/
+  background: var(--navyBlue) !important;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -125,10 +414,17 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 3rem;
+}
+/* === Desktop Footer === */
+@media (min-width: 768px) {
+  footer {
+    margin-top: 3rem;
+  }
 }
 footer h2 {
   padding: 1rem;
+  font-family: var(--subtitleFont);
+  font-weight: var(--subtitleWeight);
 }
 .social-nav {
   display: flex;
@@ -191,6 +487,9 @@ footer h2 {
   color: #ccc;
 }
 
+footer {
+  background-color: var(--navyBlue);
+}
 /*--------------------------------------------------------------------------------
 |  Bootstrap Changes
 |  - Please put boostrap changes EOF here to ensure changes!
@@ -673,9 +972,278 @@ Toggler Border Removal
 }
 
 /*checkout styles*/
+
+.checkout-page {
+  background-color: #f5f5f5; /* or whatever color you want */
+}
+
 .checkoutNav {
   font-family: "Urbanist", sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 2em;
+}
+.carousel-indicators .active {
+  background-color: #0d6efd; /* Bootstrap primary color */
+}
+
+.editButton {
+  border: 2px solid #000;
+  color: #000;
+  padding: 1em 3em;
+  border-radius: 10em;
+}
+
+.line {
+  width: 100vw;
+  height: 0.1em;
+  background-color: #000;
+  margin: 3em auto;
+}
+
+.paymentButton {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Urbanist", sans-serif;
+}
+
+.orderButton {
+  background-color: #022156;
+  border: none;
+  padding: 1.5em 4em;
+  color: white;
+  border-radius: 2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto auto 5em auto;
+}
+
+.paymentCard {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.3) !important;
+}
+
+.userAddress {
+  font-weight: bold;
+}
+
+/*shipping css*/
+
+.shipping-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Whole card */
+.shipping-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #eee;
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.3) !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.shipping-card:hover {
+  background-color: #eeeeee;
+}
+
+/* Radio hidden but functional */
+.shipping-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #444;
+  border-radius: 50%;
+  outline: none;
+  margin: 0;
+  margin-right: 3em;
+  position: relative;
+  cursor: pointer;
+}
+
+.shipping-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* Spacing for inner content */
+.shipping-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+/* Price text */
+.price {
+  font-weight: bold;
+}
+
+.option3 {
+  margin-bottom: 2em;
+}
+
+.paymentMethodButton {
+  color: black !important;
+  background-color: orange;
+  margin-left: 1em !important;
+}
+
+/*--------------------------------------------------------------------------------
+|  contact page
+|  For CSS testing
+--------------------------------------------------------------------------------*/
+.contact-section {
+  padding: 2rem;
+  background-color: var(--skyBlue);
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyFontWeight);
+  color: #ffffff;
+}
+
+.contact-section .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--navyBlue);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section h1 {
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-section p {
+  font-family: var(--subtitleFont);
+  font-weight: var(--subtitleWeight);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-section .form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.contact-section input[type="text"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--bodyFont);
+  color: var(--navyBlue);
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input[type="email"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--bodyFont);
+  color: var(--navyBlue);
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input[type="tel"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--bodyFont);
+  color: var(--navyBlue);
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--bodyFont);
+  color: var(--navyBlue);
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--bodyFont);
+  color: var(--navyBlue);
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.contact-section textarea {
+  resize: vertical;
+}
+
+.contact-section .checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-section .checkbox-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.contact-section button[type="submit"] {
+  background-color: var(--skyBlue);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1.5rem auto 0;
+  font-weight: bold;
+  font-family: var(--subtitleFont);
+}
+
+.contact-section button[type="submit"]:hover {
+  background-color: var(--brightOrange);
 }
