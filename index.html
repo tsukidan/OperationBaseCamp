@@ -16,11 +16,11 @@
 
   <body>
     <header>
-      <div
-        class="ad-banner bg-white text-dark text-center mx-auto border-bottom fst-italic"
-      >
-        Banner area! Sales! Adventures!
-      </div>
+     <section class="ad-banner">
+          <p class="mb-0 text-center">
+            Use the code <strong>SUMMERFUN</strong> for 10% off!
+          </p>
+      </section>
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
         <div
           class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -172,7 +172,13 @@
       </section>
       <!-- TODO: Add homepage sections such as featured products or company info -->
     </main>
-    <footer>
+    <footer class="footer-bg">
+      <div class="layer layer1"></div>
+      <div class="layer layer2"></div>
+      <div class="layer layer3"></div>
+      <div class="layer layer4"></div>
+      <div class="layer layer5"></div>
+
       <nav class="social-nav" aria-label="Social Media Links">
         <ul class="social-links">
           <li>
@@ -191,7 +197,6 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
@@ -205,7 +210,8 @@
               href="https://www.instagram.com"
               target="_blank"
               aria-label="Instagram"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -215,15 +221,15 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
                   d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
                 />
                 <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                <path d="M16.5 7.5v.01" /></svg
-            ></a>
+                <path d="M16.5 7.5v.01" />
+              </svg>
+            </a>
           </li>
           <li>
             <a
@@ -241,7 +247,6 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
@@ -252,7 +257,9 @@
           </li>
         </ul>
       </nav>
+
       <h2>Stay Wild.</h2>
+
       <section class="footer-links" aria-label="Footer navigation">
         <section aria-label="Company Information">
           <h3>ABOUT US</h3>
@@ -284,6 +291,7 @@
           </ul>
         </section>
       </section>
+
       <p>&copy; 2025 Supply Post All rights reserved.</p>
     </footer>
     <script

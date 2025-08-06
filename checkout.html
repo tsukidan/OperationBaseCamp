@@ -20,11 +20,11 @@
   </head>
   <body>
     <header>
-      <div
-        class="bg-white text-dark text-center mx-auto border-bottom fst-italic"
-      >
-        Banner area! Sales! Adventures!
-      </div>
+     <section class="ad-banner">
+          <p class="mb-0 text-center">
+            Use the code <strong>SUMMERFUN</strong> for 10% off!
+          </p>
+      </section>
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
         <div
           class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -156,132 +156,137 @@
     </header>
 
     <main>
-      <div class="checkout-container">
-        <!-- Navigation -->
-        <nav class="progress-steps">
-          <div class="step-label active">Billing</div>
-          <div class="step-label">Shipping</div>
-          <div class="step-label">Payment</div>
-        </nav>
+        <div class="checkout-container">
+    <form id="checkout-form">
 
-        <!-- Billing -->
-        <section class="step-section active" id="billing-panel">
-          <h2>Select Address</h2>
-          <form id="billing-form">
-            <div class="saved-addresses">
-              <label
-                ><input type="radio" name="billing-address" checked /> John Doe
-                – 123 Sesame St, NY</label
-              >
-              <label
-                ><input type="radio" name="billing-address" /> John Doe – 234
-                Vacation Way, FL</label
-              >
-            </div>
+      <!-- Step Navigation -->
+      <nav class="step-navigation">
+        <div class="step current" data-step-target="billing">Billing</div>
+        <div class="step" data-step-target="shipping">Shipping</div>
+        <div class="step" data-step-target="payment">Payment</div>
+      </nav>
 
-            <!-- Add new address -->
-            <div class="add-new-block">
-              <button type="button" id="add-billing-address-btn">
-                + Add New Address
-              </button>
-              <div class="new-address-fields" id="billing-address-form">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Street Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="ZIP Code" />
-                <button type="submit">Save Address</button>
-              </div>
-            </div>
-          </form>
-        </section>
+      <!-- Billing -->
+      <section class="form-step active" id="billing-step" data-step="billing">
+        <h2 class="section-title">Billing Address</h2>
+        <div class="billing-display" id="billing-address-display">
+          <div class="address-info">
+            <p><strong>John Doe</strong></p>
+            <p>123 Sesame St</p>
+            <p>New York, NY 12345</p>
+          
+          </div>
+                <button type="button" class="edit-action" data-action="edit-billing-address">edit</button>
+          </div>
 
-        <!-- Shipping -->
-        <section class="step-section" id="shipping-panel">
-          <h2>Shipping Method</h2>
-          <form id="shipping-form">
-            <div class="saved-addresses">
-              <label
-                ><input type="radio" name="shipping-address" checked /> John Doe
-                – 123 Sesame St, NY</label
-              >
-              <label
-                ><input type="radio" name="shipping-address" /> John Doe – 234
-                Vacation Way, FL</label
-              >
-            </div>
+        <h2 class="section-title">Payment Method</h2>
+            <div class="payment-form" data-step-form="billing">
+                <input type="text" placeholder="credit card #" name="card-number" data-input="card-number">
+            <div class="payment-fields">
+                <select name="exp-month" data-input="exp-month">
+                    <option value="">Exp month</option>
+                                                  <option value="01">01</option>
+                                                  <option value="02">02</option>
+                                                  <option value="03">03</option>
+                                                  <option value="04">04</option>
+                                                  <option value="05">05</option>
+                                                  <option value="06">06</option>
+                                                  <option value="07">07</option>
+                                                  <option value="08">08</option>
+                                                  <option value="09">09</option>
+                                                  <option value="10">10</option>
+                                                  <option value="11">11</option>
+                                                  <option value="12">12</option>
+                  </select>
+            <select name="exp-year" data-input="exp-year">
+              <option value="">Year</option><option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2030</option>
+                                            <option value="2030">2030</option>
+            </select>
+            <input type="text" placeholder="CVV" name="cvv" data-input="cvv">
+          </div>
+              <button type="button" class="use-card-btn" data-action="use-card">Use This Card</button>
+          </div>
 
-            <div class="shipping-methods">
-              <label
-                ><input type="radio" name="shipping-method" checked /> Standard
-                – Free</label
-              >
-              <label
-                ><input type="radio" name="shipping-method" /> Express –
-                $12.99</label
-              >
-              <label
-                ><input type="radio" name="shipping-method" /> Overnight –
-                $18.99</label
-              >
-            </div>
+          <button type="button" class="step-next-btn" data-action="next-to-shipping">Continue</button>
+      </section>
 
-            <!-- Add new address -->
-            <div class="add-new-block">
-              <button type="button" id="add-shipping-address-btn">
-                + Add New Address
-              </button>
-              <div class="new-address-fields" id="shipping-address-form">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Street Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="ZIP Code" />
-                <button type="submit">Save Address</button>
-              </div>
-            </div>
-          </form>
-        </section>
 
-        <!-- Payment -->
-        <section class="step-section" id="payment-panel">
-          <h2>Payment Method</h2>
-          <form id="payment-form">
-            <div class="saved-payments">
-              <label
-                ><input type="radio" name="payment-method" checked /> Bank 1 –
-                ****1234</label
-              >
-              <label
-                ><input type="radio" name="payment-method" /> Bank 2 –
-                ****2345</label
-              >
-              <label><input type="radio" name="payment-method" /> PayPal</label>
-            </div>
 
-            <!-- Add new payment -->
-            <div class="add-new-block">
-              <button type="button" id="add-payment-method-btn">
-                + Add New Payment Method
-              </button>
-              <div class="new-payment-fields" id="payment-method-form">
-                <input type="text" placeholder="Cardholder Name" />
-                <input type="text" placeholder="Card Number" />
-                <input type="text" placeholder="Expiration (MM/YY)" />
-                <input type="text" placeholder="CVV" />
-                <button type="submit">Save Payment</button>
-              </div>
-            </div>
-          </form>
-        </section>
-      </div>
+
+      <!-- Shipping -->
+      <section class="form-step" id="shipping-step" data-step="shipping">
+        <h2 class="section-title">Ship to:</h2>
+        <div class="shipping-display" id="shipping-address-display">
+          <div class="address-info">
+            <p><strong>John Doe</strong></p>
+            <p>123 Sesame St</p>
+            <p>New York, NY 12345</p>
+          </div>
+          <button type="button" class="edit-action" data-action="edit-shipping-address">edit</button>
+        </div>
+
+        <h2 class="section-title">Shipping Method</h2>
+        <div class="shipping-options">
+          <label class="shipping-option">
+            <input type="radio" name="shipping-method" value="standard" checked data-shipping="standard">
+            <div class="option-details"><span class="option-name">Standard</span><span class="option-time">6–8 Business Days</span></div>
+            <span class="option-price">Free</span>
+          </label>
+          <label class="shipping-option">
+            <input type="radio" name="shipping-method" value="ground" data-shipping="ground">
+            <div class="option-details"><span class="option-name">Ground</span><span class="option-time">5–7 Business Days</span></div>
+            <span class="option-price">13.99</span>
+          </label>
+          <label class="shipping-option">
+            <input type="radio" name="shipping-method" value="express" data-shipping="express">
+            <div class="option-details"><span class="option-name">Express</span><span class="option-time">3–5 Business Days</span></div>
+            <span class="option-price">19.99</span>
+          </label>
+        </div>
+        <div class="shipping-comments">
+          <label for="shipping-comment">comments</label>
+          <textarea id="shipping-comment" name="shipping-comment" placeholder="Leave at door" data-input="shipping-comment"></textarea>
+        </div>
+
+        <button type="button" class="step-next-btn" data-action="next-to-payment">Continue</button>
+      </section>
+
+      <!-- Payment -->
+      <section class="form-step" id="payment-step" data-step="payment">
+        <div class="order-summary-box">
+          <div class="product-list">
+            <div class="product-item"><img src="" alt="Product Image"><div class="product-info"><p class="product-name">Product Name</p><p class="product-price">$100</p></div></div>
+            <div class="product-item"><img src="" alt="Product Image"><div class="product-info"><p class="product-name">Product Name</p><p class="product-price">$100</p></div></div>
+          </div>
+          <div class="discount-box">
+            <input type="text" name="discount-code" placeholder="Discount code or gift card" data-input="discount-code">
+            <button type="button" data-action="apply-discount">apply</button>
+          </div>
+          <div class="price-summary">
+            <div class="summary-line"><span>Subtotal</span><span>$200</span></div>
+            <div class="summary-line"><span>order discount</span><span class="discount-tag">SUMMERFUN</span><span>−$20</span></div>
+            <div class="summary-line"><span>tax</span><span>$8.50</span></div>
+            <div class="summary-line"><span>shipping</span><span>$0</span></div>
+            <div class="summary-total"><span>Total:</span><span>$188.50</span></div>
+          </div>
+        </div>
+        <button type="submit" class="purchase-btn" data-action="purchase">Purchase</button>
+      </section>
+    </form>
+  </div>
+
+</div>
       <section id="youMayAlsoLike">
         <h2>You Might Also Like...</h2>
         <div class="swiper">
           <div class="swiper-wrapper" id="divCarousel1">
             <div class="swiper-slide">
               <img
-                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/css/assets/product-images/Boot placeholder.jpg"
                 alt="PRODUCT 1"
               />
               <p>Product Name 1</p>
@@ -289,48 +294,48 @@
             </div>
 
             <div class="swiper-slide">
-              <img
-                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
-                alt="PRODUCT 2"
-              />
-              <p>Product Name 2</p>
-              <span>$00.00</span>
+              <a href="products.html"><img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Cycling/Orange Helmet.png"
+                alt="ABC Helmet"
+              /></a>
+              <p>ABC Helmet</p>
+              <span>$120.00</span>
             </div>
 
             <div class="swiper-slide">
-              <img
-                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
-                alt="PRODUCT 3"
-              />
-              <p>Product Name 3</p>
-              <span>$00.00</span>
+              <a href="products.html"><img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Cycling/GreenHelmet.png"
+                alt="The Protect the Brain Space when I'm Flying Helmet"
+              /></a>
+              <p>Protect the Brain Space when I'm Flying Helmet</p>
+              <span>$215.00</span>
             </div>
 
             <div class="swiper-slide">
-              <img
-                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
-                alt="PRODUCT 4"
-              />
-              <p>Product Name 4</p>
-              <span>$00.00</span>
+              <a href="products.html"><img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Cycling/BlackHelmet.png"
+                alt="Badboy Helmet"
+              /></a>
+              <p>Badboy Helmet</p>
+              <span>$105.00</span>
             </div>
 
             <div class="swiper-slide">
-              <img
-                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
-                alt="PRODUCT 5"
-              />
-              <p>Product Name 5</p>
-              <span>$00.00</span>
+              <a href="products.html"><img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Cycling/YellowHelmet.png"
+                alt="Stars Helmet"
+              /></a>
+              <p>Stars Helmet</p>
+              <span>$46.00</span>
             </div>
 
             <div class="swiper-slide">
-              <img
-                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Product Icon.svg"
-                alt="PRODUCT 6"
-              />
-              <p>Product Name 6</p>
-              <span>$00.00</span>
+              <a href="products.html"><img
+                src="/Users/kadenrose/Documents/ASU/SUMMER_2025/GIT450/OperationBaseCamp/assets/product-images/Cycling/WhiteHelmet.png"
+                alt="Dad's Helmet"
+              /></a>
+              <p>Dad's Helmet</p>
+              <span>$60.00</span>
             </div>
 
             <div class="swiper-slide">
