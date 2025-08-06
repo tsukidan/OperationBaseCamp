@@ -6,8 +6,6 @@
     <title>Outdoor Company – Cart</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Onest:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tektur:wght@400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Font Styles -->
-    <title>Supply Post – Cart</title>
-    <!-- Boostrap CDN Implementation! Please do not remove!-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -164,126 +162,204 @@
         
         <div class="progress-dot" id="progressDot"></div>
       </nav>
-      <div class="checkout-container">
-        <!-- Navigation -->
-        <nav class="progress-steps">
-          <div class="step-label active">Billing</div>
-          <div class="step-label">Shipping</div>
-          <div class="step-label">Payment</div>
-        </nav>
 
         <!-- Billing -->
-        <section class="step-section active" id="billing-panel">
-          <h2>Select Address</h2>
-          <form id="billing-form">
-            <div class="saved-addresses">
-              <label
-                ><input type="radio" name="billing-address" checked /> John Doe
-                – 123 Sesame St, NY</label
-              >
-              <label
-                ><input type="radio" name="billing-address" /> John Doe – 234
-                Vacation Way, FL</label
-              >
-            </div>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+            <div class="container my-3">
+              <h4 class="mb-5">Billing Address</h4>
 
-            <!-- Add new address -->
-            <div class="add-new-block">
-              <button type="button" id="add-billing-address-btn">
-                + Add New Address
-              </button>
-              <div class="new-address-fields" id="billing-address-form">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Street Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="ZIP Code" />
-                <button type="submit">Save Address</button>
+              <!-- Billing Address -->
+              <div class="d-flex justify-content-between align-items-center mb-3 billingAddress">
+              <div>
+                  <p>                    
+                    John Doe<br>
+                    123 Sesame St<br>
+                    New York, NY 12345
+                  </p>
+              </div>
+              <div>
+                  <a href="#" class="text-decoration-none small editButton">edit</a>
               </div>
             </div>
-          </form>
-        </section>
+          </div>
+        
+
+            <div class="line"></div>
+
+            <!-- Payment Method -->
+      <div class="container-fluid px-5 mb-5">
+        <h4 class="mb-3">Payment Method</h4>
+
+        <div class="card shadow-sm rounded-4 p-4 w-100 paymentCard">
+          <div class="mb-3">
+            <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="credit/ debit card #" />
+          </div>
+
+          <div class="row g-2 mb-4">
+            <div class="col-4">
+              <select class="form-select border-0 border-bottom rounded-0">
+                <option selected disabled>exp month</option>
+                <option>01</option>
+                <option>02</option>
+                <option>12</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="Year" />
+            </div>
+            <div class="col-4">
+              <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="CVV" />
+            </div>
+          </div>
+
+          <button type="button" class="btn w-100 rounded-pill paymentButton">
+            Use This Card
+          </button>
+        </div>
+      </div>
+        </div>
 
         <!-- Shipping -->
-        <section class="step-section" id="shipping-panel">
-          <h2>Shipping Method</h2>
-          <form id="shipping-form">
-            <div class="saved-addresses">
-              <label
-                ><input type="radio" name="shipping-address" checked /> John Doe
-                – 123 Sesame St, NY</label
-              >
-              <label
-                ><input type="radio" name="shipping-address" /> John Doe – 234
-                Vacation Way, FL</label
-              >
-            </div>
+        <div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="shipping-tab">
+          <div class="container my-3">
+              <h4 class="mb-5">Ship To:</h4>
 
-            <div class="shipping-methods">
-              <label
-                ><input type="radio" name="shipping-method" checked /> Standard
-                – Free</label
-              >
-              <label
-                ><input type="radio" name="shipping-method" /> Express –
-                $12.99</label
-              >
-              <label
-                ><input type="radio" name="shipping-method" /> Overnight –
-                $18.99</label
-              >
-            </div>
-
-            <!-- Add new address -->
-            <div class="add-new-block">
-              <button type="button" id="add-shipping-address-btn">
-                + Add New Address
-              </button>
-              <div class="new-address-fields" id="shipping-address-form">
-                <input type="text" placeholder="Full Name" />
-                <input type="text" placeholder="Street Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="ZIP Code" />
-                <button type="submit">Save Address</button>
+              <!-- Shipping Address -->
+              <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                  <p>                    
+                    John Doe<br>
+                    123 Sesame St<br>
+                    New York, NY 12345
+                  </p>
+              </div>
+              <div>
+                  <a href="#" class="text-decoration-none small editButton">edit</a>
               </div>
             </div>
-          </form>
-        </section>
+        </div>
 
-        <!-- Payment -->
-        <section class="step-section" id="payment-panel">
-          <h2>Payment Method</h2>
-          <form id="payment-form">
-            <div class="saved-payments">
-              <label
-                ><input type="radio" name="payment-method" checked /> Bank 1 –
-                ****1234</label
-              >
-              <label
-                ><input type="radio" name="payment-method" /> Bank 2 –
-                ****2345</label
-              >
-              <label><input type="radio" name="payment-method" /> PayPal</label>
-            </div>
+          <div class="line"></div>
 
-            <!-- Add new payment -->
-            <div class="add-new-block">
-              <button type="button" id="add-payment-method-btn">
-                + Add New Payment Method
-              </button>
-              <div class="new-payment-fields" id="payment-method-form">
-                <input type="text" placeholder="Cardholder Name" />
-                <input type="text" placeholder="Card Number" />
-                <input type="text" placeholder="Expiration (MM/YY)" />
-                <input type="text" placeholder="CVV" />
-                <button type="submit">Save Payment</button>
+          <!-- Method -->
+        <div class="container my-3">
+          <section class="mb-5">
+            <h4 class="mb-4">Shipping Method</h4>
+
+            <!-- Method 1 -->
+        <div class="shipping-options">
+          <!-- Option 1 -->
+          <label class="shipping-card">
+            <input type="radio" name="shippingMethod" class="shipping-radio" />
+            <div class="shipping-content">
+              <div>
+                <strong>Standard</strong><br />
+                <small>3–5 Business Days</small>
               </div>
+              <div class="price">Free</div>
             </div>
-          </form>
-        </section>
+          </label>
+
+          <!-- Option 2 -->
+          <label class="shipping-card">
+            <input type="radio" name="shippingMethod" class="shipping-radio" />
+            <div class="shipping-content">
+              <div>
+                <strong>Ground</strong><br />
+                <small>5–7 Business Days</small>
+              </div>
+              <div class="price">13.99</div>
+            </div>
+          </label>
+
+          <!-- Option 3 -->
+          <label class="shipping-card option3">
+            <input type="radio" name="shippingMethod" class="shipping-radio" />
+            <div class="shipping-content">
+              <div>
+                <strong>Express</strong><br />
+                <small>3–5 Business Days</small>
+              </div>
+              <div class="price">19.99</div>
+            </div>
+          </label>
+        </div>
+
+
+            <!-- Comments -->
+            <div class="mb-5">
+              <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Leave at door"></textarea>
+            </div>
+
+          <div class="orderButtonContainer text-center">
+            <button type="button" class="orderButton" data-hide="billing-form">Continue</button>
+          </div>
+          </section>
+        </div>
+        </div> 
+
+<!-- Payment Tab -->
+<div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+  <div class="container my-3 d-flex flex-column align-items-center">
+    <h4 class="mb-4">Payment Method</h4>
+
+    <!-- Order Summary Card -->
+    <div class="card p-4 shadow-sm rounded-4" style="max-width: 380px; background-color: #f8f8f8;">
+      <!-- Product List -->
+      <div class="d-flex justify-content-between align-items-start mb-3">
+        <img src="https://via.placeholder.com/70" class="rounded" alt="Product 1">
+        <div class="ms-3 flex-grow-1">
+          <div class="fw-semibold">Product Name</div>
+        </div>
+        <div class="fw-bold">$100</div>
       </div>
-      <section id="youMayAlsoLike">
+      <div class="d-flex justify-content-between align-items-start mb-4">
+        <img src="https://via.placeholder.com/70" class="rounded" alt="Product 2">
+        <div class="ms-3 flex-grow-1">
+          <div class="fw-semibold">Product Name</div>
+        </div>
+        <div class="fw-bold">$100</div>
+      </div>
+
+      <!-- Discount Input -->
+      <div class="input-group mb-4">
+        <input type="text" class="form-control rounded-0 border discountInput" placeholder="Discount code or gift card">
+        <button class="btn text-white rounded-1 paymentMethodButton">apply</button>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="mb-2 d-flex justify-content-between"><span>Subtotal</span><span>$200</span></div>
+      <div class="mb-2 d-flex justify-content-between">
+        <span>
+          <div>Order Discount</div>
+          <div class="text-uppercase small"><i class="bi bi-tag"></i> summerfun</div>
+        </span>
+        <span class="">- $20</span>
+      </div>
+      <div class="mb-2 d-flex justify-content-between"><span>Tax</span><span>$8.50</span></div>
+      <div class="mb-4 d-flex justify-content-between"><span>Shipping</span><span>$0</span></div>
+
+      <!-- Total -->
+      <div class="d-flex justify-content-between fs-5 fw-bold">
+        <span>Total:</span>
+        <span>$188.50</span>
+      </div>
+    </div>
+
+    <!-- Place Order Button -->
+    <div class="orderButtonContainer text-center mt-4">
+      <button type="button" class="orderButton">Purchase</button>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+
+            <!-- You Might Also like -->
+      <!-- <section id="youMayAlsoLike">
         <h2>You Might Also Like...</h2>
         <div class="swiper">
           <div class="swiper-wrapper" id="divCarousel1">
@@ -381,7 +457,7 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer>
@@ -483,8 +559,6 @@
           </section>
         </section>
         <p>&copy; 2025 Outdoor Co. All rights reserved.</p>
-        <p>&copy; 2025 Supply Post All rights reserved.</p>
-      </footer>
     </footer>
 
     <!-- add the js file here (defer) TO DO FIX BUGS-->
