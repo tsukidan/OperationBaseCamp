@@ -155,7 +155,6 @@
       </nav>
     </header>
     
-    
     <!--Hero Banner and tagline. Change when sorting?-->
 
     <section class="cycling-banner">
@@ -565,20 +564,22 @@
         </section>
 
         <!-- Related Articles -->
-      <section class="py-5">
-        <div class="container">
-          <h5 class="text-right mb-4">We think these articles might interest you!</h5>
+      <section class="related-articles py-5 position-static">
+
+        <h3>We think these articles might interest you!</h3>
+
+        <div class="articles container position-relative">
           <div class="row g-4 justify-content-center">
             <div class="col-6 col-md-4">
               <a href="#" class="text-decoration-none text-dark d-block">
-                <img src="assets/articles/mtb-sedona.jpg" class="img-fluid rounded mb-2" alt="I'm related!">
-                <h5 class="fw-semibold">Im a related Article!</h5>
+                <img src="assets/site-images/mountainbiking.png" class="img-fluid rounded mb-2" alt="I'm related!">
+                <h5 class="fw-semibold">Mountain Biking in Sedona</h5>
               </a>
             </div>
             <div class="col-6 col-md-4">
               <a href="#" class="text-decoration-none text-dark d-block">
-                <img src="assets/articles/best-cities-cyclists.jpg" class="img-fluid rounded mb-2" alt="I'm related!">
-                <h5 class="fw-semibold">Im a related Article!</h5>
+                <img src="assets/site-images/cyclistcity.png" class="img-fluid rounded mb-2" alt="I'm related!">
+                <h5 class="fw-semibold">Best Cities in the US for Cycling</h5>
               </a>
             </div>
           </div>
@@ -586,23 +587,23 @@
       </section>
       </div>
       <!-- Photo Carousel -->
-      <section class="py-5 bg-light text-center">
-          <div class="container">
+
+          <div class="community-carousel-container container py-5 text-center position-static">
             <h3 class="fw-bold mb-4">#StayWildSP</h3>
-            <div id="communityCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-slide position-static" data-bs-ride="carousel">
               <div class="carousel-inner rounded">
                 <div class="carousel-item active">
-                  <img src="https://shop.reidbikes.com/cdn/shop/files/mtb-sport-275-mountain-bike-my24-black-reid-bikes-558544.png?v=1730603970" class="d-block w-100" alt="Community photo 1">
+                  <img src="assets/site-images/carousel1.png" class="d-block w-100" alt="Community photo 1">
                 </div>
                 <div class="carousel-item">
-                  <img src="https://www.elite-wheels.com/wp-content/uploads/2023/08/Gravel-Bike.jpg" class="d-block w-100" alt="Community photo 2">
+                  <img src="assets/site-images/carousel2.png" class="d-block w-100" alt="Community photo 2">
                 </div>
                 <div class="carousel-item">
-                  <img src="https://jacksonhole-traveler-production.s3.amazonaws.com/wp-content/uploads/2014/05/grandteton-mountainbike-1280x853.jpg" class="d-block w-100" alt="Community photo 3">
+                  <img src="assets/site-images/carousel3.png" class="d-block w-100" alt="Community photo 3">
                 </div>
               </div>
               <!-- Carousel Controls -->
-              <button class="carousel-control-prev mt-3" type="button" data-bs-target="#communityCarousel" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#communityCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
               </button>
@@ -611,7 +612,7 @@
                         <span class="visually-hidden">Next</span>
               </button>
               <!-- Carousel Indicators -->
-              <div class="carousel-indicators mt-3 position-static">
+              <div class="carousel-indicators position-static">
                 <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#communityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -619,127 +620,133 @@
               
             </div>
           </div>
-        </section>
+
       </section>    
     </main>
 
 
-    <footer>
-      <footer>
-        
-        <nav class="social-nav" aria-label="Social Media Links">
-          <ul class="social-links">
-            <li>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                aria-label="Facebook"
+    <footer class="footer-bg">
+
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+        <div class="layer layer4"></div>
+        <div class="layer layer5"></div>
+
+      <nav class="social-nav" aria-label="Social Media Links">
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                aria-label="Instagram"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-                  />
-                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                  <path d="M16.5 7.5v.01" /></svg
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.tiktok.com"
-                target="_blank"
-                aria-label="Tiktok"
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
-                  />
-                </svg>
-              </a>
-            </li>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                />
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path d="M16.5 7.5v.01" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              aria-label="Tiktok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <h2>Stay Wild.</h2>
+
+      <section class="footer-links" aria-label="Footer navigation">
+        <section aria-label="Company Information">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li><a href="about.html">Our Mission</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
           </ul>
-        </nav>
-        <h2>Stay Wild.</h2>
-        <section class="footer-links" aria-label="Footer navigation">
-          <section aria-label="Company Information">
-            <h3>ABOUT US</h3>
-            <ul>
-              <li><a href="about.html">Our Mission</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </section>
-          <section aria-label="Customer Service">
-            <h3>CUSTOMER SERVICE</h3>
-            <ul>
-              <li><a href="#">Find a Store</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </section>
-          <section aria-label="Legal and Policies">
-            <h3>LEGAL</h3>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-            </ul>
-          </section>
-          <section aria-label="Orders and Returns">
-            <h3>ORDERS AND RETURNS</h3>
-            <ul>
-              <li><a href="#">Order Status</a></li>
-              <li><a href="#">Return Policy</a></li>
-            </ul>
-          </section>
         </section>
-        <p>&copy; 2025 Supply Post All rights reserved.</p>
-      </footer>
+        <section aria-label="Customer Service">
+          <h3>CUSTOMER SERVICE</h3>
+          <ul>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </section>
+        <section aria-label="Legal and Policies">
+          <h3>LEGAL</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </section>
+        <section aria-label="Orders and Returns">
+          <h3>ORDERS AND RETURNS</h3>
+          <ul>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </section>
+      </section>
+
+      <p>&copy; 2025 Supply Post All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

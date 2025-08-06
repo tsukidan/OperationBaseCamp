@@ -1353,6 +1353,7 @@ Toggler Border Removal
 }
 .cycling-banner {
   position: relative;
+  display: flex;
   width: 100%;
   min-height: 20vh;
   background-color: white;
@@ -1566,6 +1567,47 @@ Toggler Border Removal
   }
 }
 
+.related-articles{
+  font-family: var(--bodyFont);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}
+
+.articles{
+  display: flex;
+  flex-direction: column;
+  column-gap: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+/*Community Carousel*/
+.community-carousel-container{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-slide{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin:0;
+}
+
+.carousel-indicators button:hover{
+  background-color: var(--darkBlue);
+  opacity: 0.8;
+}
+
 /*--------------------------------------------------------------------------------
 |  checkout page
 |  For CSS testing
@@ -1704,3 +1746,4 @@ button[type="submit"],
   font-size: 1rem;
   cursor: pointer;
 }
+
