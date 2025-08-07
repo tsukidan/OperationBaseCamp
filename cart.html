@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  
+
   <body>
     <header>
       <section class="ad-banner">
@@ -137,85 +137,335 @@
       <!-- Header -->
       <h6 class="text-muted">You’re almost there - Review the items in your cart!</h6>
 
-      <!-- Product Items -->
-      <div class="row border-bottom py-3" *ngFor="let item of cartItems">
-        <div class="col-3">
-          <div class="ratio ratio-1x1 bg-secondary"></div>
-          <!-- Swatches -->
-          <div class="d-flex mt-2 gap-2">
-            <div class="rounded-circle border p-1"></div>
-            <div class="rounded-circle border p-1"></div>
-            <div class="rounded-circle border p-1"></div>
+      <!-- Product Item 1 -->
+      <div class="row border-bottom py-3 product-card">
+        <div class="col-3 d-flex flex-column align-items-center">
+          <!-- Product image -->
+          <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+            <img
+              src="assets/product-images/Cycling/BlackHelmet.png"
+              class="img-fluid object-fit-cover"
+              alt="Product Image"
+            />
+          </div>
+
+          <!-- Quantity controls under image -->
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-minus">−</button>
+            <span class="quantity-value">1</span>
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-plus">+</button>
           </div>
         </div>
+
         <div class="col-9">
-        <div class="d-flex justify-content-between align-items-center">
-          <h4>Product Name</h4>
-          <p class="price">$00.00</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <h4>Product Name</h4>
+            <p class="price">$00.00</p>
+          </div>
+          <div class="mb-3">
+            <p class="mb-1"><strong>Size</strong>: Size</p>
+            <p class="mb-1"><strong>Color</strong>: Color</p>
+          </div>
+          <div class="d-flex justify-content-start gap-5 align-items-center">
+            <button class="btn btn-outline-dark btn-sm editBtn">edit</button>
+            <button class="deleteBtn" aria-label="Favorite">
+              <svg
+                class="trashSvg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 6H20L18.4199 20.2209C18.3074 21.2337 17.4512 22 16.4321 22H7.56786C6.54876 22 5.69264 21.2337 5.5801 20.2209L4 6Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M2 6H22" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="mb-3">
-          <p class="mb-1"><strong>Size</strong>: Size</p>
-          <p class="mb-1"><strong>Color</strong>: Color</p>
+      </div>
+
+      <!-- Product Item 2 -->
+      <div class="row border-bottom py-3 product-card">
+        <div class="col-3 d-flex flex-column align-items-center">
+          <!-- Product image -->
+          <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+            <img
+              src="assets/product-images/Cycling/WhiteHelmet.png"
+              class="img-fluid object-fit-cover"
+              alt="Product Image"
+            />
+          </div>
+
+          <!-- Quantity controls under image -->
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-minus">−</button>
+            <span class="quantity-value">1</span>
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-plus">+</button>
+          </div>
         </div>
-        <div class="d-flex justify-content-evenly align-items-center">
-          <button class="btn btn-outline-dark btn-sm editBtn">Edit</button>
-          <button class="btn btn-outline-dark btn-sm deleteBtn">Delete</button>
+
+        <div class="col-9">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4>Product Name</h4>
+            <p class="price">$00.00</p>
+          </div>
+          <div class="mb-3">
+            <p class="mb-1"><strong>Size</strong>: Size</p>
+            <p class="mb-1"><strong>Color</strong>: Color</p>
+          </div>
+          <div class="d-flex justify-content-start gap-5 align-items-center">
+            <button class="btn btn-outline-dark btn-sm editBtn">Edit</button>
+            <button class="deleteBtn" aria-label="Favorite">
+              <svg
+                class="trashSvg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 6H20L18.4199 20.2209C18.3074 21.2337 17.4512 22 16.4321 22H7.56786C6.54876 22 5.69264 21.2337 5.5801 20.2209L4 6Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M2 6H22" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Item 3 -->
+      <div class="row border-bottom py-3 product-card">
+        <div class="col-3 d-flex flex-column align-items-center">
+          <!-- Product image -->
+          <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+            <img
+              src="assets/product-images/Cycling/Orange Helmet.png"
+              class="img-fluid object-fit-cover"
+              alt="Product Image"
+            />
+          </div>
+
+          <!-- Quantity controls under image -->
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-minus">−</button>
+            <span class="quantity-value">1</span>
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-plus">+</button>
+          </div>
+        </div>
+
+        <div class="col-9">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4>Product Name</h4>
+            <p class="price">$00.00</p>
+          </div>
+          <div class="mb-3">
+            <p class="mb-1"><strong>Size</strong>: Size</p>
+            <p class="mb-1"><strong>Color</strong>: Color</p>
+          </div>
+          <div class="d-flex justify-content-start gap-5 align-items-center">
+            <button class="btn btn-outline-dark btn-sm editBtn">Edit</button>
+            <button class="deleteBtn" aria-label="Favorite">
+              <svg
+                class="trashSvg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 6H20L18.4199 20.2209C18.3074 21.2337 17.4512 22 16.4321 22H7.56786C6.54876 22 5.69264 21.2337 5.5801 20.2209L4 6Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M2 6H22" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Item 4 -->
+      <div class="row border-bottom py-3 product-card">
+        <div class="col-3 d-flex flex-column align-items-center">
+          <!-- Product image -->
+          <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+            <img
+              src="assets/product-images/Cycling/GreenHelmet.png"
+              class="img-fluid object-fit-cover"
+              alt="Product Image"
+            />
+          </div>
+
+          <!-- Quantity controls under image -->
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-minus">−</button>
+            <span class="quantity-value">1</span>
+            <button class="btn btn-outline-dark rounded-circle px-3 btn-plus">+</button>
+          </div>
+        </div>
+
+        <div class="col-9">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4>Product Name</h4>
+            <p class="price">$00.00</p>
+          </div>
+          <div class="mb-3">
+            <p class="mb-1"><strong>Size</strong>: Size</p>
+            <p class="mb-1"><strong>Color</strong>: Color</p>
+          </div>
+          <div class="d-flex justify-content-start gap-5 align-items-center">
+            <button class="btn btn-outline-dark btn-sm editBtn">Edit</button>
+            <button class="deleteBtn" aria-label="Favorite">
+              <svg
+                class="trashSvg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 6H20L18.4199 20.2209C18.3074 21.2337 17.4512 22 16.4321 22H7.56786C6.54876 22 5.69264 21.2337 5.5801 20.2209L4 6Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M2 6H22" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 11V16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
       <!-- Total -->
       <div class="d-flex justify-content-end align-items-center mt-4">
         <div class="me-2"><i class="bi bi-receipt"></i></div>
-        <div class="border px-3 py-1 bg-light rounded">Total: $360.00</div>
+        <div class="border px-3 py-1 bg-light rounded totalBox">Total: $360.00</div>
       </div>
 
       <!-- Actions -->
-      <div class="text-center my-4">
-        <button class="btn btn-outline-primary w-100 mb-2">Continue Shopping</button>
-        <button class="btn btn-success w-100 mb-2">Checkout</button>
-        <button class="btn btn-outline-dark w-100">Return to Homepage</button>
+      <div class="d-flex justify-content-center my-4">
+        <a href="checkout.html" class="btn btn-success mb-2 cartBtn text-center">Continue to Checkout</a>
       </div>
 
       <!-- Recommended -->
       <div class="bg-light p-3 mb-2">
-        <h6 class="text-primary">You might also like...</h6>
+        <p class="recommended">You might also like...</p>
       </div>
 
       <!-- Recommendation Cards -->
-      <div class="row row-cols-2 row-cols-md-4 g-2 mb-3">
-        <div class="col">
-          <div class="card">
-            <div class="ratio ratio-1x1 bg-secondary"></div>
-            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+      <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card h-100 p-5">
+              <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+                <img
+                  src="assets/product-images/Boot placeholder.jpg"
+                  class="img-fluid object-fit-cover"
+                  alt="Product Image"
+                />
+              </div>
+              <button class="btn btn-outline-dark btn-sm m-2 alsoLikeBtn">Add to cart</button>
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="ratio ratio-1x1 bg-secondary"></div>
-            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          <div class="col">
+            <div class="card h-100 p-5">
+              <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+                <img
+                  src="assets/product-images/backpackplaceholder.jpg"
+                  class="img-fluid object-fit-cover"
+                  alt="Product Image"
+                />
+              </div>
+              <button class="btn btn-outline-dark btn-sm m-2 alsoLikeBtn">Add to cart</button>
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="ratio ratio-1x1 bg-secondary"></div>
-            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          <div class="col">
+            <div class="card h-100 p-5">
+              <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+                <img
+                  src="assets/product-images/backpackplaceholder3.jpg"
+                  class="img-fluid object-fit-cover"
+                  alt="Product Image"
+                />
+              </div>
+              <button class="btn btn-outline-dark btn-sm m-2 alsoLikeBtn">Add to cart</button>
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="ratio ratio-1x1 bg-secondary"></div>
-            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          <div class="col">
+            <div class="card h-100 p-5">
+              <div class="ratio ratio-1x1 mb-3 w-100 product-images">
+                <img
+                  src="assets/product-images/helmetplaceholder.webp"
+                  class="img-fluid object-fit-cover"
+                  alt="Product Image"
+                />
+              </div>
+              <button class="btn btn-outline-dark btn-sm m-2 alsoLikeBtn">Add to cart</button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Load More -->
       <div class="text-center mb-5">
-        <button class="btn btn-outline-secondary">Load more</button>
+        <button class="btn loadMoreBtn">load more</button>
       </div>
     </div>
 
-   <footer class="footer-bg">
+    <footer class="footer-bg">
       <div class="layer layer1"></div>
       <div class="layer layer2"></div>
       <div class="layer layer3"></div>
@@ -225,11 +475,7 @@
       <nav class="social-nav" aria-label="Social Media Links">
         <ul class="social-links">
           <li>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              aria-label="Facebook"
-            >
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -242,18 +488,12 @@
                 stroke-linejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-                />
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
               </svg>
             </a>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              aria-label="Instagram"
-            >
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -266,20 +506,14 @@
                 stroke-linejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-                />
+                <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                 <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                 <path d="M16.5 7.5v.01" />
               </svg>
             </a>
           </li>
           <li>
-            <a
-              href="https://www.tiktok.com"
-              target="_blank"
-              aria-label="Tiktok"
-            >
+            <a href="https://www.tiktok.com" target="_blank" aria-label="Tiktok">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -337,10 +571,12 @@
 
       <p>&copy; 2025 Supply Post All rights reserved.</p>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <!-- add the js file here (defer)-->
     <script src="js/script.js" defer></script>
   </body>

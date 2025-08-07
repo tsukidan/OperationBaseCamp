@@ -202,3 +202,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//used to increase / decrease quantity in cart
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".product-card");
+
+  cards.forEach((card) => {
+    let quantity = 1;
+    const quantitySpan = card.querySelector(".quantity-value");
+    const minusBtn = card.querySelector(".btn-minus");
+    const plusBtn = card.querySelector(".btn-plus");
+
+    minusBtn.addEventListener("click", () => {
+      quantity = Math.max(1, quantity - 1);
+      quantitySpan.textContent = quantity;
+    });
+
+    plusBtn.addEventListener("click", () => {
+      quantity += 1;
+      quantitySpan.textContent = quantity;
+    });
+  });
+});
