@@ -3,6 +3,12 @@
 "use strict";
 
 // July 30th, starting a basic form validation function
+// cartButton Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("cartButton").addEventListener("click", function () {
+    window.location.href = "checkout.html";
+  });
+});
 
 function formValidation1() {
   // create a boolean variable that tells us if the form is true or not

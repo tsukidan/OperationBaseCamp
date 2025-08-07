@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Supply Post – Home</title>
+    <title>Supply Post – About</title>
     <!-- Boostrap CDN Implementation! Please do not remove!-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -13,18 +13,14 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
+  
   <body>
     <header>
       <section class="ad-banner">
-        <p class="mb-0 text-center">
-          Use the code <strong>SUMMERFUN</strong> for 10% off!
-        </p>
+        <p class="mb-0 text-center">Use the code <strong>SUMMERFUN</strong> for 10% off!</p>
       </section>
       <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-2">
-        <div
-          class="container-fluid position-relative d-flex align-items-center justify-content-between"
-        >
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
           <!-- Left Aligned Icons -->
           <div class="d-flex align-items-center mx-0">
             <button
@@ -54,10 +50,7 @@
                 <path d="M4 18l16 0" />
               </svg>
             </button>
-            <button
-              class="btn btn-link text-white d-md-none me-2 p-0"
-              aria-label="Search"
-            >
+            <button class="btn btn-link text-white d-md-none me-2 p-0" aria-label="Search">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -82,10 +75,7 @@
           </div>
           <!-- Right Aligned Icons -->
           <div class="d-flex align-items-center ms-auto">
-            <button
-              class="btn btn-link text-white d-md-none me-2 p-0"
-              aria-label="Profile"
-            >
+            <button class="btn btn-link text-white d-md-none me-2 p-0" aria-label="Profile">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -101,16 +91,10 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
                 <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path
-                  d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"
-                />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
               </svg>
             </button>
-            <button
-              id="cartButton"
-              class="btn btn-link text-white d-md-none me-2 p-0"
-              aria-label="Cart"
-            >
+            <button id="cartButton" class="btn btn-link text-white d-md-none me-2 p-0" aria-label="Cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -132,10 +116,7 @@
             </button>
           </div>
           <!-- collapsed menu (desktop view) -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="mainNav"
-          >
+          <div class="collapse navbar-collapse justify-content-end" id="mainNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link text-white" href="products.html">Shop</a>
@@ -151,29 +132,90 @@
         </div>
       </nav>
     </header>
-    <main>
-      <!-- Main content will go here -->
-      <section class="main-content">
-        <div class="main-content-grid">
-          <div class="banner">
-            <h1>Stay Wild.</h1>
+
+    <div class="container py-4">
+      <!-- Header -->
+      <h6 class="text-muted">You’re almost there - Review the items in your cart!</h6>
+
+      <!-- Product Items -->
+      <div class="row border-bottom py-3" *ngFor="let item of cartItems">
+        <div class="col-3">
+          <div class="ratio ratio-1x1 bg-secondary"></div>
+          <!-- Swatches -->
+          <div class="d-flex mt-2 gap-2">
+            <div class="rounded-circle border p-1"></div>
+            <div class="rounded-circle border p-1"></div>
+            <div class="rounded-circle border p-1"></div>
           </div>
-          <a href="products.html" class="top-rated">
-            <h1>Hittin' the road?</h1>
-            <h2>Try our top rated helmet.</h2>
-          </a>
-          <a href="products.html" class="backpacks">
-            <h1>Built to last.</h1>
-            <h2>Our most durable backpack.</h2>
-          </a>
-          <a href="about.html" class="mission-statement">
-            <h1>Our Story, Our Mission.</h1>
-          </a>
         </div>
-      </section>
-      <!-- TODO: Add homepage sections such as featured products or company info -->
-    </main>
-    <footer class="footer-bg">
+        <div class="col-9">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4>Product Name</h4>
+          <p class="price">$00.00</p>
+        </div>
+        <div class="mb-3">
+          <p class="mb-1"><strong>Size</strong>: Size</p>
+          <p class="mb-1"><strong>Color</strong>: Color</p>
+        </div>
+        <div class="d-flex justify-content-evenly align-items-center">
+          <button class="btn btn-outline-dark btn-sm editBtn">Edit</button>
+          <button class="btn btn-outline-dark btn-sm deleteBtn">Delete</button>
+        </div>
+      </div>
+
+      <!-- Total -->
+      <div class="d-flex justify-content-end align-items-center mt-4">
+        <div class="me-2"><i class="bi bi-receipt"></i></div>
+        <div class="border px-3 py-1 bg-light rounded">Total: $360.00</div>
+      </div>
+
+      <!-- Actions -->
+      <div class="text-center my-4">
+        <button class="btn btn-outline-primary w-100 mb-2">Continue Shopping</button>
+        <button class="btn btn-success w-100 mb-2">Checkout</button>
+        <button class="btn btn-outline-dark w-100">Return to Homepage</button>
+      </div>
+
+      <!-- Recommended -->
+      <div class="bg-light p-3 mb-2">
+        <h6 class="text-primary">You might also like...</h6>
+      </div>
+
+      <!-- Recommendation Cards -->
+      <div class="row row-cols-2 row-cols-md-4 g-2 mb-3">
+        <div class="col">
+          <div class="card">
+            <div class="ratio ratio-1x1 bg-secondary"></div>
+            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="ratio ratio-1x1 bg-secondary"></div>
+            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="ratio ratio-1x1 bg-secondary"></div>
+            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="ratio ratio-1x1 bg-secondary"></div>
+            <button class="btn btn-outline-dark btn-sm m-2">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More -->
+      <div class="text-center mb-5">
+        <button class="btn btn-outline-secondary">Load more</button>
+      </div>
+    </div>
+
+   <footer class="footer-bg">
       <div class="layer layer1"></div>
       <div class="layer layer2"></div>
       <div class="layer layer3"></div>
@@ -295,12 +337,11 @@
 
       <p>&copy; 2025 Supply Post All rights reserved.</p>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- add the js file here (defer) -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+    <!-- add the js file here (defer)-->
     <script src="js/script.js" defer></script>
   </body>
 </html>
