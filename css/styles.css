@@ -1855,3 +1855,17 @@ Toggler Border Removal
 .errorBox {
   color: red;
 }
+
+/* styles for plp sort and filter menu */
+
+.menu {
+  background-color: var(--darkBlue);
+  color: white;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}

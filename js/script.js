@@ -105,114 +105,193 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // event listener to operate swipe.js on checkout page 'You Might Also Like'
 document.addEventListener("DOMContentLoaded", function () {
-    new Swiper(".swiper", {
-        slidesPerView: 3, // Show 3 at a time
-        spaceBetween: 20, // Gap between slides
-        loop: true, // Infinite loop
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        breakpoints: {
-        768: { slidesPerView: 3 }, // Tablets & up
-        480: { slidesPerView: 2 }, // Small tablets
-        0: { slidesPerView: 1 }    // Mobile
-        }
-    });
+    // Only run if Swiper is loaded and swiper element exists
+    if (typeof Swiper !== "undefined" && document.querySelector(".swiper")) {
+        new Swiper(".swiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            breakpoints: {
+                768: { slidesPerView: 3 },
+                480: { slidesPerView: 2 },
+                0: { slidesPerView: 1 }
+            }
+        });
+    }
 });
 
-// Product Options
-// Color Selection
-const colorButtons = document.querySelectorAll('.color-button');
+document.addEventListener("DOMContentLoaded", function () {
+    // =====================
+    // Color Selection
+    // =====================
+    const colorButtons = document.querySelectorAll(".color-button");
+    if (colorButtons.length) {
+        colorButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            colorButtons.forEach((btn) => btn.classList.remove("selected"));
+            button.classList.add("selected");
 
-  colorButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      colorButtons.forEach(btn => btn.classList.remove('selected'));
-      button.classList.add('selected');
-
-      
-      const selectedColor = button.querySelector('.color-dot').classList[1]; 
-      console.log("Selected color:", selectedColor); 
-    });
-  });
-// Size Selection
-const sizeButtons = document.querySelectorAll('.size-btn');
-
-  sizeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // cancel other buttons' selected styles
-      sizeButtons.forEach(btn => btn.classList.remove('selected'));
-
-      // Add selected style to the clicked button
-      button.classList.add('selected');
-
-      // Selected size (optional)
-      const selectedSize = button.textContent;
-      console.log("Selected size:", selectedSize);
-    });
-  });
-// Quantity Selection
-const quantityDisplay = document.getElementById('quantity');
-  const decreaseBtn = document.getElementById('decrease');
-  const increaseBtn = document.getElementById('increase');
-
-  let quantity = 1;
-
-  decreaseBtn.addEventListener('click', () => {
-    if (quantity > 1) {
-      quantity--;
-      quantityDisplay.textContent = quantity;
+            const selectedColor =
+            button.querySelector(".color-dot")?.classList[1] || "";
+            console.log("Selected color:", selectedColor);
+        });
+        });
     }
-  });
 
-  increaseBtn.addEventListener('click', () => {
-    quantity++;
-    quantityDisplay.textContent = quantity;
-  });
-// Add to Cart Button
-const addToCartBtn = document.getElementById('addToCart');
-  const cartStatus = document.getElementById('cartStatus');
-  const cartCount = document.getElementById('cartCount');
+    // =====================
+    // Size Selection
+    // =====================
+    const sizeButtons = document.querySelectorAll(".size-btn");
+    if (sizeButtons.length) {
+        sizeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            sizeButtons.forEach((btn) => btn.classList.remove("selected"));
+            button.classList.add("selected");
 
-  let cartQuantity = 0; // Tracking the total quantity in the cart
+            const selectedSize = button.textContent.trim();
+            console.log("Selected size:", selectedSize);
+        });
+        });
+    }
 
-  addToCartBtn.addEventListener('click', () => {
-    // Add the currently selected product quantity (from the quantity variable)
-    cartQuantity += quantity;
-    cartCount.textContent = cartQuantity;
+    // =====================
+    // Quantity Selection
+    // =====================
+    const quantityDisplay = document.getElementById("quantity");
+    const decreaseBtn = document.getElementById("decrease");
+    const increaseBtn = document.getElementById("increase");
 
-    // Show the cart icon and number
-    cartStatus.style.display = 'inline-block';
-  });
+    let quantity = 1;
 
-// Product Description Accordion
-const accordionHeaders = document.querySelectorAll('.accordion-header');
+    if (quantityDisplay && decreaseBtn && increaseBtn) {
+        decreaseBtn.addEventListener("click", () => {
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+        });
 
-  accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.parentElement;
-      item.classList.toggle('active');
+        increaseBtn.addEventListener("click", () => {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+        });
+    }
+
+    // =====================
+    // Add to Cart Button
+    // =====================
+    const addToCartBtn = document.getElementById("addToCart");
+    const cartStatus = document.getElementById("cartStatus");
+    const cartCount = document.getElementById("cartCount");
+
+    let cartQuantity = 0;
+
+    if (addToCartBtn && cartStatus && cartCount) {
+        addToCartBtn.addEventListener("click", () => {
+        cartQuantity += quantity;
+        cartCount.textContent = cartQuantity;
+        cartStatus.style.display = "inline-block";
+        });
+    }
+
+    // =====================
+    // Product Description Accordion
+    // =====================
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    if (accordionHeaders.length) {
+        accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+            const item = header.parentElement;
+            item.classList.toggle("active");
+        });
+        });
+    }
+
+    // =====================
+    // Product Image Carousel
+    // =====================
+    const images = document.querySelectorAll(".carousel-img");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+        images.forEach((img) => img.classList.remove("active"));
+        if (images[index]) {
+        images[index].classList.add("active");
+        }
+    }
+
+    if (images.length && prevBtn && nextBtn) {
+        prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel(currentIndex);
+        });
+    }
     });
-  });
-  // Product image Carousel
-const images = document.querySelectorAll('.carousel-img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
 
-  let currentIndex = 0;
+// function to filter and sort plp
 
-  function updateCarousel(index) {
-    images.forEach(img => img.classList.remove('active'));
-    images[index].classList.add('active');
-  }
+    document.addEventListener("DOMContentLoaded", () => {
+        const sortBtn = document.querySelector(".red1");
+        const filterBtn = document.querySelector(".red2");
+        const sortMenu = document.getElementById("sortMenu");
+        const filterMenu = document.getElementById("filterMenu");
+        const productGrid = document.querySelector(".product-cards .row");
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateCarousel(currentIndex);
-  });
+    // Toggle menus
+    sortBtn.addEventListener("click", () => {
+        console.log("sort button clicked");
+        sortMenu.classList.toggle("hidden");
+        filterMenu.classList.add("hidden"); // close filter if open
+    });
+    filterBtn.addEventListener("click", () => {
+        console.log("filter button has been clicked");
+        filterMenu.classList.toggle("hidden");
+        sortMenu.classList.add("hidden"); // close sort if open
+    });
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateCarousel(currentIndex);
-  });
+    // Sort function
+    sortMenu.addEventListener("click", (e) => {
+        if (e.target.dataset.sort) {
+        const products = Array.from(productGrid.children);
+        products.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector(".card-text").textContent.replace("$", ""));
+            const priceB = parseFloat(b.querySelector(".card-text").textContent.replace("$", ""));
+            return e.target.dataset.sort === "low" ? priceA - priceB : priceB - priceA;
+        });
+        productGrid.innerHTML = "";
+        products.forEach(p => productGrid.appendChild(p));
+        sortMenu.classList.add("hidden");
+        }
+    });
+
+    // Filter function
+    filterMenu.addEventListener("click", (e) => {
+        if (e.target.dataset.filter) {
+        const filterValue = e.target.dataset.filter;
+        document.querySelectorAll(".product-cards .col").forEach(card => {
+            const imgSrc = card.querySelector("img").src.toLowerCase();
+            if (filterValue === "all" || imgSrc.includes(filterValue)) {
+            card.style.display = "";
+            } else {
+            card.style.display = "none";
+            }
+        });
+        filterMenu.classList.add("hidden");
+        }
+    });
+    });
+
+
 
