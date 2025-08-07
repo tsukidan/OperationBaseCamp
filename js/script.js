@@ -1,218 +1,226 @@
+// JS written by Kaden Rose &
+
 "use strict";
 
 // July 30th, starting a basic form validation function
 // cartButton Functionality
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('cartButton').addEventListener('click', function() {
-    window.location.href = 'checkout.html';
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("cartButton").addEventListener("click", function () {
+    window.location.href = "checkout.html";
   });
 });
 
 function formValidation1() {
-    // create a boolean variable that tells us if the form is true or not
-    let isValid = true;
+  // create a boolean variable that tells us if the form is true or not
+  let isValid = true;
 
-    // variables for the inputs
-    let inputNameFirst = document.getElementById(""); // name input
-    let inputNameLast = document.getElementById("");
-    let inputMail = document.getElementById(""); // email input
-    let inputTel = document.getElementById(""); // phone input
-    let radioMail = document.getElementById(""); // preferred method of contact radio email
-    let radioTel = document.getElementById(""); // preferred method of contact radio phone
+  // variables for the inputs
+  let inputNameFirst = document.getElementById(""); // name input
+  let inputNameLast = document.getElementById("");
+  let inputMail = document.getElementById(""); // email input
+  let inputTel = document.getElementById(""); // phone input
+  let radioMail = document.getElementById(""); // preferred method of contact radio email
+  let radioTel = document.getElementById(""); // preferred method of contact radio phone
 
-    // box(es) to list errors
-    let eBox = document.getElementById("");
+  // box(es) to list errors
+  let eBox = document.getElementById("");
 
-    // reset eBox to an empty string
+  // reset eBox to an empty string
 
-    // create an output of errors, this works if the errors are displayed as a list
-    let output = "<ul>";
+  // create an output of errors, this works if the errors are displayed as a list
+  let output = "<ul>";
 
-    // REGEX validation
-    let firstNameRegex = /^[A-Za-z]+(?:[-'][A-Za-z]+)*$/;
-    let lastNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
-    let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let telRegex = /^\+?[0-9\s\-().]{7,20}$/;
+  // REGEX validation
+  let firstNameRegex = /^[A-Za-z]+(?:[-'][A-Za-z]+)*$/;
+  let lastNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-'\s][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+  let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let telRegex = /^\+?[0-9\s\-().]{7,20}$/;
 
-    // Remove error class (depends on what the class is named)
-    inputNameFirst.classList.remove("");
-    inputNameLast.classList.remove("");
-    inputMail.classList.remove("");
-    inputTel.classList.remove("");
-    eBox.classList.remove("");
+  // Remove error class (depends on what the class is named)
+  inputNameFirst.classList.remove("");
+  inputNameLast.classList.remove("");
+  inputMail.classList.remove("");
+  inputTel.classList.remove("");
+  eBox.classList.remove("");
 
-    // validate first name
+  // validate first name
 
-    //validate last name
+  //validate last name
 
-    // validate email
+  // validate email
 
-    // validate phone number
+  // validate phone number
 
-    // validate method of contact
+  // validate method of contact
 
-    // add output to the page
-    output += "</ul>";
-    eBox.innerHTML += output;
+  // add output to the page
+  output += "</ul>";
+  eBox.innerHTML += output;
 
-    // if form is valid output
-    if(isValid === true){
-        alert(`Thank you, ${inputNameFirst.value} for reaching out! A team member will address your concerns promptly. DISCLAIMER: This is a demonstration form for an educational project. No real information has been gathered.`)
-    }
+  // if form is valid output
+  if (isValid === true) {
+    alert(
+      `Thank you, ${inputNameFirst.value} for reaching out! A team member will address your concerns promptly. DISCLAIMER: This is a demonstration form for an educational project. No real information has been gathered.`
+    );
+  }
 }
 
-// form validation for newsletter signup
-document.addEventListener("DOMContentLoaded", function() {
-    // grab newsletter forms only
-    let newsletterForms = document.querySelectorAll(".newsletter form");
-    
-    // loop through each form
-    newsletterForms.forEach(function (form) {
-        let mailInput = form.querySelector("input");
+document.addEventListener("DOMContentLoaded", function () {
+  // check to see if user has already been on site during this browsing session
+  if (sessionStorage.getItem("newsletterShown")) return;
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
+  // a 5 second delay
+  setTimeout(showNewsletterPopup, 5000);
 
-            // reset error class & clear error box
-            mailInput.classList.remove("error");
-            let eBox = form.closest(".newsletter").querySelector(".eBoxNewsletter");
-            eBox.textContent = "";
+  // function for newsletter
+  function showNewsletterPopup() {
+    // mark as shown so it won't show again til browser tab is closed
+    sessionStorage.setItem("newsletterShown", "true");
 
-            // regex for email
-            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // create div and style it
+    const popup = document.createElement("div");
+    popup.id = "newsletter-popup";
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.background = "#fff";
+    popup.style.padding = "20px";
+    popup.style.border = "2px solid #333";
+    popup.style.borderRadius = "8px";
+    popup.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
+    popup.style.zIndex = "9999";
+    popup.style.textAlign = "center";
 
-            // empty check
-            if (mailInput.value.trim() === "") {
-                mailInput.classList.add("error");
-                eBox.textContent = "Please enter your email address.";
-                return;
-            }
+    popup.innerHTML = `<h2>Join our newsletter</h2>
+            <p>Get exclusive offers and updates.</p>
+            <input type="email" id="newsletter-email" placeholder="Your email" style="padding:5px; width: 80%;">
+            <br><br>
+            <button id="newsletter-submit" style="padding:8px 12px;">Subscribe</button>
+            <br><br>
+            <button id="newsletter-close" style="background:none; border:none; color:red; cursor:pointer;">Close</button>`;
 
-            // check email format
-            if (!emailRegex.test(mailInput.value.trim())) {
-                mailInput.classList.add("error");
-                eBox.textContent = "Please enter a valid email address.";
-                return;
-            }
+    // add this to the body
+    document.body.appendChild(popup);
 
-            // success
-            alert("Thank you for subscribing! #StayWild! (DEMO only, no real information was stored)");
-            mailInput.value = "";
-        });
+    // remove popup when user clicks remove
+    document.getElementById("newsletter-close").addEventListener("click", function () {
+      popup.remove();
     });
-});
 
+    // remove popup when users subscribes
+    document.getElementById("newsletter-submit").addEventListener("click", function () {
+      let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let mailInput = document.getElementById("newsletter-email").value.trim();
+
+      if (mailInput === "") {
+        alert("Please enter your email address.");
+        return;
+      }
+      if (!mailRegex.test(mailInput)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      alert(
+        "Thanks for subscribing to our newsletter, see you on the trail! DISCLAIMER: This form is an educational demonstration, no real information was collected."
+      );
+      popup.remove();
+    });
+  }
+});
 
 // event listener to operate swipe.js on checkout page 'You Might Also Like'
 document.addEventListener("DOMContentLoaded", function () {
-    new Swiper(".swiper", {
-        slidesPerView: 3, // Show 3 at a time
-        spaceBetween: 20, // Gap between slides
-        loop: true, // Infinite loop
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        breakpoints: {
-        768: { slidesPerView: 3 }, // Tablets & up
-        480: { slidesPerView: 2 }, // Small tablets
-        0: { slidesPerView: 1 }    // Mobile
-        }
-    });
-});
-
-// Product Options
-// Color Selection
-const colorButtons = document.querySelectorAll('.color-button');
-
-  colorButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      colorButtons.forEach(btn => btn.classList.remove('selected'));
-      button.classList.add('selected');
-
-      
-      const selectedColor = button.querySelector('.color-dot').classList[1]; 
-      console.log("Selected color:", selectedColor); 
-    });
-  });
-// Size Selection
-const sizeButtons = document.querySelectorAll('.size-btn');
-
-  sizeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // cancel other buttons' selected styles
-      sizeButtons.forEach(btn => btn.classList.remove('selected'));
-
-      // Add selected style to the clicked button
-      button.classList.add('selected');
-
-      // Selected size (optional)
-      const selectedSize = button.textContent;
-      console.log("Selected size:", selectedSize);
-    });
-  });
-// Quantity Selection
-const quantityDisplay = document.getElementById('quantity');
-  const decreaseBtn = document.getElementById('decrease');
-  const increaseBtn = document.getElementById('increase');
-
-  let quantity = 1;
-
-  decreaseBtn.addEventListener('click', () => {
-    if (quantity > 1) {
-      quantity--;
-      quantityDisplay.textContent = quantity;
+  new Swiper(".swiper", {
+    slidesPerView: 3, // Show 3 at a time
+    spaceBetween: 20, // Gap between slides
+    loop: true, // Infinite loop
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      768: { slidesPerView: 3 }, // Tablets & up
+      480: { slidesPerView: 2 }, // Small tablets
+      0: { slidesPerView: 1 } // Mobile
     }
   });
+});
 
-  increaseBtn.addEventListener('click', () => {
-    quantity++;
-    quantityDisplay.textContent = quantity;
-  });
-// Add to Cart Button
-const addToCartBtn = document.getElementById('addToCart');
-  const cartStatus = document.getElementById('cartStatus');
-  const cartCount = document.getElementById('cartCount');
+// functions to facilitate movable nav effect
+document.addEventListener("DOMContentLoaded", function () {
+  const dot = document.getElementById("progressDot");
+  const tabButtons = document.querySelectorAll(".checkoutTabs .nav-link");
 
-  let cartQuantity = 0; // Tracking the total quantity in the cart
-
-  addToCartBtn.addEventListener('click', () => {
-    // Add the currently selected product quantity (from the quantity variable)
-    cartQuantity += quantity;
-    cartCount.textContent = cartQuantity;
-
-    // Show the cart icon and number
-    cartStatus.style.display = 'inline-block';
-  });
-
-// Product Description Accordion
-const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-  accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.parentElement;
-      item.classList.toggle('active');
-    });
-  });
-  // Product image Carousel
-const images = document.querySelectorAll('.carousel-img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-
-  let currentIndex = 0;
-
-  function updateCarousel(index) {
-    images.forEach(img => img.classList.remove('active'));
-    images[index].classList.add('active');
+  function moveDotToTab(tab) {
+    const tabRect = tab.getBoundingClientRect();
+    const navRect = tab.closest(".checkout-progress").getBoundingClientRect();
+    const centerX = tabRect.left + tabRect.width / 2;
+    const dotX = centerX - navRect.left - dot.offsetWidth / 2;
+    dot.style.left = `${dotX}px`;
   }
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateCarousel(currentIndex);
+  // Initial position
+  const initialActive = document.querySelector(".checkoutTabs .nav-link.active");
+  if (initialActive) {
+    moveDotToTab(initialActive);
+  }
+
+  // Listen for Bootstrap tab change event
+  tabButtons.forEach((tab) => {
+    tab.addEventListener("shown.bs.tab", function () {
+      console.log("Tab changed:", this.id);
+      moveDotToTab(this);
+    });
   });
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateCarousel(currentIndex);
+  // Move on resize
+  window.addEventListener("resize", () => {
+    const activeTab = document.querySelector(".checkoutTabs .nav-link.active");
+    if (activeTab) moveDotToTab(activeTab);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Show the form when "Add New" is clicked
+  document.querySelectorAll("[data-toggle]").forEach((toggleBtn) => {
+    toggleBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("data-toggle");
+      const form = this.closest(".tab-pane").querySelector(`[data-form="${target}"]`);
+      if (form) form.classList.remove("d-none");
+    });
   });
 
+  // Hide the form when "Confirm" is clicked
+  document.querySelectorAll("[data-hide]").forEach((hideBtn) => {
+    hideBtn.addEventListener("click", function () {
+      const target = this.getAttribute("data-hide");
+      const form = this.closest(".tab-pane").querySelector(`[data-form="${target}"]`);
+      if (form) form.classList.add("d-none");
+    });
+  });
+});
+
+//used to increase / decrease quantity in cart
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".product-card");
+
+  cards.forEach((card) => {
+    let quantity = 1;
+    const quantitySpan = card.querySelector(".quantity-value");
+    const minusBtn = card.querySelector(".btn-minus");
+    const plusBtn = card.querySelector(".btn-plus");
+
+    minusBtn.addEventListener("click", () => {
+      quantity = Math.max(1, quantity - 1);
+      quantitySpan.textContent = quantity;
+    });
+
+    plusBtn.addEventListener("click", () => {
+      quantity += 1;
+      quantitySpan.textContent = quantity;
+    });
+  });
+});
