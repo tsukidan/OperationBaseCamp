@@ -1,8 +1,12 @@
-
-
 "use strict";
 
 // July 30th, starting a basic form validation function
+// cartButton Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('cartButton').addEventListener('click', function() {
+    window.location.href = 'checkout.html';
+  });
+});
 
 function formValidation1() {
     // create a boolean variable that tells us if the form is true or not
@@ -56,10 +60,6 @@ function formValidation1() {
         alert(`Thank you, ${inputNameFirst.value} for reaching out! A team member will address your concerns promptly. DISCLAIMER: This is a demonstration form for an educational project. No real information has been gathered.`)
     }
 }
-
-
-
-
 
 // form validation for newsletter signup
 document.addEventListener("DOMContentLoaded", function() {
@@ -215,3 +215,4 @@ const images = document.querySelectorAll('.carousel-img');
     currentIndex = (currentIndex + 1) % images.length;
     updateCarousel(currentIndex);
   });
+

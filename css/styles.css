@@ -16,6 +16,7 @@
   --leafGreen: #2f7a3e;
   --plum: #5d3a58;
   --brown: #713b1c;
+  --mainBgColor: #faf9f6;
 
   /*Fonts*/
   --headingFont: "Freude";
@@ -255,7 +256,7 @@ body {
   font-weight: var(--bodyFontWeight);
   line-height: 1.6;
   color: #333;
-  background: #fff;
+  background: var(--mainBgColor);
 }
 .container {
   width: 90%;
@@ -310,16 +311,23 @@ body {
   box-shadow: var(--mainBoxShadow);
 }
 .top-rated {
-  background-image: url("../assets/product-images/helmetplaceholder.webp");
+  background-image: url("../assets/product-images/Cycling/GreenHelmet.png");
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
   box-shadow: var(--mainBoxShadow);
+  background-position: center center;
+  background-position-y: -8vh;
+  background-repeat: no-repeat;
+  background-size: 120%;
 }
 .backpacks {
   background-image: url("../assets/product-images/backpackplaceholder.jpg");
   box-shadow: var(--mainBoxShadow);
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
+  background-size: 65%;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 .mission-statement {
   background-image: url("../assets/site-images/missionbanner.jpg");
@@ -732,12 +740,10 @@ Social Media Links
 
 /*------------- Product Detail Page --------------*/
 
- 
 .container-pdp {
   background: #fff;
   padding: 2rem;
 }
-
 
 /* Product image Carousel */
 .carousel-wrapper {
@@ -747,10 +753,10 @@ Social Media Links
 }
 .carousel {
   position: relative;
-  display: block;  
-  width: 100%;              /* 滿版，但受 max-width 限制 */
-  max-width: 400px;         /* ✅ 最大寬度限制 */
-  aspect-ratio: 3 / 4;      /* ✅ 維持 3:4 圖片比例 */
+  display: block;
+  width: 100%; /* 滿版，但受 max-width 限制 */
+  max-width: 400px; /* ✅ 最大寬度限制 */
+  aspect-ratio: 3 / 4; /* ✅ 維持 3:4 圖片比例 */
   margin: 1rem auto;
   overflow: hidden;
   border-radius: 10px;
@@ -778,7 +784,7 @@ Social Media Links
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   border: none;
   font-size: 2rem;
@@ -795,7 +801,6 @@ Social Media Links
 .carousel-btn.next {
   right: 10px;
 }
-
 
 /* Color Options */
 .color-options {
@@ -829,7 +834,6 @@ Social Media Links
   outline: 2px solid black;
   outline-offset: 2px;
 }
-
 
 /* Size Options */
 .size-options {
@@ -891,10 +895,9 @@ Social Media Links
   border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
-  display:block;
-  width:50%;
+  display: block;
+  width: 50%;
   margin: 1rem auto;
-
 }
 
 .cart-icon {
@@ -902,8 +905,6 @@ Social Media Links
   font-size: 1rem;
   vertical-align: middle;
 }
-
-
 
 /* Product Description Accordion */
 .accordion {
@@ -1209,7 +1210,7 @@ Toggler Border Removal
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.2;
-   font-family: var(--headingFont);
+  font-family: var(--headingFont);
   font-weight: var(--headingWeight);
 }
 .hero-content h2 {
@@ -1219,25 +1220,24 @@ Toggler Border Removal
   font-weight: var(--subtitleWeight);
 }
 .tenants {
-background-color:#001f4d;
-color:#fff;
-display: flex;
-justify-content: space-between;
- font-family: var(--headingFont);
+  background-color: #001f4d;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--headingFont);
   font-weight: var(--headingWeight);
-padding-top: 1rem;
+  padding-top: 1rem;
 }
 .tenants p {
   font-family: var(--bodyFont);
   font-weight: var(--bodyFontWeight);
-
 }
 .Story h2 {
-font-family: var(--headingFont);
+  font-family: var(--headingFont);
   font-weight: var(--headingWeight);
 }
 .Story p {
- font-family: var(--bodyFont);
+  font-family: var(--bodyFont);
   font-weight: var(--bodyFontWeight);
 }
 
@@ -1254,7 +1254,7 @@ font-family: var(--headingFont);
   justify-content: center;
   text-align: left;
   position: relative;
-  color: #fff ;
+  color: #fff;
   padding: 2rem;
   top: 0;
   left: 0;
@@ -1272,11 +1272,11 @@ font-family: var(--headingFont);
   margin-bottom: 2rem;
 }
 .Featured {
-background-color: #001f4d;
-padding: 1rem 0;
+  background-color: #001f4d;
+  padding: 1rem 0;
 }
 .card-title-featured-content {
-  color:#fff;
+  color: #fff;
   font-size: 2rem;
   margin-bottom: 0.5rem;
   line-height: 1.2;
@@ -1284,7 +1284,7 @@ padding: 1rem 0;
   font-weight: var(--headingWeight);
 }
 .card-text-featured-content {
-  color:#fff;
+  color: #fff;
   font-size: 1.25rem;
   margin-bottom: 2rem;
   font-family: var(--subtitleFont);
@@ -1525,7 +1525,7 @@ padding: 1rem 0;
   fill: var(--periwinkle) !important;
 }
 
-.favorite-btn:active{
+.favorite-btn:active {
   fill: var(--periwinkle) !important;
 }
 
@@ -1581,7 +1581,7 @@ padding: 1rem 0;
   }
 }
 
-.related-articles{
+.related-articles {
   font-family: var(--bodyFont);
   display: flex;
   flex-direction: column;
@@ -1589,35 +1589,33 @@ padding: 1rem 0;
   padding: 1rem;
 }
 
-.articles{
+.articles {
   display: flex;
   flex-direction: column;
   column-gap: 0;
   align-items: center;
   justify-content: center;
   width: 100%;
-
 }
 
 /*Community Carousel*/
-.community-carousel-container{
-
+.community-carousel-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.carousel-slide{
+.carousel-slide {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  margin:0;
+  margin: 0;
 }
 
-.carousel-indicators button:hover{
+.carousel-indicators button:hover {
   background-color: var(--darkBlue);
   opacity: 0.8;
 }
@@ -1630,13 +1628,11 @@ padding: 1rem 0;
   border: none;
   outline: none;
   background: none;
-
 }
 
 #backToTopBtn circle:hover {
   fill: var(--periwinkle) !important;
 }
-
 
 /*--------------------------------------------------------------------------------
 |  checkout page
@@ -1686,18 +1682,12 @@ padding: 1rem 0;
   font-family: var(--subtitleFont);
   font-size: 0.85rem;
   float: right;
-  
 }
-
-
-
 
 /*--------------------------------------------------------------------------------
 |  contact page
 |  For CSS testing
 --------------------------------------------------------------------------------*/
-
-
 
 .checkout-container .section-title {
   font-family: var(--subtitleFont);
@@ -1708,13 +1698,11 @@ padding: 1rem 0;
   margin: 1rem 0 0.5rem;
 }
 
-
 .checkout-container .address-info {
   font-size: 0.95rem;
   line-height: 1.4;
   margin-bottom: 0.5rem;
 }
-
 
 .checkout-container .payment-form {
   background-color: #f5f5f5;
@@ -1745,7 +1733,6 @@ padding: 1rem 0;
   flex: 1;
 }
 
-
 .checkout-container .use-card-btn {
   background-color: var(--brightYellow);
   color: #000;
@@ -1758,7 +1745,6 @@ padding: 1rem 0;
   font-family: var(--subtitleFont);
   cursor: pointer;
 }
-
 
 .checkout-container .step-next-btn,
 .checkout-container .purchase-btn {
@@ -1816,7 +1802,6 @@ padding: 1rem 0;
   font-weight: bold;
 }
 
-
 .checkout-container .discount-box {
   display: flex;
   gap: 0.5rem;
@@ -1837,7 +1822,6 @@ padding: 1rem 0;
   font-family: var(--subtitleFont);
   cursor: pointer;
 }
-
 
 .checkout-container .price-summary {
   font-size: 0.95rem;
@@ -1862,7 +1846,6 @@ padding: 1rem 0;
   border-radius: 4px;
   margin: 0 0.5rem;
 }
-
 
 /* newsletter validation failure styles */
 .error {
