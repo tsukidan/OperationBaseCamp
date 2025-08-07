@@ -4,7 +4,7 @@
 // cartButton Functionality
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('cartButton').addEventListener('click', function() {
-    window.location.href = 'checkout.html';
+    window.location.href = 'cart.html';
   });
 });
 
